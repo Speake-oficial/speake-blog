@@ -2,16 +2,48 @@
 
 /*
   Tokens de design centralizados (Tailwind v4 @theme).
-  Tom/personalidade do blog: "estúdio de áudio analógico-profissional, editorial e limpo".
+  Tom/personalidade do blog (tema claro, padrão): "estúdio de mixagem à luz do dia —
+  editorial, preciso, com um acento violeta de equipamento de áudio profissional
+  (como o LED de gravação de um console digital), nunca pastel ou genérico".
   Referências concretas:
-  - Paleta: fundo quase-preto de console de mixagem + âmbar de VU-meter "hot" como acento
-    primário + verde-menta como acento secundário (indicador de sinal "ok").
-  - Tipografia: serifada (Source Serif 4) para títulos/corpo editorial, monoespaçada
-    (JetBrains Mono / ui-monospace) para metadados (datas, tags, labels) — efeito "painel técnico".
+  - Paleta: fundo branco/quase-branco + acento violeta (hue ~268°, mesma família do
+    âmbar antigo mas trocando "calor analógico" por "precisão digital") como cor
+    primária de interação, verde-menta mantido como acento secundário de "sinal ok".
+  - Tipografia: mantém serifada (Source Serif 4) para títulos/corpo editorial e
+    monoespaçada (JetBrains Mono) para metadados — não muda entre temas, é a mesma
+    "voz" do produto, só a paleta de cor inverte.
+  - Tema escuro (ativado via [data-theme="dark"]) preserva a identidade original de
+    "console de mixagem analógico" (fundo quase-preto + âmbar de VU-meter) como
+    variante, não como remoção.
   - Motion: transições curtas e funcionais (hover/foco), nunca decorativas; respeita
     prefers-reduced-motion.
 */
 @theme {
+  /* Tema claro (padrão) — "estúdio à luz do dia", acento violeta de equipamento digital */
+  --color-studio-bg: #ffffff;
+  --color-studio-surface: #faf9fc;
+  --color-studio-surface-raised: #f1eef8;
+  --color-studio-border: #ddd6ec;
+  --color-studio-text: #241f33;
+  --color-studio-text-muted: #5d5470;
+  --color-studio-amber: #6d28d9;
+  --color-studio-amber-dim: #7c3aed;
+  --color-studio-mint: #0a6e53;
+
+  --font-serif-editorial: "Source Serif 4", ui-serif, Georgia, serif;
+  --font-mono-panel: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+/*
+  Tema escuro — variante que preserva a identidade original do blog
+  ("console de mixagem analógico", fundo quase-preto + âmbar de VU-meter).
+  Ativado via atributo `data-theme="dark"` em <html> (ver ThemeToggle.astro).
+  Tailwind v4 resolve `--color-*` em tempo de build para a classe utilitária
+  (ex.: bg-studio-bg -> var(--color-studio-bg)), então sobrescrever a variável
+  num seletor de atributo comum (não dark: do Tailwind) já basta — não precisa
+  duplicar classes utilitárias por tema.
+*/
+:root[data-theme="dark"] {
   --color-studio-bg: #14110f;
   --color-studio-surface: #1d1916;
   --color-studio-surface-raised: #262019;
@@ -19,11 +51,8 @@
   --color-studio-text: #f1ebe2;
   --color-studio-text-muted: #b8ad9c;
   --color-studio-amber: #f0a830;
-  --color-studio-amber-dim: #8a6420;
+  --color-studio-amber-dim: #b07f2a;
   --color-studio-mint: #6fd9a8;
-
-  --font-serif-editorial: "Source Serif 4", ui-serif, Georgia, serif;
-  --font-mono-panel: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
 html {

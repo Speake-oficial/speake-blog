@@ -1,4 +1,6 @@
 ---
+import { getTagLabel } from '../lib/tagLabels';
+
 interface Props {
 	tag: string;
 	count?: number;
@@ -6,22 +8,7 @@ interface Props {
 
 const { tag, count } = Astro.props;
 
-// Label legível a partir do slug (ex.: "producao-musical" -> "produção musical")
-// — mapeamento explícito em vez de replace genérico, porque acentos não se recuperam
-// de um slug sem acento por regra mecânica.
-const LABELS: Record<string, string> = {
-	podcasting: 'podcasting',
-	'producao-musical': 'produção musical',
-	masterizacao: 'masterização',
-	'equipamentos-de-audio': 'equipamentos de áudio',
-	narracao: 'narração',
-	mixagem: 'mixagem',
-	'audio-livros': 'áudio-livros',
-	microfones: 'microfones',
-	'home-studio': 'home studio',
-};
-
-const label = LABELS[tag] ?? tag;
+const label = getTagLabel(tag);
 ---
 
 <a

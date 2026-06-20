@@ -10,20 +10,30 @@
 - Stack: Astro 6 + Tailwind v4 + MDX + @astrojs/sitemap（决定于 cycle_20260619_235638）
 - Caminho: C:\Users\fuba\Documents\projects\speake-blog
 
-## 状态（cycle_20260619_235638 之后）
-- 项目已脚手架完成并通过完整周期：5 个 Planner 步骤全部执行（scaffolding、tag 分类法 + 动态路由、SEO 技术层、视觉设计、内容+安全）。
-- `npm run build` 通过（exit 0）。Checker 用 9 项 success_criteria 全部核实通过（build、dist/ 检查、sitemap/robots/JSON-LD/OG 的 grep、文章/标签计数、innerHTML/密钥的 grep）。
-- Reviewer：approved，3 个 minor finding（无 blocker，见下方"重要文件状态"）。
-- 尚未 ship：项目内容已创建但还没有 `git add`/`commit`/`push`（仓库之前完全空白，这是第一批真实文件）。
+## 状态（cycle_20260620_003003 之后）
+- 项目已脚手架完成并通过两个完整周期：
+  - cycle_20260619_235638：脚手架 + SEO + 视觉设计 v1（5 步）。
+  - cycle_20260620_003003：UX 修复（整篇文章卡片可点击，stretched-link 模式）+ 视觉改版（白底+紫色亮色主题为默认）+ 暗色主题 toggle（持久化 localStorage + anti-FOUC inline script + a11y）+ 抽取 `tagLabels` 单一来源（偿还上一周期记录的债务）。
+- Maker iteration 1 引入了一个对比度缺陷：暗色主题下 `--color-studio-amber-dim` 用 `#8a6420`，对暗背景 `#14110f` 对比度只有 3.51:1（WCAG AA 正文小字要求 4.5:1）。Checker iteration 1 独立算出该数值并 `rejected`。Maker iteration 2 把该值改为 `#b07f2a`，对比度 5.30:1，Checker iteration 2 独立重算确认，`approved`。
+- Checker：iteration 2 approved（功能 + 对比度数值独立验证）。
+- Reviewer：approved，2 个 minor finding（无 blocker，见下方"重要文件状态"）。
+- 尚未 ship：本周期产出尚未 commit/push（沿用上一周期已开的分支 `feature/scaffold-blog-seo-audio`，或确认是否需要新分支——Orquestrador 待确认）。
 
 ## 下一步
 - **部署前必须处理**：`astro.config.mjs` 里的 `site` 字段目前是占位符 `https://speake-blog.example.com`（带 TODO 注释）—— 部署前必须替换成真实域名，否则 sitemap/canonical URL/Open Graph 会静默指向错误地址。
-- **技术欠账（非阻塞，建议下个周期处理）**：tag-slug → 葡语标签名的翻译映射表，目前在 `TagBadge.astro`、`posts/[slug].astro`、`tags/[tag].astro` 三个文件里逐字复制了 3 遍。应提取成单一来源模块（例如 `src/lib/tagLabels.ts`），三处都从那里 import，避免未来新增标签时漏改某一处导致显示不一致。
-- **待 ship**：确认当前分支正确（不是 master/main），`git add` + commit（引用 task_id cycle_20260619_235638）+ push（待有网络/凭证时执行）。
+- ~~技术欠账：tag-slug → 葡语标签名的翻译映射表三处重复~~ —— **已在本周期解决**：抽取到 `src/lib/tagLabels.ts`，`TagBadge.astro`、`posts/[slug].astro`、`tags/[tag].astro` 三处均改为 import，不再有重复副本。
+- **新技术决定/已知局限（非阻塞，记录供以后参考）**：
+  1. `PostCard` 整卡可点击（stretched-link 模式：整个 `<article>` 是可点击区域，不只是标题链接）目前没有给 `<article>` 加 ARIA 提示（例如 `aria-label` 说明整卡可交互）。Reviewer 标注这是该模式本身已知的局限，不是本次引入的新缺陷——下次专门做 a11y 审查时可以处理，非阻塞。
+  2. `src/styles/global.css` 暗色主题的实现方式是整组重新声明全部 9 个 design token 去覆盖亮色主题的 token，而不是只覆盖真正不同的值。能正常工作，但以后如果想让某个 token 在两个主题间共享，容易因为这种"全量覆盖"的写法漏改其中一处。Reviewer 标注为 minor，非阻塞。
+  3. 暗色主题下 `--color-studio-amber-dim` 最终值是 `#b07f2a`（对暗背景 `#14110f` 对比度 5.30:1，WCAG AA 达标）——以后再调整这个 token 时，必须重新用 WCAG 公式验证，不要凭直觉调亮/调暗。
+- **Ship 状态**：上一周期已创建分支 `feature/scaffold-blog-seo-audio`（不是 main）并 commit 过 root commit。本周期的改动尚未 commit/push——push + 开 PR draft 仍待人类显式确认（Orquestrador 此前已询问，等待答复）。
 - esbuild（经由 astro/@astrojs/mdx 引入）存在低严重度 CVE —— 只影响 Windows 上的 dev server，不影响生产环境。目前无需采取行动；后续依赖更新时关注一下。
 
 ## 重要文件状态
 - `astro.config.mjs` —— `site` 字段是带 TODO 注释的占位符，见上方"下一步"。
 - `src/content.config.ts` —— 使用 Astro 6 的新格式（`loader: glob(...)`），不是旧版 `src/content/config.ts` —— 以后编辑时不要改回旧约定。
-- `src/components/TagBadge.astro`、`src/pages/posts/[slug].astro`、`src/pages/tags/[tag].astro` —— 包含逐字相同的 tag-slug→葡语标签翻译映射表副本；是提取单一来源的候选对象（见上方"下一步"）。
+- `src/lib/tagLabels.ts` —— tag-slug→葡语标签名映射的单一来源（本周期新建）；`TagBadge.astro`、`posts/[slug].astro`、`tags/[tag].astro` 均从这里 import，不要再在这些文件里手写映射表副本。
+- `src/components/PostCard.astro` —— 本周期改为整卡可点击（stretched-link 模式），见上方"已知局限 1"（无 ARIA 提示）。
+- `src/styles/global.css` —— 本周期新增亮/暗主题 token 体系（默认浅色+紫色），暗色主题以"全量覆盖 9 个 token"方式实现，见上方"已知局限 2"；`--color-studio-amber-dim` 暗色值为 `#b07f2a`（对比度 5.30:1），调整前必须重算对比度。
+- 主题 toggle 的持久化逻辑（localStorage + anti-FOUC inline script，写在 `<head>` 防止刷新闪烁）——具体实现文件待下次涉及主题逻辑时由 Maker/Reflector 补充行号。
 - Build/test/lint 命令：`npm run build`（Astro）；lint/test 等其他命令本周期尚未明确配置 —— 下个周期需要时再确认。

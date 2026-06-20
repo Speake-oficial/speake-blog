@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import TagBadge from '../../components/TagBadge.astro';
+import { getTagLabel } from '../../lib/tagLabels';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -19,17 +20,6 @@ const formattedDate = post.data.pubDate.toLocaleDateString('pt-BR', {
 });
 
 const primaryTag = post.data.tags[0];
-const TAG_LABELS: Record<string, string> = {
-	podcasting: 'podcasting',
-	'producao-musical': 'produção musical',
-	masterizacao: 'masterização',
-	'equipamentos-de-audio': 'equipamentos de áudio',
-	narracao: 'narração',
-	mixagem: 'mixagem',
-	'audio-livros': 'áudio-livros',
-	microfones: 'microfones',
-	'home-studio': 'home studio',
-};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
 
@@ -60,7 +50,7 @@ const jsonLd = {
 		items={[
 			{ label: 'Início', href: '/' },
 			{ label: 'Tags', href: '/tags' },
-			...(primaryTag ? [{ label: TAG_LABELS[primaryTag] ?? primaryTag, href: `/tags/${primaryTag}/` }] : []),
+			...(primaryTag ? [{ label: getTagLabel(primaryTag), href: `/tags/${primaryTag}/` }] : []),
 			{ label: post.data.title },
 		]}
 	/>

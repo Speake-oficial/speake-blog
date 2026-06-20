@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
 	title: string;
@@ -23,6 +24,21 @@ const ogImage = image
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script is:inline>
+			// Anti-FOUC: precisa rodar de forma síncrona, antes do primeiro paint do
+			// <body>, por isso é inline (não type="module") e sem defer/async.
+			// Valores fixos apenas ('light'/'dark'); getItem nunca é usado para HTML/innerHTML,
+			// só comparado a strings literais e passado a setAttribute (sem risco de injeção).
+			(function () {
+				var STORAGE_KEY = 'theme';
+				var stored = localStorage.getItem(STORAGE_KEY);
+				var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				var dark = stored === 'dark' || (stored !== 'light' && prefersDark);
+				if (dark) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				}
+			})();
+		</script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
@@ -53,9 +69,12 @@ const ogImage = image
 				<a href="/" class="font-mono-panel text-studio-amber text-lg tracking-tight hover:text-studio-mint transition-colors duration-150">
 					speake<span class="text-studio-text-muted">.blog</span>
 				</a>
-				<nav aria-label="Navegação principal" class="font-mono-panel text-sm">
-					<a href="/tags" class="text-studio-text-muted hover:text-studio-amber transition-colors duration-150">tags</a>
-				</nav>
+				<div class="flex items-center gap-4">
+					<nav aria-label="Navegação principal" class="font-mono-panel text-sm">
+						<a href="/tags" class="text-studio-text-muted hover:text-studio-amber transition-colors duration-150">tags</a>
+					</nav>
+					<ThemeToggle />
+				</div>
 			</div>
 		</header>
 

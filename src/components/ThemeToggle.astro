@@ -1,0 +1,51 @@
+---
+// Botão nativo de alternância de tema claro/escuro.
+// O estado inicial (atributo data-theme em <html>) já é definido por um script
+// inline síncrono no <head> do BaseLayout, antes deste componente renderizar —
+// aqui só lemos esse estado já presente no DOM para refletir aria-pressed/label
+// corretamente no primeiro paint, sem flash de estado errado no botão.
+---
+
+<button
+	id="theme-toggle"
+	type="button"
+	aria-pressed="false"
+	aria-label="Alternar para tema escuro"
+	class="font-mono-panel text-xs uppercase tracking-wide text-studio-text-muted hover:text-studio-amber transition-colors duration-150 border border-studio-border rounded-sm px-2.5 py-1.5"
+>
+	<span aria-hidden="true">tema</span>
+</button>
+
+<script>
+	// Mesma chave de localStorage usada pelo script inline síncrono no <head>
+	// (ver BaseLayout.astro) — precisa ser idêntica para o toggle e o anti-FOUC
+	// concordarem sobre o estado persistido.
+	const STORAGE_KEY = 'theme';
+	const button = document.getElementById('theme-toggle');
+
+	function isDark(): boolean {
+		return document.documentElement.getAttribute('data-theme') === 'dark';
+	}
+
+	function syncButton() {
+		if (!button) return;
+		const dark = isDark();
+		button.setAttribute('aria-pressed', String(dark));
+		button.setAttribute('aria-label', dark ? 'Alternar para tema claro' : 'Alternar para tema escuro');
+	}
+
+	button?.addEventListener('click', () => {
+		const next = isDark() ? 'light' : 'dark';
+		if (next === 'dark') {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		} else {
+			document.documentElement.removeAttribute('data-theme');
+		}
+		// Valor fixo ('light'/'dark'), nunca dado vindo do usuário — seguro contra
+		// qualquer injeção via localStorage.
+		localStorage.setItem(STORAGE_KEY, next);
+		syncButton();
+	});
+
+	syncButton();
+</script>
