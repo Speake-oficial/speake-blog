@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PostCard from '../../components/PostCard.astro';
+import { AUDIO_TAGS } from '../../content.config';
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+
+	// Gera apenas páginas para tags da taxonomia que de fato têm post associado —
+	// evita página de tag vazia/morta no build.
+	return AUDIO_TAGS.filter((tag) => allPosts.some((post) => post.data.tags.includes(tag))).map((tag) => {
+		const posts = allPosts
+			.filter((post) => post.data.tags.includes(tag))
+			.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+		return { params: { tag }, props: { posts } };
+	});
+}
+
+const LABELS: Record<string, string> = {
+	podcasting: 'podcasting',
+	'producao-musical': 'produção musical',
+	masterizacao: 'masterização',
+	'equipamentos-de-audio': 'equipamentos de áudio',
+	narracao: 'narração',
+	mixagem: 'mixagem',
+	'audio-livros': 'áudio-livros',
+	microfones: 'microfones',
+	'home-studio': 'home studio',
+};
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const label = (tag && LABELS[tag]) ?? tag;
+---
+
+<BaseLayout title={`Tag: ${label}`} description={`Posts marcados com a tag ${label}.`}>
+	<Breadcrumbs
+		items={[
+			{ label: 'Início', href: '/' },
+			{ label: 'Tags', href: '/tags' },
+			{ label: label ?? '' },
+		]}
+	/>
+
+	<h1 class="font-serif-editorial text-3xl mb-6 capitalize">{label}</h1>
+
+	<div class="grid gap-4">
+		{posts.map((post: (typeof posts)[number]) => <PostCard post={post} />)}
+	</div>
+</BaseLayout>

@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	type?: 'website' | 'article';
+	jsonLd?: Record<string, unknown>;
+}
+
+const { title, description, image, type = 'website', jsonLd } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const siteName = 'Speake Blog';
+const ogImage = image
+	? new URL(image, Astro.site ?? Astro.url.origin).toString()
+	: new URL('/og-default.svg', Astro.site ?? Astro.url.origin).toString();
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title} · {siteName}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:locale" content="pt_BR" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+
+		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<header class="border-b border-studio-border bg-studio-surface">
+			<div class="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
+				<a href="/" class="font-mono-panel text-studio-amber text-lg tracking-tight hover:text-studio-mint transition-colors duration-150">
+					speake<span class="text-studio-text-muted">.blog</span>
+				</a>
+				<nav aria-label="Navegação principal" class="font-mono-panel text-sm">
+					<a href="/tags" class="text-studio-text-muted hover:text-studio-amber transition-colors duration-150">tags</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="flex-1 max-w-3xl mx-auto px-4 py-10 w-full">
+			<slot />
+		</main>
+
+		<footer class="border-t border-studio-border bg-studio-surface mt-auto">
+			<div class="max-w-3xl mx-auto px-4 py-6 font-mono-panel text-xs text-studio-text-muted">
+				<p>© {new Date().getFullYear()} speake.blog — conteúdo sobre áudio, podcasting e produção sonora.</p>
+			</div>
+		</footer>
+	</body>
+</html>

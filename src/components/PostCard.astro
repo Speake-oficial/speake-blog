@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TagBadge from './TagBadge.astro';
+
+interface Props {
+	post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const formattedDate = post.data.pubDate.toLocaleDateString('pt-BR', {
+	day: '2-digit',
+	month: 'short',
+	year: 'numeric',
+});
+---
+
+<article
+	class="post-card border border-studio-border bg-studio-surface rounded-sm p-5 transition-colors duration-150 hover:border-studio-amber-dim"
+	data-title={post.data.title.toLowerCase()}
+	data-tags={post.data.tags.join(',')}
+>
+	<time datetime={post.data.pubDate.toISOString()} class="font-mono-panel text-xs text-studio-text-muted">
+		{formattedDate}
+	</time>
+	<h2 class="font-serif-editorial text-xl mt-1.5 mb-2 leading-snug">
+		<a href={`/posts/${post.id}/`} class="hover:text-studio-amber transition-colors duration-150">
+			{post.data.title}
+		</a>
+	</h2>
+	<p class="text-studio-text-muted mb-3 leading-relaxed">{post.data.description}</p>
+	<div class="flex flex-wrap gap-2">
+		{post.data.tags.map((tag) => <TagBadge tag={tag} />)}
+	</div>
+</article>

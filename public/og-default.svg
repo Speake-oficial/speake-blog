@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#14110f" />
+  <g stroke="#f0a830" stroke-width="6" stroke-linecap="round">
+    <line x1="120" y1="420" x2="120" y2="300" />
+    <line x1="220" y1="420" x2="220" y2="220" />
+    <line x1="320" y1="420" x2="320" y2="340" />
+    <line x1="420" y1="420" x2="420" y2="180" />
+    <line x1="520" y1="420" x2="520" y2="280" />
+  </g>
+  <g stroke="#6fd9a8" stroke-width="6" stroke-linecap="round">
+    <line x1="680" y1="420" x2="680" y2="260" />
+    <line x1="780" y1="420" x2="780" y2="200" />
+    <line x1="880" y1="420" x2="880" y2="320" />
+    <line x1="980" y1="420" x2="980" y2="240" />
+    <line x1="1080" y1="420" x2="1080" y2="300" />
+  </g>
+  <text x="120" y="510" font-family="Georgia, serif" font-size="56" fill="#f1ebe2">speake.blog</text>
+  <text x="120" y="555" font-family="monospace" font-size="22" fill="#b8ad9c">podcasting · produção musical · masterização</text>
+</svg>

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/*
+  Tokens de design centralizados (Tailwind v4 @theme).
+  Tom/personalidade do blog: "estúdio de áudio analógico-profissional, editorial e limpo".
+  Referências concretas:
+  - Paleta: fundo quase-preto de console de mixagem + âmbar de VU-meter "hot" como acento
+    primário + verde-menta como acento secundário (indicador de sinal "ok").
+  - Tipografia: serifada (Source Serif 4) para títulos/corpo editorial, monoespaçada
+    (JetBrains Mono / ui-monospace) para metadados (datas, tags, labels) — efeito "painel técnico".
+  - Motion: transições curtas e funcionais (hover/foco), nunca decorativas; respeita
+    prefers-reduced-motion.
+*/
+@theme {
+  --color-studio-bg: #14110f;
+  --color-studio-surface: #1d1916;
+  --color-studio-surface-raised: #262019;
+  --color-studio-border: #3a322a;
+  --color-studio-text: #f1ebe2;
+  --color-studio-text-muted: #b8ad9c;
+  --color-studio-amber: #f0a830;
+  --color-studio-amber-dim: #8a6420;
+  --color-studio-mint: #6fd9a8;
+
+  --font-serif-editorial: "Source Serif 4", ui-serif, Georgia, serif;
+  --font-mono-panel: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-studio-bg);
+  color: var(--color-studio-text);
+  font-family: var(--font-serif-editorial);
+}
+
+/* Foco visível consistente em todos os elementos interativos (WCAG AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-studio-amber);
+  outline-offset: 2px;
+}

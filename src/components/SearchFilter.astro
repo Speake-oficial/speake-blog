@@ -1,0 +1,51 @@
+---
+// Astro island mínimo (vanilla JS, sem framework) para filtro client-side de posts
+// por título/tag. Segurança: o script só lê/esconde nós DOM já renderizados no
+// server (via toggle de classe), nunca insere HTML a partir do valor digitado —
+// não há innerHTML/outerHTML com string não sanitizada em nenhum ponto deste arquivo.
+---
+
+<div class="mb-8">
+	<label for="post-search" class="sr-only">Buscar posts por título ou tag</label>
+	<input
+		id="post-search"
+		type="search"
+		placeholder="Buscar por título ou tag..."
+		autocomplete="off"
+		class="w-full font-mono-panel text-sm bg-studio-surface border border-studio-border rounded-sm px-3 py-2.5 text-studio-text placeholder:text-studio-text-muted focus-visible:border-studio-amber"
+	/>
+	<p id="post-search-empty" class="hidden font-mono-panel text-sm text-studio-text-muted mt-4">
+		Nenhum post encontrado para essa busca.
+	</p>
+</div>
+
+<script>
+	// Filtra apenas os nós .post-card já existentes no DOM (renderizados estaticamente
+	// pelo Astro no build). Nenhum dado novo é criado a partir do input do usuário.
+	const input = document.getElementById('post-search') as HTMLInputElement | null;
+	const emptyState = document.getElementById('post-search-empty');
+	const cards = Array.from(document.querySelectorAll<HTMLElement>('.post-card'));
+
+	function normalize(value: string): string {
+		return value.toLowerCase().trim();
+	}
+
+	function applyFilter(rawQuery: string) {
+		// Limite de tamanho defensivo: input de busca não deveria nunca chegar a
+		// centenas de caracteres; corta para evitar processamento desnecessário.
+		const query = normalize(rawQuery).slice(0, 200);
+		let visibleCount = 0;
+
+		for (const card of cards) {
+			const title = card.dataset.title ?? '';
+			const tags = card.dataset.tags ?? '';
+			const matches = query === '' || title.includes(query) || tags.includes(query);
+			card.classList.toggle('hidden', !matches);
+			if (matches) visibleCount += 1;
+		}
+
+		emptyState?.classList.toggle('hidden', visibleCount !== 0);
+	}
+
+	input?.addEventListener('input', () => applyFilter(input.value));
+</script>
