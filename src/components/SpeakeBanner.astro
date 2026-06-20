@@ -1,14 +1,45 @@
 ---
-// Faixa fixa, sempre visível, com chamada para o site institucional da Speake.
-// Não é dispensável de propósito — é o canal de conversão do blog, deve
-// acompanhar o usuário em toda a navegação (topo da página, antes do header).
+// Chamada para o site institucional da Speake, sempre visível durante a navegação.
+// Vive como faixa no topo da página enquanto está no fluxo normal; quando o scroll
+// a leva pra fora da viewport, um IntersectionObserver troca pra uma versão fixa
+// lateral, pra continuar acompanhando o usuário sem precisar de scroll/position
+// fixed permanente (que cobriria conteúdo logo no topo da página).
 ---
 
 <a
 	href="https://speake.com.br"
 	target="_blank"
 	rel="noopener"
+	id="speake-banner-top"
 	class="block bg-studio-amber text-white font-mono-panel text-xs sm:text-sm tracking-wide text-center py-2 px-4 hover:bg-studio-amber-dim transition-colors duration-150"
 >
 	🎙️ Speake — produção de áudio, podcast e narração profissional. Conheça <span class="underline">speake.com.br</span> →
 </a>
+
+<a
+	href="https://speake.com.br"
+	target="_blank"
+	rel="noopener"
+	id="speake-banner-side"
+	aria-hidden="true"
+	class="hidden fixed right-0 top-1/2 -translate-y-1/2 z-50 [writing-mode:vertical-rl] bg-studio-amber text-white font-mono-panel text-xs tracking-wide py-3 px-2 rounded-l-md shadow-lg hover:bg-studio-amber-dim transition-colors duration-150"
+>
+	🎙️ Conheça a Speake →
+</a>
+
+<script>
+	const top = document.getElementById('speake-banner-top');
+	const side = document.getElementById('speake-banner-side');
+
+	if (top && side) {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				const topVisible = entry.isIntersecting;
+				side.classList.toggle('hidden', topVisible);
+				side.setAttribute('aria-hidden', String(topVisible));
+			},
+			{ threshold: 0 }
+		);
+		observer.observe(top);
+	}
+</script>
