@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://speake-blog.example.com', // TODO: substituir pela URL real de produção antes do deploy — necessário para sitemap/SEO/canonical funcionarem corretamente
+  site: 'https://blog.speake.com.br',
   integrations: [sitemap(), mdx()],
 
   vite: {

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import SpeakeBanner from '../components/SpeakeBanner.astro';
 
 interface Props {
 	title: string;
@@ -64,6 +65,7 @@ const ogImage = image
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 	</head>
 	<body class="min-h-screen flex flex-col">
+		<SpeakeBanner />
 		<header class="border-b border-studio-border bg-studio-surface">
 			<div class="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
 				<a href="/" class="font-mono-panel text-studio-amber text-lg tracking-tight hover:text-studio-mint transition-colors duration-150">

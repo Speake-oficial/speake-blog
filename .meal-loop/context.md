@@ -17,7 +17,7 @@
 - Maker iteration 1 引入了一个对比度缺陷：暗色主题下 `--color-studio-amber-dim` 用 `#8a6420`，对暗背景 `#14110f` 对比度只有 3.51:1（WCAG AA 正文小字要求 4.5:1）。Checker iteration 1 独立算出该数值并 `rejected`。Maker iteration 2 把该值改为 `#b07f2a`，对比度 5.30:1，Checker iteration 2 独立重算确认，`approved`。
 - Checker：iteration 2 approved（功能 + 对比度数值独立验证）。
 - Reviewer：approved，2 个 minor finding（无 blocker，见下方"重要文件状态"）。
-- 尚未 ship：本周期产出尚未 commit/push（沿用上一周期已开的分支 `feature/scaffold-blog-seo-audio`，或确认是否需要新分支——Orquestrador 待确认）。
+- 已 commit：本周期产出已 commit 到 `feature/scaffold-blog-seo-audio`（commit `173fecb`，引用 task_id cycle_20260620_003003），尚未 push。
 
 ## 下一步
 - **部署前必须处理**：`astro.config.mjs` 里的 `site` 字段目前是占位符 `https://speake-blog.example.com`（带 TODO 注释）—— 部署前必须替换成真实域名，否则 sitemap/canonical URL/Open Graph 会静默指向错误地址。
@@ -26,7 +26,7 @@
   1. `PostCard` 整卡可点击（stretched-link 模式：整个 `<article>` 是可点击区域，不只是标题链接）目前没有给 `<article>` 加 ARIA 提示（例如 `aria-label` 说明整卡可交互）。Reviewer 标注这是该模式本身已知的局限，不是本次引入的新缺陷——下次专门做 a11y 审查时可以处理，非阻塞。
   2. `src/styles/global.css` 暗色主题的实现方式是整组重新声明全部 9 个 design token 去覆盖亮色主题的 token，而不是只覆盖真正不同的值。能正常工作，但以后如果想让某个 token 在两个主题间共享，容易因为这种"全量覆盖"的写法漏改其中一处。Reviewer 标注为 minor，非阻塞。
   3. 暗色主题下 `--color-studio-amber-dim` 最终值是 `#b07f2a`（对暗背景 `#14110f` 对比度 5.30:1，WCAG AA 达标）——以后再调整这个 token 时，必须重新用 WCAG 公式验证，不要凭直觉调亮/调暗。
-- **Ship 状态**：上一周期已创建分支 `feature/scaffold-blog-seo-audio`（不是 main）并 commit 过 root commit。本周期的改动尚未 commit/push——push + 开 PR draft 仍待人类显式确认（Orquestrador 此前已询问，等待答复）。
+- **Ship 状态**：分支 `feature/scaffold-blog-seo-audio`（不是 main）现有 2 个 commit：`5d4909a`（上一周期 scaffold）+ `173fecb`（本周期 UX/visual，cycle_20260620_003003）。push + 开 PR draft **第二次**待人类显式确认未获回应（Orquestrador 用 AskUserQuestion 询问未收到答案）——继续停在 commit 这一步，不要自动 push。
 - esbuild（经由 astro/@astrojs/mdx 引入）存在低严重度 CVE —— 只影响 Windows 上的 dev server，不影响生产环境。目前无需采取行动；后续依赖更新时关注一下。
 
 ## 重要文件状态
