@@ -23,3 +23,5 @@ Depois do EQ corretivo, comprima para nivelar picos de volume entre frases. Uma 
 Sibilância ("s" e "ch" estridentes) fica mais evidente depois da compressão, porque a compressão realça o que já estava lá. Por isso o de-esser vai depois, não antes, na cadeia — aplicá-lo cedo demais faz você compensar errado, ouvindo um sinal que ainda vai mudar.
 
 Essa ordem — EQ corretivo, compressão, de-essing — é o ponto de partida que resolve o caso comum; ajustes finos vêm depois que essa base já está soando limpa.
+
+Depois de mixado, falta publicar com a mesma qualidade que você cuidou do áudio. Quer uma estação própria para o seu podcast? [Conheça a Speake](https://speake.com.br).

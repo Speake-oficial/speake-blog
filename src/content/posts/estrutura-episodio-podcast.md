@@ -23,3 +23,5 @@ A maior taxa de abandono de um episódio de podcast acontece nos primeiros 90 se
 Colocar vinheta de abertura longa, agradecimentos e institucional **antes** do gancho. Isso é o equivalente, em texto, a um artigo que começa com três parágrafos de introdução antes de dizer de que ele trata — o ouvinte já foi embora.
 
 Inverter a ordem (gancho primeiro, institucional depois ou no meio) é a mudança de estrutura com maior retorno sobre retenção, sem precisar mudar o conteúdo em si.
+
+Depois de acertar a estrutura, falta o canal certo para publicar e acompanhar a retenção de cada episódio. Quer uma estação própria para o seu podcast? [Conheça a Speake](https://speake.com.br).

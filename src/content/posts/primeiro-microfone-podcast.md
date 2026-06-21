@@ -25,3 +25,5 @@ Se já existe (ou está nos planos) mais de uma pessoa gravando ao mesmo tempo, 
 ## Recomendação prática
 
 Para narração solo em ambiente doméstico sem tratamento acústico: microfone dinâmico USB, filtro pop simples, gravando a uns 15cm de distância. Resolve o suficiente para publicar com qualidade decente sem virar projeto de engenharia de áudio.
+
+Depois de gravado, ainda falta a parte de publicar e gerenciar episódios de forma profissional — é onde entra uma estação própria. Quer publicar seu podcast com qualidade? [Conheça a Speake](https://speake.com.br).

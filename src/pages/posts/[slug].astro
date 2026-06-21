@@ -24,6 +24,8 @@ const primaryTag = post.data.tags[0];
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
 
 // JSON-LD BlogPosting (schema.org) — exigido pelo plano (step 3).
+// author/publisher são exigidos pelo Google para elegibilidade a rich results
+// de Article/BlogPosting (sem eles a propriedade fica incompleta para o crawler).
 const jsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'BlogPosting',
@@ -36,6 +38,22 @@ const jsonLd = {
 		? { image: new URL(post.data.image.src.src, Astro.site ?? Astro.url.origin).toString() }
 		: {}),
 	keywords: post.data.tags.join(', '),
+	author: {
+		'@type': 'Organization',
+		name: 'Speake',
+		url: 'https://speake.com.br',
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: 'Speake',
+		url: 'https://speake.com.br',
+		logo: {
+			'@type': 'ImageObject',
+			// TODO: trocar por um PNG/JPG real (min. 112x112) quando houver um —
+			// Google aceita SVG no logo do publisher, mas um raster é mais seguro.
+			url: new URL('/og-default.svg', Astro.site ?? Astro.url.origin).toString(),
+		},
+	},
 };
 ---
 

@@ -26,3 +26,5 @@ Na narração o objetivo da compressão é nivelar a diferença entre a parte ma
 - **Podcast:** -16 LUFS é o padrão mais comum para distribuição em apps.
 
 Masterizar sem saber pra qual plataforma o áudio vai gera retrabalho — o ideal é checar a norma antes de fechar o processamento final, não depois.
+
+Se você prefere deixar a masterização e a publicação por conta de quem já calibra isso todo dia, vale conhecer um serviço pensado pra isso. [Conheça a Speake](https://speake.com.br).

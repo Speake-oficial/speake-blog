@@ -23,3 +23,5 @@ Levemente fora do eixo direto da boca (não apontado direto para as narinas) já
 Cortar toda respiração da gravação deixa a narração com um silêncio antinatural e mecânico. O ideal é **reduzir o volume** das respirações remanescentes (não sumir com elas) — preserva o ritmo natural sem o ruído chamar atenção.
 
 Esses três ajustes — planejamento da respiração, posicionamento de microfone e edição que reduz em vez de remover — resolvem a maior parte dos problemas de respiração em narração longa.
+
+Se a narração é para um áudio-livro ou podcast que você quer publicar com qualidade profissional, vale conhecer um espaço pensado pra isso. [Conheça a Speake](https://speake.com.br).
