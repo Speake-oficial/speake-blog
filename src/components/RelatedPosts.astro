@@ -1,0 +1,68 @@
+---
+// Posts relacionados ao fim do artigo: ranqueia por tags em comum (desempate
+// por data) e completa com os mais recentes se faltar candidato. Três é o
+// número — cabe numa linha no desktop e não vira "feed infinito" no rodapé.
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { formatPostDateShort } from '../lib/formatDate';
+import { getTagLabel } from '../lib/tagLabels';
+
+interface Props {
+	current: CollectionEntry<'posts'>;
+}
+
+const { current } = Astro.props;
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const currentTags = new Set(current.data.tags);
+
+const scored = allPosts
+	.filter((post) => post.id !== current.id)
+	.map((post) => ({
+		post,
+		shared: post.data.tags.filter((tag) => currentTags.has(tag)).length,
+	}))
+	.sort(
+		(a, b) =>
+			b.shared - a.shared || b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf()
+	);
+
+const related = scored.slice(0, 3).map(({ post }) => post);
+
+function readingMinutes(post: CollectionEntry<'posts'>): number {
+	const words = post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0;
+	return Math.max(1, Math.round(words / 200));
+}
+---
+
+{related.length > 0 && (
+	<section aria-labelledby="related-heading" class="mt-10">
+		<div class="label-rail mb-4">
+			<h2 id="related-heading" class="t-micro text-ink-faint font-mono-panel">Continue a sessão</h2>
+		</div>
+		<div class="grid gap-4 sm:grid-cols-3">
+			{related.map((post) => (
+				<article class="sheet sheet--hover relative p-5 flex flex-col">
+					<p class="font-mono-panel text-[0.6875rem] tracking-[0.08em] uppercase text-ink-faint flex items-center gap-2">
+						<time datetime={post.data.pubDate.toISOString()}>{formatPostDateShort(post.data.pubDate)}</time>
+						<span aria-hidden="true" class="text-(--line-strong)">|</span>
+						<span>{readingMinutes(post)} min</span>
+					</p>
+					<h3 class="font-display font-semibold text-base mt-2 leading-snug flex-1">
+						<a
+							href={`/posts/${post.id}/`}
+							class="hover:text-signal transition-colors duration-150 after:absolute after:inset-0 after:content-['']"
+						>
+							{post.data.title}
+						</a>
+					</h3>
+					{post.data.tags[0] && (
+						<p class="font-mono-panel text-[0.6875rem] tracking-[0.08em] uppercase text-signal mt-3">
+							{getTagLabel(post.data.tags[0])}
+						</p>
+					)}
+				</article>
+			))}
+		</div>
+	</section>
+)}

@@ -1,0 +1,39 @@
+---
+// Lista de categorias com contagem, para a sidebar do artigo (e onde mais servir).
+// A categoria atual (tag principal do post aberto) fica em laranja-sinal, como
+// item ativo — mesmo padrão de "canal armado" do resto do site.
+import { getCollection } from 'astro:content';
+import { AUDIO_TAGS } from '../content.config';
+import { getTagLabel } from '../lib/tagLabels';
+
+interface Props {
+	currentTag?: string;
+}
+
+const { currentTag } = Astro.props;
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const tagCounts = new Map<string, number>();
+for (const post of allPosts) {
+	for (const tag of post.data.tags) {
+		tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+	}
+}
+const tags = AUDIO_TAGS.filter((tag) => tagCounts.has(tag)).map((tag) => ({
+	tag,
+	label: getTagLabel(tag),
+	count: tagCounts.get(tag) ?? 0,
+}));
+---
+
+<nav class="catlist" aria-label="Categorias do blog">
+	<ul class="list-none m-0 p-0">
+		{tags.map(({ tag, label, count }) => (
+			<li>
+				<a href={`/tags/${tag}/`} class:list={[{ 'is-current': tag === currentTag }]}>
+					{label}<span class="count">({count})</span>
+				</a>
+			</li>
+		))}
+	</ul>
+</nav>

@@ -18,10 +18,10 @@ const tagsWithCount = AUDIO_TAGS.filter((tag) => tagCounts.has(tag))
 	.sort((a, b) => b.count - a.count);
 ---
 
-<BaseLayout title="Temas" description="Todos os temas do blog e quantidade de posts em cada um.">
-	<Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Temas' }]} />
+<BaseLayout title="Categorias" description="Todas as categorias do blog e quantidade de posts em cada uma.">
+	<Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Categorias' }]} />
 
-	<h1 class="font-display font-semibold text-3xl sm:text-4xl mb-3 rise-in">Temas</h1>
+	<h1 class="font-display font-semibold text-3xl sm:text-4xl mb-3 rise-in">Categorias</h1>
 	<p class="text-ink-soft leading-relaxed mb-8 max-w-xl rise-in">
 		Todo o conteúdo do blog, organizado por assunto — de captação a masterização.
 	</p>
@@ -31,11 +31,11 @@ const tagsWithCount = AUDIO_TAGS.filter((tag) => tagCounts.has(tag))
 			<li>
 				<a
 					href={`/tags/${tag}/`}
-					class="glass card-hover relative block rounded-[1.75rem] p-6 h-full"
+					class="sheet sheet--hover relative block p-6 h-full"
 				>
 					<h2 class="font-display font-semibold text-lg leading-snug">{getTagLabel(tag)}</h2>
-					<p class="font-mono-panel text-xs text-ink-faint mt-2">
-						{count} {count === 1 ? 'artigo' : 'artigos'}
+					<p class="font-mono-panel text-[0.6875rem] tracking-[0.08em] uppercase text-ink-faint mt-2">
+						{count} {count === 1 ? 'faixa' : 'faixas'}
 					</p>
 				</a>
 			</li>

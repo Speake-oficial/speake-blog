@@ -1,0 +1,62 @@
+---
+// Sumário "Neste artigo" gerado dos headings do markdown (depth 2 e 3).
+// Desktop: caixa fixa na sidebar com scroll-spy (item ativo em laranja-sinal).
+// Mobile: o mesmo markup vira um <details> recolhível antes do texto.
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+	headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const items = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{items.length > 0 && (
+	<nav class="toc" aria-label="Sumário do artigo" data-toc>
+		<ul class="list-none m-0 p-0">
+			{items.map((h) => (
+				<li>
+					<a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+)}
+
+<script>
+	// Scroll-spy: marca no sumário a seção visível. Um observer por página basta —
+	// observa os headings referenciados pelos links do próprio sumário.
+	const tocs = document.querySelectorAll<HTMLElement>('[data-toc]');
+	if (tocs.length > 0) {
+		const links = new Map<string, HTMLAnchorElement[]>();
+		for (const toc of tocs) {
+			for (const a of toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')) {
+				const id = decodeURIComponent(a.hash.slice(1));
+				links.set(id, [...(links.get(id) ?? []), a]);
+			}
+		}
+
+		const targets = [...links.keys()]
+			.map((id) => document.getElementById(id))
+			.filter((el): el is HTMLElement => el !== null);
+
+		function setActive(id: string) {
+			for (const [key, anchors] of links) {
+				for (const a of anchors) a.classList.toggle('is-active', key === id);
+			}
+		}
+
+		// Heading mais próximo do topo (com folga do header fixo) é o ativo.
+		function onScroll() {
+			let current: HTMLElement | undefined;
+			for (const t of targets) {
+				if (t.getBoundingClientRect().top <= 110) current = t;
+			}
+			setActive(current?.id ?? '');
+		}
+
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+	}
+</script>

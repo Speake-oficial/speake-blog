@@ -3,6 +3,9 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import TagBadge from '../../components/TagBadge.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import CategoryList from '../../components/CategoryList.astro';
+import RelatedPosts from '../../components/RelatedPosts.astro';
 import { getTagLabel } from '../../lib/tagLabels';
 import { extractFaq } from '../../lib/faq';
 import { formatPostDate } from '../../lib/formatDate';
@@ -13,7 +16,8 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 const formattedDate = formatPostDate(post.data.pubDate);
 
@@ -117,85 +121,124 @@ const jsonLd = {
 	modifiedTime={updatedDate}
 	tags={post.data.tags}
 	jsonLd={jsonLd}
+	wide
 >
 	<Breadcrumbs
 		items={[
 			{ label: 'Início', href: '/' },
-			{ label: 'Temas', href: '/tags' },
+			{ label: 'Categorias', href: '/tags' },
 			...(primaryTag ? [{ label: getTagLabel(primaryTag), href: `/tags/${primaryTag}/` }] : []),
 			{ label: post.data.title },
 		]}
 	/>
 
-	<article class="glass rounded-[1.75rem] overflow-hidden rise-in">
-		{post.data.image && (
-			<img
-				src={post.data.image.src.src}
-				alt={post.data.image.alt}
-				class="w-full aspect-[1200/630] object-cover"
-			/>
-		)}
-
-		<div class="px-5 py-8 sm:px-10 sm:py-10">
-			<header class="mb-8 max-w-[70ch] mx-auto">
-				{primaryTag && (
-					<a href={`/tags/${primaryTag}/`} class="chip mb-4">{getTagLabel(primaryTag)}</a>
+	<div class="lg:grid lg:grid-cols-[minmax(0,1fr)_264px] lg:gap-8 lg:items-start">
+		<div class="min-w-0">
+			<article class="sheet overflow-hidden rise-in">
+				{post.data.image && (
+					<img
+						src={post.data.image.src.src}
+						alt={post.data.image.alt}
+						class="w-full aspect-[1200/630] object-cover border-b border-(--line)"
+					/>
 				)}
-				<h1 class="font-display font-semibold text-3xl sm:text-4xl leading-[1.12] mb-4">
-					{post.data.title}
-				</h1>
-				<p class="text-ink-soft leading-relaxed text-base sm:text-lg mb-5">
-					{post.data.description}
-				</p>
-				<p class="font-mono-panel text-xs text-ink-faint flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-b border-brand-200/50 py-3">
-					<span>
-						Por {author?.url ? <a href={author.url} rel="author" class="text-brand-600 font-semibold underline underline-offset-2">{author.name}</a> : (author?.name ?? 'Speake')}
-					</span>
-					<span aria-hidden="true">·</span>
-					<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
-					<span aria-hidden="true">·</span>
-					<span>{readingMinutes} min de leitura</span>
-					{updatedDate && (
-						<>
-							<span aria-hidden="true">·</span>
+
+				<div class="px-5 py-8 sm:px-10 sm:py-10">
+					<header class="mb-8 max-w-[70ch]">
+						<p class="font-mono-panel text-[0.6875rem] tracking-[0.08em] uppercase text-ink-faint flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
+							{primaryTag && (
+								<a href={`/tags/${primaryTag}/`} class="text-signal font-semibold hover:underline underline-offset-2">
+									{getTagLabel(primaryTag)}
+								</a>
+							)}
+							<span aria-hidden="true" class="text-(--line-strong)">|</span>
+							<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+							<span aria-hidden="true" class="text-(--line-strong)">|</span>
+							<span>{readingMinutes} min de leitura</span>
+						</p>
+						<h1 class="font-display font-semibold text-3xl sm:text-4xl leading-[1.1] mb-4">
+							{post.data.title}
+						</h1>
+						<p class="text-ink-soft leading-relaxed text-base sm:text-lg mb-5">
+							{post.data.description}
+						</p>
+						<p class="font-mono-panel text-xs text-ink-faint flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-b border-(--line) py-3">
 							<span>
-								atualizado em <time datetime={updatedDate.toISOString()}>{formattedUpdatedDate}</time>
+								Por {author?.url ? <a href={author.url} rel="author" class="text-(--link) font-semibold underline underline-offset-2">{author.name}</a> : (author?.name ?? 'Speake')}
 							</span>
-						</>
+							{updatedDate && (
+								<>
+									<span aria-hidden="true">·</span>
+									<span>
+										atualizado em <time datetime={updatedDate.toISOString()}>{formattedUpdatedDate}</time>
+									</span>
+								</>
+							)}
+						</p>
+					</header>
+
+					{tocItems.length > 0 && (
+						<details class="lg:hidden sheet !rounded-xl px-4 py-3 mb-8">
+							<summary class="t-micro text-ink-soft cursor-pointer select-none">Neste artigo</summary>
+							<div class="pt-3">
+								<TableOfContents headings={headings} />
+							</div>
+						</details>
 					)}
-				</p>
-			</header>
 
-			<div class="prose-speake max-w-[70ch] mx-auto">
-				<Content />
-			</div>
+					<div class="prose-speake max-w-[70ch]">
+						<Content />
+					</div>
 
-			<footer class="max-w-[70ch] mx-auto mt-10">
-				<p class="t-micro text-ink-faint mb-3">Temas relacionados</p>
-				<div class="flex flex-wrap gap-2">
-					{post.data.tags.map((tag) => <TagBadge tag={tag} />)}
+					<footer class="max-w-[70ch] mt-10">
+						<p class="t-micro text-ink-faint mb-3">Categorias deste artigo</p>
+						<div class="flex flex-wrap gap-1.5">
+							{post.data.tags.map((tag) => <TagBadge tag={tag} />)}
+						</div>
+					</footer>
 				</div>
-			</footer>
-		</div>
-	</article>
+			</article>
 
-	<!-- CTA institucional — único glass-deep da tela, como manda o design system -->
-	<aside class="glass-deep rounded-[1.75rem] mt-6 px-6 py-8 sm:px-10 text-center rise-in rise-in--2" aria-label="Conheça a Speake">
-		<h2 class="font-display font-semibold text-2xl text-white">
-			Precisa de áudio profissional?
-		</h2>
-		<p class="text-white/75 text-sm sm:text-base leading-relaxed mt-2 max-w-md mx-auto">
-			A Speake produz podcast, narração e áudio publicitário de ponta a ponta —
-			gravação, edição, mixagem e masterização.
-		</p>
-		<a
-			href="https://speake.com.br"
-			target="_blank"
-			rel="noopener"
-			class="btn btn--primary mt-5"
-		>
-			Conhecer a Speake
-			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-		</a>
-	</aside>
+			<RelatedPosts current={post} />
+
+			<!-- CTA institucional: bloco chapado violeta profundo, sem gradiente -->
+			<aside class="deep mt-10 px-6 py-8 sm:px-10 rise-in" aria-label="Conheça a Speake">
+				<div class="flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
+					<div>
+						<p class="t-micro text-white/45 mb-2">Da casa</p>
+						<h2 class="font-display font-semibold text-2xl text-white">
+							Precisa de áudio profissional?
+						</h2>
+						<p class="text-white/75 text-sm sm:text-base leading-relaxed mt-2 max-w-md">
+							A Speake produz podcast, narração e áudio publicitário de ponta a ponta —
+							gravação, edição, mixagem e masterização.
+						</p>
+					</div>
+					<a
+						href="https://speake.com.br"
+						target="_blank"
+						rel="noopener"
+						class="btn btn--primary shrink-0"
+					>
+						Conhecer a Speake
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+					</a>
+				</div>
+			</aside>
+		</div>
+
+		<!-- sidebar fixa: sumário + categorias (desktop) -->
+		<aside class="hidden lg:block sticky top-24 space-y-4 rise-in rise-in--2" aria-label="Navegação do artigo">
+			{tocItems.length > 0 && (
+				<div class="sheet p-5">
+					<p class="t-micro text-ink-faint mb-3">Neste artigo</p>
+					<TableOfContents headings={headings} />
+				</div>
+			)}
+			<div class="sheet p-5">
+				<p class="t-micro text-ink-faint mb-3">Categorias</p>
+				<CategoryList currentTag={primaryTag} />
+			</div>
+		</aside>
+	</div>
 </BaseLayout>
