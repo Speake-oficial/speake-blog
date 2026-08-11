@@ -7,14 +7,28 @@
 
 <div class="mb-8">
 	<label for="post-search" class="sr-only">Buscar posts por título ou tag</label>
-	<input
-		id="post-search"
-		type="search"
-		placeholder="Buscar por título ou tag..."
-		autocomplete="off"
-		class="w-full font-mono-panel text-sm bg-studio-surface border border-studio-border rounded-sm px-3 py-2.5 text-studio-text placeholder:text-studio-text-muted focus-visible:border-studio-amber"
-	/>
-	<p id="post-search-empty" class="hidden font-mono-panel text-sm text-studio-text-muted mt-4">
+	<div class="relative">
+		<svg
+			width="16"
+			height="16"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+			class="absolute left-4 top-1/2 -translate-y-1/2 text-ink-faint pointer-events-none"
+		><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+		<input
+			id="post-search"
+			type="search"
+			placeholder="Buscar por título ou tag…"
+			autocomplete="off"
+			class="field !pl-11"
+		/>
+	</div>
+	<p id="post-search-empty" class="hidden text-sm text-ink-soft mt-4">
 		Nenhum post encontrado para essa busca.
 	</p>
 </div>

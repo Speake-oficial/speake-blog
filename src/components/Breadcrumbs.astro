@@ -10,7 +10,7 @@ interface Props {
 
 const { items } = Astro.props;
 
-// JSON-LD BreadcrumbList — exigido pelo plano (step 3) para navegação estruturada.
+// JSON-LD BreadcrumbList — navegação estruturada para buscadores e motores generativos.
 const breadcrumbList = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
@@ -23,18 +23,20 @@ const breadcrumbList = {
 };
 ---
 
-<nav aria-label="Breadcrumb" class="font-mono-panel text-sm text-studio-text-muted mb-6">
+<nav aria-label="Breadcrumb" class="text-sm text-ink-faint mb-6">
 	<ol class="flex flex-wrap items-center gap-1.5">
 		{
 			items.map((item, index) => (
 				<li class="flex items-center gap-1.5">
-					{index > 0 && <span aria-hidden="true">/</span>}
+					{index > 0 && (
+						<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="opacity-60"><path d="m9 18 6-6-6-6"/></svg>
+					)}
 					{item.href ? (
-						<a href={item.href} class="hover:text-studio-amber transition-colors duration-150 underline-offset-2 hover:underline">
+						<a href={item.href} class="font-medium hover:text-brand-600 transition-colors duration-150">
 							{item.label}
 						</a>
 					) : (
-						<span aria-current="page" class="text-studio-text">
+						<span aria-current="page" class="font-medium text-ink-soft">
 							{item.label}
 						</span>
 					)}

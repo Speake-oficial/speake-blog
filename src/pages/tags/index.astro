@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import TagBadge from '../../components/TagBadge.astro';
 import { AUDIO_TAGS } from '../../content.config';
+import { getTagLabel } from '../../lib/tagLabels';
 
 const allPosts = await getCollection('posts', ({ data }) => !data.draft);
 
@@ -18,15 +18,26 @@ const tagsWithCount = AUDIO_TAGS.filter((tag) => tagCounts.has(tag))
 	.sort((a, b) => b.count - a.count);
 ---
 
-<BaseLayout title="Tags" description="Todas as tags do blog e quantidade de posts em cada uma.">
-	<Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Tags' }]} />
+<BaseLayout title="Temas" description="Todos os temas do blog e quantidade de posts em cada um.">
+	<Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Temas' }]} />
 
-	<h1 class="font-serif-editorial text-3xl mb-6">Tags</h1>
+	<h1 class="font-display font-semibold text-3xl sm:text-4xl mb-3 rise-in">Temas</h1>
+	<p class="text-ink-soft leading-relaxed mb-8 max-w-xl rise-in">
+		Todo o conteúdo do blog, organizado por assunto — de captação a masterização.
+	</p>
 
-	<ul class="flex flex-wrap gap-2">
+	<ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 rise-in rise-in--2">
 		{tagsWithCount.map(({ tag, count }) => (
 			<li>
-				<TagBadge tag={tag} count={count} />
+				<a
+					href={`/tags/${tag}/`}
+					class="glass card-hover relative block rounded-[1.75rem] p-6 h-full"
+				>
+					<h2 class="font-display font-semibold text-lg leading-snug">{getTagLabel(tag)}</h2>
+					<p class="font-mono-panel text-xs text-ink-faint mt-2">
+						{count} {count === 1 ? 'artigo' : 'artigos'}
+					</p>
+				</a>
 			</li>
 		))}
 	</ul>

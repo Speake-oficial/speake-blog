@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import SpeakeBanner from '../components/SpeakeBanner.astro';
+import logoRoxo from '../assets/logo-speake-roxo.svg';
+import logoBranco from '../assets/logo-speake-branco.svg';
 
 interface Props {
 	title: string;
@@ -69,13 +71,28 @@ const ogImageAlt = imageAlt ?? (usingDefaultImage ? `${siteName} — podcasting,
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<meta name="theme-color" content="#6711D5" />
+		<meta name="theme-color" content="#6d28d9" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Tipografia do design system: Clash Display (títulos) + Satoshi (corpo) via
+		     Fontshare, JetBrains Mono (metadados) via Google Fonts. -->
+		<link rel="preconnect" href="https://api.fontshare.com" />
+		<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
 
 		<title>{fullTitle}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+		<link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
 
 		<!-- Open Graph -->
 		<meta property="og:type" content={type} />
@@ -108,29 +125,106 @@ const ogImageAlt = imageAlt ?? (usingDefaultImage ? `${siteName} — podcasting,
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 	</head>
 	<body class="min-h-screen flex flex-col">
+		<!-- barra de progresso de leitura -->
+		<div class="progress-top" aria-hidden="true"><div class="progress-top__fill" id="readbar"></div></div>
+
+		<!-- o céu da Speake: aurora fixa atrás de todo o conteúdo -->
+		<div class="aurora grain" aria-hidden="true">
+			<div class="aurora__base"></div>
+			<div class="aurora__blob aurora__blob--1"></div>
+			<div class="aurora__blob aurora__blob--2"></div>
+			<div class="aurora__blob aurora__blob--3"></div>
+			<div class="aurora__blob aurora__blob--4"></div>
+		</div>
+
 		<SpeakeBanner />
-		<header class="border-b border-studio-border bg-studio-surface">
-			<div class="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
-				<a href="/" class="font-mono-panel text-studio-amber text-lg tracking-tight hover:text-studio-mint transition-colors duration-150">
-					speake<span class="text-studio-text-muted">.blog</span>
+
+		<!-- nav: pílula de vidro flutuante, nunca barra colada na borda -->
+		<header class="sticky top-3 z-50 px-3 sm:px-4 mt-3">
+			<nav
+				aria-label="Navegação principal"
+				class="glass rounded-full max-w-4xl mx-auto flex items-center justify-between gap-3 pl-4 pr-2 py-2"
+			>
+				<a href="/" class="flex items-center gap-2 shrink-0" aria-label="Speake Blog — início">
+					<img src={logoRoxo.src} alt="" aria-hidden="true" class="h-6 w-auto block dark-hide" />
+					<img src={logoBranco.src} alt="" aria-hidden="true" class="h-6 w-auto hidden dark-show" />
+					<span class="font-display font-semibold tracking-tight text-base leading-none mt-0.5">blog</span>
 				</a>
-				<div class="flex items-center gap-4">
-					<nav aria-label="Navegação principal" class="font-mono-panel text-sm">
-						<a href="/tags" class="text-studio-text-muted hover:text-studio-amber transition-colors duration-150">tags</a>
-					</nav>
+				<div class="flex items-center gap-1.5 sm:gap-2">
+					<a
+						href="/tags"
+						class="text-sm font-semibold text-ink-soft hover:text-brand-600 transition-colors duration-150 px-3 py-1.5 rounded-full"
+					>
+						Temas
+					</a>
 					<ThemeToggle />
+					<a href="https://speake.com.br" target="_blank" rel="noopener" class="btn btn--primary btn--sm hidden sm:inline-flex">
+						Conheça a Speake
+					</a>
 				</div>
-			</div>
+			</nav>
 		</header>
 
-		<main class="flex-1 max-w-3xl mx-auto px-4 py-10 w-full">
+		<main class="flex-1 w-full max-w-4xl mx-auto px-4 pt-10 pb-16">
 			<slot />
 		</main>
 
-		<footer class="border-t border-studio-border bg-studio-surface mt-auto">
-			<div class="max-w-3xl mx-auto px-4 py-6 font-mono-panel text-xs text-studio-text-muted">
-				<p>© {new Date().getFullYear()} speake.blog — conteúdo sobre áudio, podcasting e produção sonora.</p>
+		<footer class="px-3 sm:px-4 pb-4 mt-auto">
+			<div class="glass-deep rounded-[1.75rem] max-w-4xl mx-auto px-6 py-8 sm:px-8">
+				<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
+					<div class="max-w-md">
+						<a href="https://speake.com.br" target="_blank" rel="noopener" aria-label="Speake — site oficial">
+							<img src={logoBranco.src} alt="Speake" class="h-7 w-auto" />
+						</a>
+						<p class="text-sm mt-3 text-white/75 leading-relaxed">
+							Conteúdo técnico sobre áudio, podcasting e produção sonora — escrito por quem
+							grava, mixa e publica na
+							<a href="https://speake.com.br" target="_blank" rel="noopener" class="text-white font-semibold underline underline-offset-2 decoration-white/40 hover:decoration-white">Speake</a>,
+							estúdio de produção de áudio, podcast e narração profissional.
+						</p>
+					</div>
+					<nav aria-label="Links do rodapé" class="flex flex-col gap-2 text-sm shrink-0">
+						<span class="t-micro text-white/50">Navegue</span>
+						<a href="/" class="text-white/80 hover:text-white transition-colors duration-150">Início</a>
+						<a href="/tags" class="text-white/80 hover:text-white transition-colors duration-150">Temas</a>
+						<a href="/rss.xml" class="text-white/80 hover:text-white transition-colors duration-150">Feed RSS</a>
+						<a href="https://speake.com.br" target="_blank" rel="noopener" class="text-white/80 hover:text-white transition-colors duration-150">speake.com.br</a>
+					</nav>
+				</div>
+				<div class="border-t border-white/15 mt-6 pt-4 flex flex-wrap items-center justify-between gap-2">
+					<p class="font-mono-panel text-xs text-white/55">
+						© {new Date().getFullYear()} Speake — blog.speake.com.br
+					</p>
+					<div class="flex items-end gap-1 h-4 animate-equalize" aria-hidden="true">
+						<span class="w-1 h-full rounded-full bg-white/60"></span>
+						<span class="w-1 h-3/4 rounded-full bg-white/45"></span>
+						<span class="w-1 h-full rounded-full bg-white/60"></span>
+						<span class="w-1 h-1/2 rounded-full bg-white/45"></span>
+					</div>
+				</div>
 			</div>
 		</footer>
+
+		<style>
+			/* troca de logo por tema (violeta no claro, branco no escuro) */
+			:global([data-theme="dark"]) .dark-hide {
+				display: none;
+			}
+			:global([data-theme="dark"]) .dark-show {
+				display: block;
+			}
+		</style>
+
+		<script>
+			// Barra de progresso de leitura — largura acompanha o scroll da página.
+			const bar = document.getElementById('readbar');
+			function onScroll() {
+				if (!bar) return;
+				const max = document.documentElement.scrollHeight - window.innerHeight;
+				bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+			}
+			onScroll();
+			window.addEventListener('scroll', onScroll, { passive: true });
+		</script>
 	</body>
 </html>

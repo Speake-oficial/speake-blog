@@ -24,18 +24,22 @@ const { posts } = Astro.props;
 const label = tag ? getTagLabel(tag) : tag;
 ---
 
-<BaseLayout title={`Tag: ${label}`} description={`Posts marcados com a tag ${label}.`}>
+<BaseLayout title={`Tema: ${label}`} description={`Posts sobre ${label}: guias práticos escritos pela equipe da Speake.`}>
 	<Breadcrumbs
 		items={[
 			{ label: 'Início', href: '/' },
-			{ label: 'Tags', href: '/tags' },
+			{ label: 'Temas', href: '/tags' },
 			{ label: label ?? '' },
 		]}
 	/>
 
-	<h1 class="font-serif-editorial text-3xl mb-6 capitalize">{label}</h1>
+	<span class="badge-soft rise-in">Tema</span>
+	<h1 class="font-display font-semibold text-3xl sm:text-4xl mt-3 mb-2 rise-in">{label}</h1>
+	<p class="font-mono-panel text-xs text-ink-faint mb-8 rise-in">
+		{posts.length} {posts.length === 1 ? 'artigo' : 'artigos'}
+	</p>
 
-	<div class="grid gap-4">
+	<div class="grid gap-5 sm:grid-cols-2 rise-in rise-in--2">
 		{posts.map((post: (typeof posts)[number]) => <PostCard post={post} />)}
 	</div>
 </BaseLayout>

@@ -24,6 +24,9 @@ const formattedUpdatedDate = updatedDate ? formatPostDate(updatedDate) : undefin
 
 const author = post.data.author;
 
+const wordCount = post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 200));
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
 
 // Mesma troca SVG→PNG feita no BaseLayout: o Google exige raster (jpg/png/webp)
@@ -35,6 +38,7 @@ const ogImagePath = rawImage?.endsWith('.svg')
 
 const publisher = {
 	'@type': 'Organization',
+	'@id': 'https://speake.com.br/#organization',
 	name: 'Speake',
 	url: 'https://speake.com.br',
 	logo: {
@@ -73,7 +77,8 @@ const jsonLdPost = {
 	image: new URL(ogImagePath ?? '/og-default.png', Astro.site ?? Astro.url.origin).toString(),
 	keywords: post.data.tags.map(getTagLabel).join(', '),
 	...(primaryTag ? { articleSection: getTagLabel(primaryTag) } : {}),
-	wordCount: post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0,
+	wordCount,
+	timeRequired: `PT${readingMinutes}M`,
 	author: authorNode,
 	publisher,
 };
@@ -116,43 +121,81 @@ const jsonLd = {
 	<Breadcrumbs
 		items={[
 			{ label: 'Início', href: '/' },
-			{ label: 'Tags', href: '/tags' },
+			{ label: 'Temas', href: '/tags' },
 			...(primaryTag ? [{ label: getTagLabel(primaryTag), href: `/tags/${primaryTag}/` }] : []),
 			{ label: post.data.title },
 		]}
 	/>
 
-	<article>
-		<header class="mb-8">
-			<h1 class="font-serif-editorial text-3xl mb-3 leading-tight">{post.data.title}</h1>
-			<p class="font-mono-panel text-sm text-studio-text-muted flex flex-wrap items-center gap-x-2 gap-y-1">
-				<span>
-					Por {author?.url ? <a href={author.url} rel="author" class="text-studio-amber underline underline-offset-2">{author.name}</a> : (author?.name ?? 'Speake')}
-				</span>
-				<span aria-hidden="true">·</span>
-				<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
-				{updatedDate && (
-					<>
-						<span aria-hidden="true">·</span>
-						<span>
-							atualizado em <time datetime={updatedDate.toISOString()}>{formattedUpdatedDate}</time>
-						</span>
-					</>
+	<article class="glass rounded-[1.75rem] overflow-hidden rise-in">
+		{post.data.image && (
+			<img
+				src={post.data.image.src.src}
+				alt={post.data.image.alt}
+				class="w-full aspect-[1200/630] object-cover"
+			/>
+		)}
+
+		<div class="px-5 py-8 sm:px-10 sm:py-10">
+			<header class="mb-8 max-w-[70ch] mx-auto">
+				{primaryTag && (
+					<a href={`/tags/${primaryTag}/`} class="chip mb-4">{getTagLabel(primaryTag)}</a>
 				)}
-			</p>
-		</header>
+				<h1 class="font-display font-semibold text-3xl sm:text-4xl leading-[1.12] mb-4">
+					{post.data.title}
+				</h1>
+				<p class="text-ink-soft leading-relaxed text-base sm:text-lg mb-5">
+					{post.data.description}
+				</p>
+				<p class="font-mono-panel text-xs text-ink-faint flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-b border-brand-200/50 py-3">
+					<span>
+						Por {author?.url ? <a href={author.url} rel="author" class="text-brand-600 font-semibold underline underline-offset-2">{author.name}</a> : (author?.name ?? 'Speake')}
+					</span>
+					<span aria-hidden="true">·</span>
+					<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+					<span aria-hidden="true">·</span>
+					<span>{readingMinutes} min de leitura</span>
+					{updatedDate && (
+						<>
+							<span aria-hidden="true">·</span>
+							<span>
+								atualizado em <time datetime={updatedDate.toISOString()}>{formattedUpdatedDate}</time>
+							</span>
+						</>
+					)}
+				</p>
+			</header>
 
-		<div class="prose-content font-serif-editorial leading-relaxed text-studio-text [&_h2]:font-serif-editorial [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_a]:text-studio-amber [&_a]:underline [&_a]:underline-offset-2 [&_h3]:font-serif-editorial [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_li]:mb-1.5 [&_strong]:font-semibold [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:my-6 [&_table]:text-sm [&_table]:border-collapse [&_th]:border [&_th]:border-studio-border [&_th]:bg-studio-surface-raised [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-mono-panel [&_th]:text-xs [&_th]:uppercase [&_th]:tracking-wide [&_td]:border [&_td]:border-studio-border [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_code]:font-mono-panel [&_code]:text-sm [&_code]:bg-studio-surface-raised [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded-sm">
-			<Content />
-		</div>
-
-		<footer class="mt-10 pt-6 border-t border-studio-border">
-			<p class="font-mono-panel text-xs uppercase tracking-wide text-studio-text-muted mb-3">
-				Tags relacionadas
-			</p>
-			<div class="flex flex-wrap gap-2">
-				{post.data.tags.map((tag) => <TagBadge tag={tag} />)}
+			<div class="prose-speake max-w-[70ch] mx-auto">
+				<Content />
 			</div>
-		</footer>
+
+			<footer class="max-w-[70ch] mx-auto mt-10">
+				<p class="t-micro text-ink-faint mb-3">Temas relacionados</p>
+				<div class="flex flex-wrap gap-2">
+					{post.data.tags.map((tag) => <TagBadge tag={tag} />)}
+				</div>
+			</footer>
+		</div>
 	</article>
+
+	<!-- CTA institucional — único glass-deep da tela, como manda o design system -->
+	<aside class="glass-deep rounded-[1.75rem] mt-6 px-6 py-8 sm:px-10 text-center rise-in rise-in--2" aria-label="Conheça a Speake">
+		<h2 class="font-display font-semibold text-2xl text-white">
+			Precisa de áudio profissional?
+		</h2>
+		<p class="text-white/75 text-sm sm:text-base leading-relaxed mt-2 max-w-md mx-auto">
+			A Speake produz podcast, narração e áudio publicitário de ponta a ponta —
+			gravação, edição, mixagem e masterização.
+		</p>
+		<a
+			href="https://speake.com.br"
+			target="_blank"
+			rel="noopener"
+			class="btn btn--primary mt-5"
+		>
+			Conhecer a Speake
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+		</a>
+	</aside>
 </BaseLayout>

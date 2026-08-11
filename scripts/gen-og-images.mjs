@@ -8,7 +8,7 @@ import { join, basename, extname } from 'node:path';
 
 const SRC = 'src/assets/posts';
 const OUT = 'public/og';
-const BG = '#1d1916'; // studio-surface — mesmo fundo das ilustrações
+const BG = '#2e1065'; // brand-950 (aurora) — mesmo fundo das ilustrações
 
 mkdirSync(OUT, { recursive: true });
 
