@@ -34,4 +34,4 @@ Três medições resolvem 90% das reprovações:
 
 Para quem narra ocasionalmente, calibrar isso manualmente capítulo por capítulo é viável. Para projetos com volume — uma coleção de audiolivros, um catálogo inteiro — vale a pena ter uma etapa de controle de qualidade técnico separada da masterização criativa, justamente para pegar inconsistências entre capítulos antes do envio. A Speake presta esse tipo de serviço de masterização e adequação de especificações para entrega em plataformas de áudio-livro, revisando RMS, pico e ruído de fundo capítulo a capítulo antes da submissão.
 
-Quer evitar reprovação técnica no seu próximo áudio-livro? [Conheça a Speake](https://speake.com.br).
+Quer evitar reprovação técnica no seu próximo áudio-livro? [entrega de audiolivro com a Speake](https://speake.com.br).

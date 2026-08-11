@@ -38,4 +38,4 @@ Antes de abrir um plugin multibanda, uma pergunta: o problema é dinâmico e esp
 
 Nas sessões de masterização da Speake, multibanda entra na cadeia quando o material apresenta exatamente esse padrão: problema dinâmico, localizado em frequência, sem outra saída. Para projetos produzidos do zero com a Speake, o desequilíbrio é resolvido na mixagem — onde a correção é mais limpa e deixa a master fazer seu trabalho sem compensar erro de etapa anterior.
 
-Quer masterização que resolve o problema certo com a ferramenta certa? [Conheça a Speake](https://speake.com.br).
+Quer masterização que resolve o problema certo com a ferramenta certa? [masterização com a Speake](https://speake.com.br).

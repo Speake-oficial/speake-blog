@@ -44,4 +44,4 @@ Reverb se acumula na faixa baixa e alta. Na faixa baixa, reverb cria lama — su
 
 A Speake usa essa abordagem de reverb filtrado e em paralelo como padrão em mixagens de música e podcast, porque é o que permite profundidade sem sacrificar definição — o mix soa grande e ao mesmo tempo claro.
 
-Quer esse cuidado na sua produção? [Conheça a Speake](https://speake.com.br).
+Quer esse cuidado na sua produção? [conte com a Speake](https://speake.com.br).

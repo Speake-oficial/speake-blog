@@ -49,4 +49,4 @@ Revise o template a cada três ou quatro meses. Quando você muda de plugin favo
 
 Na Speake, sessões de narração e podcast partem de um template estruturado por tipo de projeto — o que garante que o processamento correto está disponível desde o primeiro take, sem reconfiguração a cada entrega.
 
-Quer ajuda profissional com sua produção de áudio? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com sua produção de áudio? [produção de áudio na Speake](https://speake.com.br).

@@ -44,4 +44,4 @@ Widening excessivo. Quem descobre o processamento M-S pela primeira vez tende a 
 
 A checagem é simples: se você fez uma mudança no Side e o mono ficou pior, você foi longe demais. Ouça em mono antes e depois de qualquer manipulação de largura. É o teste mais rápido e honesto sobre se o M-S que você aplicou ajudou ou criou problema novo.
 
-Quer masterização com esse cuidado de controle stereo e compatibilidade mono? [Conheça a Speake](https://speake.com.br).
+Quer masterização com esse cuidado de controle stereo e compatibilidade mono? [masterização com controle stereo na Speake](https://speake.com.br).

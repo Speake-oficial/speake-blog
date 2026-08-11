@@ -38,4 +38,4 @@ A regra prática: tente cortar primeiro. Se o mix melhorar com o corte, o boost 
 
 Na Speake, o processo de mixagem parte sempre do EQ subtrativo como primeiro passo em cada faixa — o que economiza processamento, preserva headroom e resulta em mixes que respiram melhor e sobrevivem à masterização sem surpresas.
 
-Quer esse cuidado na sua produção? [Conheça a Speake](https://speake.com.br).
+Quer esse cuidado na sua produção? [produção musical na Speake](https://speake.com.br).

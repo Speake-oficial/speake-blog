@@ -48,4 +48,4 @@ Uma aplicação menos óbvia: automação de sustain em seções de clímax. Aum
 
 A Speake usa transient shaping como etapa padrão em percussão, guitarras e baixo nas mixagens de produção musical — é um dos ajustes que entrega punch e definição sem sacrificar headroom para a masterização.
 
-Quer esse nível de controle na sua produção? [Conheça a Speake](https://speake.com.br).
+Quer esse nível de controle na sua produção? [produção de áudio profissional na Speake](https://speake.com.br).

@@ -35,4 +35,4 @@ Corte e crossfade resolvem a transição mecânica, mas não corrigem diferença
 
 Para quem narra capítulos longos e acumula vários pickups por sessão, vale revisar a continuidade do capítulo inteiro de uma vez, ouvindo do início ao fim, em vez de validar cada pickup isoladamente — é assim que se pega uma emenda que parecia perfeita isolada, mas destoa no contexto. A Speake faz esse tipo de edição e revisão de continuidade para projetos de áudio-livro, capítulo a capítulo, antes da masterização final.
 
-Tem um capítulo cheio de pickups para encaixar sem deixar marca? [Conheça a Speake](https://speake.com.br).
+Tem um capítulo cheio de pickups para encaixar sem deixar marca? [edição de audiolivro na Speake](https://speake.com.br).

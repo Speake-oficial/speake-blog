@@ -44,4 +44,4 @@ Você não precisa de um analisador profissional para isso. O Youlean Loudness M
 
 Se você distribui o mesmo conteúdo em múltiplas plataformas com especificações diferentes — podcast no Spotify, versão em áudio-livro na Audible, trecho em vídeo no YouTube — manter masters separados e calibrados certo para cada uma vira trabalho de rotina que rouba tempo de produção de conteúdo. A Speake faz esse processo de masterização e adequação de loudness por plataforma como parte do serviço de pós-produção de áudio, evitando que o episódio saia errado em algum canal.
 
-Quer ajuda profissional com isso? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com isso? [masterização de podcast na Speake](https://speake.com.br).

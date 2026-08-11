@@ -39,4 +39,4 @@ Mesmo com o padrão polar certo, posicionamento errado anula a vantagem. Falar f
 
 Quando o projeto exige decisão técnica sobre captação — qual padrão, qual posicionamento, qual microfone para qual ambiente — a Speake ajuda a montar esse setup do zero, do equipamento ao tratamento acústico do espaço.
 
-Quer ajuda profissional com isso? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com isso? [fale com os engenheiros da Speake](https://speake.com.br).

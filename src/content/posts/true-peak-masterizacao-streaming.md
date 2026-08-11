@@ -60,4 +60,4 @@ Se a master excede o alvo de loudness, os streamings vão normalizar o volume pa
 
 Na Speake, toda masterização para streaming passa por verificação de true peak e loudness integrado nas especificações de cada plataforma — porque uma master que clipa após conversão de codec não é uma master finalizada, independentemente de como ela soa no DAW antes da entrega.
 
-Quer uma masterização pronta para todas as plataformas? [Conheça a Speake](https://speake.com.br).
+Quer uma masterização pronta para todas as plataformas? [masterização para streaming na Speake](https://speake.com.br).

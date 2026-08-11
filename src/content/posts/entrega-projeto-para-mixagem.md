@@ -47,4 +47,4 @@ Não mande o arquivo do projeto do seu DAW como substituto dos stems. Projetos d
 
 Na Speake, o processo começa com um checklist de entrega antes de abrir qualquer arquivo — justamente para garantir que o tempo de sessão vai para decisões criativas, não para resolver problemas de exportação que deveriam ter sido resolvidos antes. Se você tem dúvidas sobre como preparar sua entrega, é exatamente esse tipo de orientação que faz parte do serviço.
 
-Pronto para enviar seu projeto para mixagem? [Conheça a Speake](https://speake.com.br).
+Pronto para enviar seu projeto para mixagem? [envie seu projeto para a Speake](https://speake.com.br).

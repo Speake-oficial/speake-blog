@@ -52,4 +52,4 @@ Um detalhe técnico que afeta o resultado final: automação de volume que cria 
 
 Na Speake, automação de volume faz parte do fluxo padrão de mixagem — antes de qualquer decisão de masterização, o mix precisa respirar corretamente por conta própria.
 
-Precisa de um mix que soa coeso do início ao fim? [Conheça a Speake](https://speake.com.br).
+Precisa de um mix que soa coeso do início ao fim? [mixagem de áudio na Speake](https://speake.com.br).

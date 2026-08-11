@@ -55,4 +55,4 @@ Definir posições estéreo cedo — mesmo que como rascunho — muda o que voc�
 
 Nas sessões de mixagem da Speake, posicionamento estéreo é mapeado desde o início do trabalho, não como ajuste final. Saber onde cada elemento vai sentar antes de começar o processamento muda as decisões de EQ e compressão ao longo do caminho — e o resultado é um mix com separação real, não separação fabricada na masterização.
 
-Quer um mix com imagem estéreo bem construída do começo ao fim? [Conheça a Speake](https://speake.com.br).
+Quer um mix com imagem estéreo bem construída do começo ao fim? [mixagem na Speake](https://speake.com.br).

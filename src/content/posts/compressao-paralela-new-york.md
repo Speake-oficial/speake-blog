@@ -41,4 +41,4 @@ O segundo erro é misturar o canal paralelo alto demais. A sensação certa é q
 
 Na Speake, compressão paralela faz parte do processo padrão de mixagem para produção musical — usada em combinação com EQ, saturação e automação para entregar um som ao mesmo tempo denso e orgânico.
 
-Quer esse cuidado na sua produção? [Conheça a Speake](https://speake.com.br).
+Quer esse cuidado na sua produção? [produção musical com a Speake](https://speake.com.br).

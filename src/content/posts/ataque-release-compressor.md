@@ -45,4 +45,4 @@ Se você ajustou threshold e ratio e o compressor parece não estar fazendo nada
 
 Na Speake, o ajuste de compressão é feito caso a caso por faixa, levando em conta o material, o gênero e o destino da mixagem — não há preset que funcione para todo tipo de áudio.
 
-Quer uma mixagem com controle de dinâmica feito com precisão? [Conheça a Speake](https://speake.com.br).
+Quer uma mixagem com controle de dinâmica feito com precisão? [mixagem profissional na Speake](https://speake.com.br).

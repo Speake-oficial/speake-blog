@@ -41,4 +41,4 @@ Quando a sibilância é extremamente severa — locutor com dicção muito sibil
 
 Na Speake, o controle de sibilância começa na captação — escolha de microfone, posicionamento e acústica do ambiente — e a etapa de mixagem com de-esser é o ajuste fino, não o resgate de uma gravação problemática.
 
-Quer voz limpa desde a origem? [Conheça a Speake](https://speake.com.br).
+Quer voz limpa desde a origem? [tratamento de voz profissional na Speake](https://speake.com.br).

@@ -43,4 +43,4 @@ Para audiolivros longos — onde o roteiro pode ter centenas de páginas — o m
 
 Na Speake, os projetos de narração e audiolivro incluem revisão do roteiro antes da gravação, justamente para garantir que o narrador entre na cabine com o material preparado — e que a sessão seja usada para gravar, não para resolver dúvidas que podiam ter sido respondidas antes.
 
-Quer produzir sua narração com esse nível de preparação? [Conheça a Speake](https://speake.com.br).
+Quer produzir sua narração com esse nível de preparação? [narração profissional na Speake](https://speake.com.br).

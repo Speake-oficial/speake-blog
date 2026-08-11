@@ -46,4 +46,4 @@ Um buffer de 64 amostras numa interface com driver ASIO bem otimizado é complet
 
 Parte do cuidado técnico que a Speake aplica na preparação de sessões remotas passa exatamente por isso: garantir que a cadeia de captura esteja calibrada antes de gravar, não depois de perceber o problema na edição.
 
-Quer uma sessão de gravação configurada do início? [Conheça a Speake](https://speake.com.br).
+Quer uma sessão de gravação configurada do início? [comece com a Speake](https://speake.com.br).

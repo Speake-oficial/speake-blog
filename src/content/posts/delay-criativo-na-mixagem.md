@@ -44,4 +44,4 @@ Quando um vocal soa fechado e seco mas você quer presença sem parecer que est�
 
 Na Speake, delay é parte do kit padrão de mixagem — mesmo em materiais aparentemente simples, como locução corporativa ou podcast solo, o uso cuidadoso de atraso faz a diferença entre uma voz que "tá lá" e uma voz que prende a atenção.
 
-Quer um mix que usa essas técnicas de forma consciente? [Conheça a Speake](https://speake.com.br).
+Quer um mix que usa essas técnicas de forma consciente? [mixagem profissional com a Speake](https://speake.com.br).

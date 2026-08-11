@@ -24,4 +24,4 @@ Colocar vinheta de abertura longa, agradecimentos e institucional **antes** do g
 
 Inverter a ordem (gancho primeiro, institucional depois ou no meio) é a mudança de estrutura com maior retorno sobre retenção, sem precisar mudar o conteúdo em si.
 
-Depois de acertar a estrutura, falta o canal certo para publicar e acompanhar a retenção de cada episódio. Quer uma estação própria para o seu podcast? [Conheça a Speake](https://speake.com.br).
+Depois de acertar a estrutura, falta o canal certo para publicar e acompanhar a retenção de cada episódio. Quer uma estação própria para o seu podcast? [estação de podcast da Speake](https://speake.com.br).

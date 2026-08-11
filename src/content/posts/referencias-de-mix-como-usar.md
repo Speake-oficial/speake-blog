@@ -52,4 +52,4 @@ No começo do mix — antes de qualquer processamento — ouça a referência pa
 
 Na Speake, o uso de referências faz parte do fluxo padrão de mixagem e masterização — tanto para calibrar decisões técnicas quanto para alinhar expectativas com o cliente sobre o caráter sonoro do projeto.
 
-Quer um mix calibrado com esse critério? [Conheça a Speake](https://speake.com.br).
+Quer um mix calibrado com esse critério? [mixagem e masterização na Speake](https://speake.com.br).

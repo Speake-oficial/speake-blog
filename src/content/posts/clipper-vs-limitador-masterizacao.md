@@ -44,4 +44,4 @@ A decisão depende do material. Conteúdo de voz raramente precisa de clipper. M
 
 Na Speake, a escolha entre clipper, limitador ou a combinação dos dois faz parte do processo de masterização caso a caso, avaliando o conteúdo espectral e o target de loudness de cada plataforma de entrega.
 
-Quer uma masterização calibrada para o seu material? [Conheça a Speake](https://speake.com.br).
+Quer uma masterização calibrada para o seu material? [masterização profissional na Speake](https://speake.com.br).

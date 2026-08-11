@@ -42,4 +42,4 @@ O fluxo correto: desligue qualquer dither automático do DAW, deixe o processame
 
 A Speake trabalha o processo de entrega final de cada projeto — a decisão sobre profundidade de bits, dithering e loudness target — como parte da masterização, não como um passo técnico que o cliente resolve depois. Esses detalhes importam no resultado final.
 
-Quer uma masterização onde nenhum detalhe da entrega fica ao acaso? [Conheça a Speake](https://speake.com.br).
+Quer uma masterização onde nenhum detalhe da entrega fica ao acaso? [masterização de áudio na Speake](https://speake.com.br).

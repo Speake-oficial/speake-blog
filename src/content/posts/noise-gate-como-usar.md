@@ -37,4 +37,4 @@ Gate não resolve ruído severo. Se o ruído está dentro de 6 a 10 dB do sinal 
 
 A Speake inclui revisão de processamento dinâmico — incluindo gate e de-essing — nos serviços de mixagem e masterização de voz, justamente para garantir que o isolamento de ruído não comprometa a naturalidade da locução.
 
-Quer ajuda profissional com o processamento de áudio do seu projeto? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com o processamento de áudio do seu projeto? [processamento de áudio na Speake](https://speake.com.br).

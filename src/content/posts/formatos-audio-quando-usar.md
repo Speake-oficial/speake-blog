@@ -52,4 +52,4 @@ Um WAV gravado em 16 bit tem menos headroom e mais ruído de quantização que u
 
 ---
 
-Na Speake, todos os projetos de voz, narração e produção são recebidos e entregues em formatos especificados pelo engenheiro antes do início do projeto — o que evita retrabalho por incompatibilidade de formato ou conversões desnecessárias que degradam qualidade. Quer saber qual formato preparar para o seu projeto? [Conheça a Speake](https://speake.com.br).
+Na Speake, todos os projetos de voz, narração e produção são recebidos e entregues em formatos especificados pelo engenheiro antes do início do projeto — o que evita retrabalho por incompatibilidade de formato ou conversões desnecessárias que degradam qualidade. Quer saber qual formato preparar para o seu projeto? [fale com a Speake](https://speake.com.br).

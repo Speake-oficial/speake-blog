@@ -31,4 +31,4 @@ Peça para quem vai ser gravado fazer a parte mais intensa do material — o gri
 
 Gravações bem calibradas na entrada economizam horas de mixagem depois, porque sobra menos para "salvar" e mais espaço para decisões criativas. É um dos motivos pelos quais a Speake trata a etapa de captação com tanto cuidado quanto a mixagem em si — gravação malfeita limita o resultado final, não importa quão boa seja a mesa depois.
 
-Quer uma gravação calibrada desde o primeiro take? [Conheça a Speake](https://speake.com.br).
+Quer uma gravação calibrada desde o primeiro take? [gravação profissional na Speake](https://speake.com.br).

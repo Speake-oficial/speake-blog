@@ -43,4 +43,4 @@ Existem situações em que reduzir ruído de forma mais agressiva, mesmo com alg
 
 Na Speake, a limpeza de ruído de fundo é parte do fluxo de pós-produção de narração e podcast: o objetivo é sempre resolver o máximo possível na escolha de equipamento e ambiente de gravação, e usar redução de ruído como ajuste fino, não como muleta para uma gravação mal capturada.
 
-Quer ajuda profissional com isso? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com isso? [tratamento de voz na Speake](https://speake.com.br).

@@ -24,4 +24,4 @@ Cortar toda respiração da gravação deixa a narração com um silêncio antin
 
 Esses três ajustes — planejamento da respiração, posicionamento de microfone e edição que reduz em vez de remover — resolvem a maior parte dos problemas de respiração em narração longa.
 
-Se a narração é para um áudio-livro ou podcast que você quer publicar com qualidade profissional, vale conhecer um espaço pensado pra isso. [Conheça a Speake](https://speake.com.br).
+Se a narração é para um áudio-livro ou podcast que você quer publicar com qualidade profissional, vale conhecer um espaço pensado pra isso: [narração profissional para audiolivro na Speake](https://speake.com.br).

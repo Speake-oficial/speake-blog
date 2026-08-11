@@ -40,4 +40,4 @@ Para sessões de audiolivro acima de duas horas, o aquecimento inicial não é s
 
 Para narradores que trabalham com audiolivros de longa duração, a Speake cuida de toda a pós-produção da sessão — edição, comping, masterização nos padrões ACX e Findaway — para que o esforço fique concentrado na performance, não no processo técnico.
 
-Quer ajuda profissional com produção de audiolivros? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com produção de audiolivros? [produção de audiolivros na Speake](https://speake.com.br).

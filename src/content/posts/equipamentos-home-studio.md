@@ -22,4 +22,4 @@ A armadilha mais comum de quem monta um home studio é comprar equipamento de es
 
 Pré-amplificadores de válvula, microfones de fita, racks de outboard analógico — tudo isso resolve problemas que só aparecem depois que o básico (acústica + monitoramento confiável) já está resolvido. Comprar isso primeiro é gastar dinheiro tentando resolver um problema que ainda não existe.
 
-Com o home studio montado, o próximo gargalo costuma ser onde publicar o que você grava. Quer uma estação própria para distribuir seu conteúdo? [Conheça a Speake](https://speake.com.br).
+Com o home studio montado, o próximo gargalo costuma ser onde publicar o que você grava. Quer uma estação própria para distribuir seu conteúdo? [estação própria na Speake](https://speake.com.br).

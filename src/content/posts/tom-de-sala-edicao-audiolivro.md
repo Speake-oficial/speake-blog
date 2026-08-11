@@ -39,4 +39,4 @@ Se você perceber o problema na edição e não tiver o room tone gravado, vai p
 
 São dois minutos que custam nada e economizam horas. Na Speake, o room tone é capturado como parte do protocolo padrão de toda produção de audiolivro, para que a edição final nunca traia os cortes.
 
-Vai produzir um audiolivro? [Conheça a Speake](https://speake.com.br).
+Vai produzir um audiolivro? [produza com a Speake](https://speake.com.br).

@@ -43,4 +43,4 @@ A DI é um dos acessórios mais baratos com impacto real na qualidade do sinal g
 
 Na Speake, o setup de gravação para projetos de produção musical inclui DI ativas para instrumentos de corda e passivas para teclados e baixo — escolha feita instrumento a instrumento, não como padrão único.
 
-Quer ajuda profissional com gravação e produção no seu projeto? [Conheça a Speake](https://speake.com.br).
+Quer ajuda profissional com gravação e produção no seu projeto? [gravação e produção na Speake](https://speake.com.br).

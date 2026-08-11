@@ -44,4 +44,4 @@ O processo mais direto: grave 30 segundos na posição padrão (15 cm, 0° de â
 
 Na Speake, o ajuste de posicionamento faz parte do setup de gravação de narração e voz, especialmente em sessões de audiolivro onde a consistência de timbre ao longo de horas de gravação é crítica. Um posicionamento bem calibrado no início poupa tempo de edição e entrega um sinal mais limpo desde o source.
 
-Quer que sua voz soe bem antes do processamento? [Conheça a Speake](https://speake.com.br).
+Quer que sua voz soe bem antes do processamento? [gravação de voz na Speake](https://speake.com.br).

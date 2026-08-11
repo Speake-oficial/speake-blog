@@ -53,4 +53,4 @@ Mantenha as faixas originais de cada take intactas no projeto, mesmo depois de m
 
 Na Speake, as sessões de produção vocal incluem o processo de comping como parte da entrega — o cliente recebe a faixa comp finalizada, com os takes originais arquivados, pronta para entrar na fase de mixagem sem necessidade de revisitar a gravação.
 
-Quer produzir vocais com esse nível de cuidado? [Conheça a Speake](https://speake.com.br).
+Quer produzir vocais com esse nível de cuidado? [produção vocal na Speake](https://speake.com.br).

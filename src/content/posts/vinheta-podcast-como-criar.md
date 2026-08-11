@@ -37,4 +37,4 @@ Ferramentas de IA e loops de royalty-free resolvem o mínimo, mas a maior parte 
 
 A Speake produz vinhetas personalizadas para podcasts — trilha composta sob medida, locução gravada e mixada, entregue em todos os formatos necessários para edição. O resultado é um conjunto sonoro exclusivo do programa, não uma combinação de templates.
 
-Quer uma vinheta criada do zero para o seu podcast? [Conheça a Speake](https://speake.com.br).
+Quer uma vinheta criada do zero para o seu podcast? [criação de vinhetas na Speake](https://speake.com.br).

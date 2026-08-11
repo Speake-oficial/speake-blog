@@ -52,4 +52,4 @@ Violões com captadores de sela (undersaddle piezo) ou microfones internos permi
 
 Esse approach é comum em gravações para trilha e produção musical onde o violão precisa de presença sem dominar o espectro. Em projetos de produção musical na Speake, a escolha entre microfone puro ou híbrido é parte do processo de setup antes de iniciar a gravação.
 
-Quer gravar seu violão com resultado profissional? [Conheça a Speake](https://speake.com.br).
+Quer gravar seu violão com resultado profissional? [gravação profissional com a Speake](https://speake.com.br).
