@@ -23,6 +23,13 @@ const primaryTag = post.data.tags[0];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
 
+// Mesma troca SVG→PNG feita no BaseLayout: o Google exige raster (jpg/png/webp)
+// nas imagens de Article para elegibilidade a rich results.
+const rawImage = post.data.image?.src.src;
+const ogImagePath = rawImage?.endsWith('.svg')
+	? `/og/${rawImage.split('/').pop()!.split('.')[0]}.png`
+	: rawImage;
+
 // JSON-LD BlogPosting (schema.org) — exigido pelo plano (step 3).
 // author/publisher são exigidos pelo Google para elegibilidade a rich results
 // de Article/BlogPosting (sem eles a propriedade fica incompleta para o crawler).
@@ -34,9 +41,7 @@ const jsonLd = {
 	datePublished: post.data.pubDate.toISOString(),
 	...(post.data.updatedDate ? { dateModified: post.data.updatedDate.toISOString() } : {}),
 	mainEntityOfPage: canonicalURL,
-	...(post.data.image
-		? { image: new URL(post.data.image.src.src, Astro.site ?? Astro.url.origin).toString() }
-		: {}),
+	image: new URL(ogImagePath ?? '/og-default.png', Astro.site ?? Astro.url.origin).toString(),
 	keywords: post.data.tags.join(', '),
 	author: {
 		'@type': 'Organization',
@@ -49,9 +54,9 @@ const jsonLd = {
 		url: 'https://speake.com.br',
 		logo: {
 			'@type': 'ImageObject',
-			// TODO: trocar por um PNG/JPG real (min. 112x112) quando houver um —
-			// Google aceita SVG no logo do publisher, mas um raster é mais seguro.
-			url: new URL('/og-default.svg', Astro.site ?? Astro.url.origin).toString(),
+			url: new URL('/icon-512.png', Astro.site ?? Astro.url.origin).toString(),
+			width: 512,
+			height: 512,
 		},
 	},
 };
@@ -62,6 +67,10 @@ const jsonLd = {
 	description={post.data.description}
 	type="article"
 	image={post.data.image?.src.src}
+	imageAlt={post.data.image?.alt}
+	publishedTime={post.data.pubDate}
+	modifiedTime={post.data.updatedDate}
+	tags={post.data.tags}
 	jsonLd={jsonLd}
 >
 	<Breadcrumbs
