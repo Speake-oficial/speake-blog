@@ -1,12 +1,13 @@
 ---
-// Astro island mínimo (vanilla JS, sem framework) para filtro client-side de posts
-// por título/tag. Segurança: o script só lê/esconde nós DOM já renderizados no
-// server (via toggle de classe), nunca insere HTML a partir do valor digitado —
-// não há innerHTML/outerHTML com string não sanitizada em nenhum ponto deste arquivo.
+// Busca client-side sobre o índice estático /search.json (o acervo inteiro,
+// não só a página atual — a listagem é paginada). O índice só é baixado no
+// primeiro caractere digitado; sem interação, custo zero.
+// Segurança: resultados são construídos exclusivamente com createElement/
+// textContent — nenhum innerHTML com dado do índice ou do input do usuário.
 ---
 
 <div class="mb-8">
-	<label for="post-search" class="sr-only">Buscar posts por título ou tag</label>
+	<label for="post-search" class="sr-only">Buscar posts por título ou categoria</label>
 	<div class="relative">
 		<svg
 			width="16"
@@ -23,43 +24,113 @@
 		<input
 			id="post-search"
 			type="search"
-			placeholder="Buscar por título ou tag…"
+			placeholder="Buscar por título ou categoria…"
 			autocomplete="off"
 			class="field !pl-11"
 		/>
 	</div>
+	<div id="search-results" class="hidden mt-4 grid gap-3" role="region" aria-live="polite" aria-label="Resultados da busca"></div>
 	<p id="post-search-empty" class="hidden text-sm text-ink-soft mt-4">
 		Nenhum post encontrado para essa busca.
 	</p>
 </div>
 
 <script>
-	// Filtra apenas os nós .post-card já existentes no DOM (renderizados estaticamente
-	// pelo Astro no build). Nenhum dado novo é criado a partir do input do usuário.
-	const input = document.getElementById('post-search') as HTMLInputElement | null;
-	const emptyState = document.getElementById('post-search-empty');
-	const cards = Array.from(document.querySelectorAll<HTMLElement>('.post-card'));
-
-	function normalize(value: string): string {
-		return value.toLowerCase().trim();
+	interface IndexEntry {
+		title: string;
+		url: string;
+		date: string;
+		min: number;
+		tags: string[];
+		labels: string[];
 	}
 
-	function applyFilter(rawQuery: string) {
-		// Limite de tamanho defensivo: input de busca não deveria nunca chegar a
-		// centenas de caracteres; corta para evitar processamento desnecessário.
-		const query = normalize(rawQuery).slice(0, 200);
-		let visibleCount = 0;
+	const input = document.getElementById('post-search') as HTMLInputElement | null;
+	const results = document.getElementById('search-results');
+	const emptyState = document.getElementById('post-search-empty');
+	// Grade estática e paginador da listagem: somem enquanto há busca ativa.
+	const grid = document.getElementById('post-grid');
+	const pager = document.getElementById('post-pager');
 
-		for (const card of cards) {
-			const title = card.dataset.title ?? '';
-			const tags = card.dataset.tags ?? '';
-			const matches = query === '' || title.includes(query) || tags.includes(query);
-			card.classList.toggle('hidden', !matches);
-			if (matches) visibleCount += 1;
+	let index: IndexEntry[] | null = null;
+	let loading: Promise<void> | null = null;
+
+	function ensureIndex(): Promise<void> {
+		if (index) return Promise.resolve();
+		loading ??= fetch('/search.json')
+			.then((r) => r.json())
+			.then((data: IndexEntry[]) => {
+				index = data;
+			})
+			.catch(() => {
+				loading = null;
+			});
+		return loading;
+	}
+
+	// Normaliza com remoção de acentos: "narracao" encontra "narração".
+	function normalize(value: string): string {
+		return value
+			.toLowerCase()
+			.normalize('NFD')
+			.replace(/[̀-ͯ]/g, '')
+			.trim();
+	}
+
+	function renderResults(matches: IndexEntry[]) {
+		if (!results) return;
+		results.replaceChildren();
+		for (const entry of matches.slice(0, 20)) {
+			const a = document.createElement('a');
+			a.href = entry.url;
+			a.className = 'sheet sheet--hover block p-4';
+
+			const meta = document.createElement('p');
+			meta.className =
+				'font-mono-panel text-[0.6875rem] tracking-[0.08em] uppercase text-ink-faint';
+			meta.textContent = `${entry.date} | ${entry.min} min | ${entry.labels.join(', ')}`;
+
+			const title = document.createElement('h3');
+			title.className = 'font-display font-semibold text-base mt-1.5 leading-snug';
+			title.textContent = entry.title;
+
+			a.append(meta, title);
+			results.append(a);
+		}
+	}
+
+	async function applyFilter(rawQuery: string) {
+		// Limite defensivo de tamanho do input.
+		const query = normalize(rawQuery).slice(0, 200);
+		const active = query !== '';
+
+		grid?.classList.toggle('hidden', active);
+		pager?.classList.toggle('hidden', active);
+		results?.classList.toggle('hidden', !active);
+
+		if (!active) {
+			emptyState?.classList.add('hidden');
+			results?.replaceChildren();
+			return;
 		}
 
-		emptyState?.classList.toggle('hidden', visibleCount !== 0);
+		await ensureIndex();
+		const matches = (index ?? []).filter(
+			(entry) =>
+				normalize(entry.title).includes(query) ||
+				entry.tags.some((t) => normalize(t).includes(query)) ||
+				entry.labels.some((l) => normalize(l).includes(query))
+		);
+
+		renderResults(matches);
+		emptyState?.classList.toggle('hidden', matches.length !== 0);
 	}
 
-	input?.addEventListener('input', () => applyFilter(input.value));
+	let debounce: ReturnType<typeof setTimeout> | undefined;
+	input?.addEventListener('input', () => {
+		clearTimeout(debounce);
+		debounce = setTimeout(() => applyFilter(input.value), 120);
+	});
+	// Pré-carrega o índice ao focar o campo, antes do primeiro caractere.
+	input?.addEventListener('focus', () => void ensureIndex(), { once: true });
 </script>

@@ -1,0 +1,161 @@
+---
+// Home paginada: 12 posts por página (/, /2, /3…). Páginas estáticas leves no
+// lugar de uma listagem única com o acervo inteiro — o que travava o celular.
+// A busca (SearchFilter) cobre o acervo todo via /search.json, então a
+// paginação não limita o alcance do filtro.
+import type { GetStaticPaths, Page } from 'astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import TagBadge from '../components/TagBadge.astro';
+import SearchFilter from '../components/SearchFilter.astro';
+import { AUDIO_TAGS } from '../content.config';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+	const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	return paginate(posts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+interface Props {
+	page: Page<CollectionEntry<'posts'>>;
+}
+
+const { page } = Astro.props;
+const isFirstPage = page.currentPage === 1;
+const totalPages = page.lastPage;
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const tagCounts = new Map<string, number>();
+for (const post of allPosts) {
+	for (const tag of post.data.tags) {
+		tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+	}
+}
+const tagsWithCount = AUDIO_TAGS.filter((tag) => tagCounts.has(tag)).map((tag) => ({
+	tag,
+	count: tagCounts.get(tag) ?? 0,
+}));
+
+const siteURL = (Astro.site ?? Astro.url.origin).toString();
+
+// JSON-LD só na primeira página: WebSite + Blog + Organization num @graph.
+// É a âncora de entidade que liga o blog à Speake (speake.com.br).
+const jsonLd = isFirstPage
+	? {
+			'@context': 'https://schema.org',
+			'@graph': [
+				{
+					'@type': 'WebSite',
+					'@id': `${siteURL}#website`,
+					url: siteURL,
+					name: 'Speake Blog',
+					description:
+						'Guias práticos de podcasting, produção musical, masterização e equipamentos de áudio.',
+					inLanguage: 'pt-BR',
+					publisher: { '@id': 'https://speake.com.br/#organization' },
+				},
+				{
+					'@type': 'Blog',
+					'@id': `${siteURL}#blog`,
+					url: siteURL,
+					name: 'Speake Blog',
+					inLanguage: 'pt-BR',
+					publisher: { '@id': 'https://speake.com.br/#organization' },
+					blogPost: page.data.slice(0, 10).map((post) => ({
+						'@type': 'BlogPosting',
+						headline: post.data.title,
+						url: new URL(`/posts/${post.id}/`, siteURL).toString(),
+						datePublished: post.data.pubDate.toISOString(),
+					})),
+				},
+				{
+					'@type': 'Organization',
+					'@id': 'https://speake.com.br/#organization',
+					name: 'Speake',
+					url: 'https://speake.com.br',
+					description: 'Estúdio de produção de áudio, podcast e narração profissional.',
+					logo: {
+						'@type': 'ImageObject',
+						url: new URL('/icon-512.png', siteURL).toString(),
+						width: 512,
+						height: 512,
+					},
+				},
+			],
+		}
+	: undefined;
+
+const pageTitle = isFirstPage ? 'Início' : `Página ${page.currentPage}`;
+const pageDescription = isFirstPage
+	? 'Conteúdo sobre podcasting, produção musical, masterização e equipamentos de áudio.'
+	: `Página ${page.currentPage} de ${totalPages} — posts sobre podcasting, produção musical, masterização e equipamentos de áudio.`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={jsonLd}>
+	{isFirstPage && (
+		<section class="mb-12 rise-in">
+			<span class="onair">Sessão aberta</span>
+			<h1 class="font-display font-semibold text-4xl sm:text-[3.4rem] mt-5 leading-[1.08]">
+				Notas de estúdio<br />sobre{' '}<span class="marker">
+					áudio<svg viewBox="0 0 120 12" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9C25 4 60 3 117 6.5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+				</span>
+			</h1>
+			<p class="text-ink-soft leading-relaxed mt-5 max-w-xl text-base sm:text-lg">
+				Guias práticos de podcasting, produção musical, masterização e equipamentos —
+				escritos por quem grava, mixa e publica.
+			</p>
+			<p class="font-mono-panel text-[0.6875rem] tracking-[0.14em] uppercase text-ink-faint mt-5">
+				{page.total} faixas gravadas · {tagsWithCount.length} categorias
+			</p>
+		</section>
+	)}
+
+	{isFirstPage && (
+		<section class="mb-10 rise-in rise-in--2" aria-labelledby="tags-heading">
+			<div class="label-rail mb-4">
+				<h2 id="tags-heading" class="t-micro text-ink-faint">Categorias</h2>
+			</div>
+			<div class="flex flex-wrap gap-1.5">
+				{tagsWithCount.map(({ tag, count }) => <TagBadge tag={tag} count={count} />)}
+			</div>
+		</section>
+	)}
+
+	<section class:list={[isFirstPage ? 'rise-in rise-in--3' : 'rise-in']} aria-labelledby="posts-heading">
+		<div class="label-rail mb-4">
+			{isFirstPage ? (
+				<h2 id="posts-heading" class="t-micro text-ink-faint">Faixas recentes</h2>
+			) : (
+				<h1 id="posts-heading" class="t-micro text-ink-faint">
+					Faixas — página {page.currentPage} de {totalPages}
+				</h1>
+			)}
+		</div>
+		<SearchFilter />
+		<div id="post-grid" class="grid gap-5 sm:grid-cols-2">
+			{page.data.map((post, index) => <PostCard post={post} index={page.start + index} />)}
+		</div>
+
+		<nav
+			id="post-pager"
+			aria-label="Paginação de posts"
+			class="mt-8 flex items-center justify-between gap-3"
+		>
+			{page.url.prev ? (
+				<a href={page.url.prev} class="btn btn--outline btn--sm">← Anteriores</a>
+			) : (
+				<span class="btn btn--outline btn--sm opacity-40 pointer-events-none" aria-hidden="true">← Anteriores</span>
+			)}
+			<span class="font-mono-panel text-[0.6875rem] tracking-[0.14em] uppercase text-ink-faint">
+				Pág {String(page.currentPage).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
+			</span>
+			{page.url.next ? (
+				<a href={page.url.next} class="btn btn--outline btn--sm">Próximas →</a>
+			) : (
+				<span class="btn btn--outline btn--sm opacity-40 pointer-events-none" aria-hidden="true">Próximas →</span>
+			)}
+		</nav>
+	</section>
+</BaseLayout>

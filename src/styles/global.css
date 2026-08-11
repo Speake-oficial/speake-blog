@@ -75,7 +75,13 @@
 
 /* ============================================================
    Base
+   ------------------------------------------------------------
+   Dentro de @layer base/components para que utilitários do
+   Tailwind (hidden, sm:*, etc.) consigam sobrescrever as classes
+   custom — CSS fora de layer venceria qualquer utilitário.
    ============================================================ */
+
+@layer base {
 
 html {
 	scroll-behavior: smooth;
@@ -134,6 +140,10 @@ summary:focus-visible {
 		scroll-behavior: auto !important;
 	}
 }
+
+}
+
+@layer components {
 
 /* ============================================================
    Rótulos e texto utilitário
@@ -215,6 +225,13 @@ summary:focus-visible {
 /* ============================================================
    Superfícies
    ============================================================ */
+
+/* cards fora da viewport não são renderizados até se aproximarem do scroll —
+   corta o custo de layout/paint inicial das listagens no mobile */
+.post-card {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 420px;
+}
 
 /* cartão padrão: superfície plana, fio fino, canto moderado */
 .sheet {
@@ -652,4 +669,6 @@ summary:focus-visible {
 
 .rise-in--3 {
 	animation-delay: 0.16s;
+}
+
 }

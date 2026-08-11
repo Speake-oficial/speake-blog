@@ -48,15 +48,24 @@ const items = headings.filter((h) => h.depth === 2 || h.depth === 3);
 		}
 
 		// Heading mais próximo do topo (com folga do header fixo) é o ativo.
-		function onScroll() {
+		// Leitura de layout (getBoundingClientRect) apenas uma vez por frame via
+		// requestAnimationFrame — scroll no mobile dispara em rajada.
+		let ticking = false;
+		function update() {
 			let current: HTMLElement | undefined;
 			for (const t of targets) {
 				if (t.getBoundingClientRect().top <= 110) current = t;
 			}
 			setActive(current?.id ?? '');
+			ticking = false;
+		}
+		function onScroll() {
+			if (ticking) return;
+			ticking = true;
+			requestAnimationFrame(update);
 		}
 
-		onScroll();
+		update();
 		window.addEventListener('scroll', onScroll, { passive: true });
 	}
 </script>

@@ -133,7 +133,9 @@ const ogImageAlt = imageAlt ?? (usingDefaultImage ? `${siteName} — podcasting,
 
 		<SpeakeBanner />
 
-		<header class="sticky top-0 z-50 border-b border-(--line) bg-(--color-paper)/92 backdrop-blur-sm">
+		<!-- sem backdrop-blur: filtro de fundo em elemento sticky encarece cada
+		     frame de rolagem no mobile; papel 97% opaco dá o mesmo efeito -->
+		<header class="sticky top-0 z-50 border-b border-(--line) bg-(--color-paper)/97">
 			<nav
 				aria-label="Navegação principal"
 				class:list={['mx-auto flex items-center justify-between gap-3 px-4 py-3', wide ? 'max-w-6xl' : 'max-w-4xl']}
@@ -210,13 +212,24 @@ const ogImageAlt = imageAlt ?? (usingDefaultImage ? `${siteName} — podcasting,
 
 		<script>
 			// Barra de progresso de leitura — largura acompanha o scroll da página.
+			// Trabalho de layout (scrollHeight) só dentro de requestAnimationFrame,
+			// no máximo uma vez por frame: eventos de scroll no mobile disparam em
+			// rajada e ler layout em cada um deles trava a rolagem.
 			const bar = document.getElementById('readbar');
-			function onScroll() {
-				if (!bar) return;
-				const max = document.documentElement.scrollHeight - window.innerHeight;
-				bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+			let ticking = false;
+			function update() {
+				if (bar) {
+					const max = document.documentElement.scrollHeight - window.innerHeight;
+					bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+				}
+				ticking = false;
 			}
-			onScroll();
+			function onScroll() {
+				if (ticking) return;
+				ticking = true;
+				requestAnimationFrame(update);
+			}
+			update();
 			window.addEventListener('scroll', onScroll, { passive: true });
 		</script>
 	</body>
