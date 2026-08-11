@@ -4,6 +4,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import TagBadge from '../../components/TagBadge.astro';
 import { getTagLabel } from '../../lib/tagLabels';
+import { extractFaq } from '../../lib/faq';
+import { formatPostDate } from '../../lib/formatDate';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -13,13 +15,14 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-const formattedDate = post.data.pubDate.toLocaleDateString('pt-BR', {
-	day: '2-digit',
-	month: 'long',
-	year: 'numeric',
-});
+const formattedDate = formatPostDate(post.data.pubDate);
 
 const primaryTag = post.data.tags[0];
+
+const updatedDate = post.data.updatedDate;
+const formattedUpdatedDate = updatedDate ? formatPostDate(updatedDate) : undefined;
+
+const author = post.data.author;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
 
@@ -30,35 +33,72 @@ const ogImagePath = rawImage?.endsWith('.svg')
 	? `/og/${rawImage.split('/').pop()!.split('.')[0]}.png`
 	: rawImage;
 
-// JSON-LD BlogPosting (schema.org) — exigido pelo plano (step 3).
-// author/publisher são exigidos pelo Google para elegibilidade a rich results
-// de Article/BlogPosting (sem eles a propriedade fica incompleta para o crawler).
-const jsonLd = {
-	'@context': 'https://schema.org',
+const publisher = {
+	'@type': 'Organization',
+	name: 'Speake',
+	url: 'https://speake.com.br',
+	logo: {
+		'@type': 'ImageObject',
+		url: new URL('/icon-512.png', Astro.site ?? Astro.url.origin).toString(),
+		width: 512,
+		height: 512,
+	},
+};
+
+// Autor nomeado (frontmatter `author`) vira Person e vence a atribuição
+// institucional; sem ele, cai no Organization de antes.
+const authorNode = author
+	? {
+			'@type': 'Person',
+			name: author.name,
+			...(author.url ? { url: author.url } : {}),
+			...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+			worksFor: { '@type': 'Organization', name: 'Speake', url: 'https://speake.com.br' },
+		}
+	: { '@type': 'Organization', name: 'Speake', url: 'https://speake.com.br' };
+
+// `dateModified` sempre presente: sem edição registrada ele coincide com a
+// publicação, que é a informação correta — a ausência da propriedade é lida como
+// dado faltando, não como "nunca mudou".
+const jsonLdPost = {
 	'@type': 'BlogPosting',
+	'@id': `${canonicalURL}#article`,
 	headline: post.data.title,
 	description: post.data.description,
 	datePublished: post.data.pubDate.toISOString(),
-	...(post.data.updatedDate ? { dateModified: post.data.updatedDate.toISOString() } : {}),
+	dateModified: (updatedDate ?? post.data.pubDate).toISOString(),
 	mainEntityOfPage: canonicalURL,
+	url: canonicalURL,
+	inLanguage: 'pt-BR',
 	image: new URL(ogImagePath ?? '/og-default.png', Astro.site ?? Astro.url.origin).toString(),
-	keywords: post.data.tags.join(', '),
-	author: {
-		'@type': 'Organization',
-		name: 'Speake',
-		url: 'https://speake.com.br',
-	},
-	publisher: {
-		'@type': 'Organization',
-		name: 'Speake',
-		url: 'https://speake.com.br',
-		logo: {
-			'@type': 'ImageObject',
-			url: new URL('/icon-512.png', Astro.site ?? Astro.url.origin).toString(),
-			width: 512,
-			height: 512,
-		},
-	},
+	keywords: post.data.tags.map(getTagLabel).join(', '),
+	...(primaryTag ? { articleSection: getTagLabel(primaryTag) } : {}),
+	wordCount: post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0,
+	author: authorNode,
+	publisher,
+};
+
+// FAQPage a partir da seção "Perguntas frequentes" do próprio markdown, quando
+// existir. Marcar as perguntas que já estão escritas é o que as torna extraíveis
+// como par pergunta/resposta por buscador e por motor generativo.
+const faqEntries = extractFaq(post.body ?? '');
+const jsonLdFaq =
+	faqEntries.length > 0
+		? {
+				'@type': 'FAQPage',
+				'@id': `${canonicalURL}#faq`,
+				inLanguage: 'pt-BR',
+				mainEntity: faqEntries.map((entry) => ({
+					'@type': 'Question',
+					name: entry.question,
+					acceptedAnswer: { '@type': 'Answer', text: entry.answer },
+				})),
+			}
+		: null;
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [jsonLdPost, ...(jsonLdFaq ? [jsonLdFaq] : [])],
 };
 ---
 
@@ -69,7 +109,7 @@ const jsonLd = {
 	image={post.data.image?.src.src}
 	imageAlt={post.data.image?.alt}
 	publishedTime={post.data.pubDate}
-	modifiedTime={post.data.updatedDate}
+	modifiedTime={updatedDate}
 	tags={post.data.tags}
 	jsonLd={jsonLd}
 >
@@ -85,12 +125,24 @@ const jsonLd = {
 	<article>
 		<header class="mb-8">
 			<h1 class="font-serif-editorial text-3xl mb-3 leading-tight">{post.data.title}</h1>
-			<time datetime={post.data.pubDate.toISOString()} class="font-mono-panel text-sm text-studio-text-muted">
-				{formattedDate}
-			</time>
+			<p class="font-mono-panel text-sm text-studio-text-muted flex flex-wrap items-center gap-x-2 gap-y-1">
+				<span>
+					Por {author?.url ? <a href={author.url} rel="author" class="text-studio-amber underline underline-offset-2">{author.name}</a> : (author?.name ?? 'Speake')}
+				</span>
+				<span aria-hidden="true">·</span>
+				<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+				{updatedDate && (
+					<>
+						<span aria-hidden="true">·</span>
+						<span>
+							atualizado em <time datetime={updatedDate.toISOString()}>{formattedUpdatedDate}</time>
+						</span>
+					</>
+				)}
+			</p>
 		</header>
 
-		<div class="prose-content font-serif-editorial leading-relaxed text-studio-text [&_h2]:font-serif-editorial [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_a]:text-studio-amber [&_a]:underline [&_a]:underline-offset-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:mb-1.5 [&_code]:font-mono-panel [&_code]:text-sm [&_code]:bg-studio-surface-raised [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded-sm">
+		<div class="prose-content font-serif-editorial leading-relaxed text-studio-text [&_h2]:font-serif-editorial [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_a]:text-studio-amber [&_a]:underline [&_a]:underline-offset-2 [&_h3]:font-serif-editorial [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_li]:mb-1.5 [&_strong]:font-semibold [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:my-6 [&_table]:text-sm [&_table]:border-collapse [&_th]:border [&_th]:border-studio-border [&_th]:bg-studio-surface-raised [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-mono-panel [&_th]:text-xs [&_th]:uppercase [&_th]:tracking-wide [&_td]:border [&_td]:border-studio-border [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_code]:font-mono-panel [&_code]:text-sm [&_code]:bg-studio-surface-raised [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded-sm">
 			<Content />
 		</div>
 

@@ -1,17 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import TagBadge from './TagBadge.astro';
+import { formatPostDateShort } from '../lib/formatDate';
 
 interface Props {
 	post: CollectionEntry<'posts'>;
 }
 
 const { post } = Astro.props;
-const formattedDate = post.data.pubDate.toLocaleDateString('pt-BR', {
-	day: '2-digit',
-	month: 'short',
-	year: 'numeric',
-});
+const formattedDate = formatPostDateShort(post.data.pubDate);
 ---
 
 <article

@@ -25,6 +25,18 @@ const postsCollection = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			tags: z.array(z.enum(AUDIO_TAGS)).min(1),
+			// Autor nomeado. Opcional: sem ele, o post é atribuído à Speake como
+			// Organization (comportamento histórico). Preenchido, vira um `Person`
+			// no JSON-LD e uma assinatura visível — sinal de E-E-A-T que buscadores
+			// e motores generativos pesam mais que autoria institucional.
+			author: z
+				.object({
+					name: z.string().min(1),
+					// Página/perfil que comprove a autoria (LinkedIn, site pessoal, /sobre).
+					url: z.string().url().optional(),
+					jobTitle: z.string().optional(),
+				})
+				.optional(),
 			image: z
 				.object({
 					src: image(),
