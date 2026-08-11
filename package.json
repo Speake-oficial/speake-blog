@@ -13,10 +13,13 @@
     "og:images": "node scripts/gen-og-images.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.3",
+    "@astrojs/mdx": "^7.0.5",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.1",
-    "astro": "^6.4.7",
+    "astro": "^7.2.1",
     "tailwindcss": "^4.3.1"
+  },
+  "overrides": {
+    "sharp": "^0.35.0"
   }
 }
