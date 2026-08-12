@@ -164,37 +164,56 @@ const ogImageAlt = imageAlt ?? (usingDefaultImage ? `${siteName} — podcasting,
 			<slot />
 		</main>
 
-		<footer class="px-3 sm:px-4 pb-4 mt-auto">
-			<div class:list={['deep mx-auto px-6 py-8 sm:px-8', wide ? 'max-w-6xl' : 'max-w-4xl']}>
-				<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
-					<div class="max-w-md">
-						<a href="https://speake.com.br" target="_blank" rel="noopener" aria-label="Speake — site oficial">
-							<img src={logoBranco.src} alt="Speake" class="h-7 w-auto" />
+		<footer class="footer-panel mt-auto">
+			<div class:list={['mx-auto w-full px-4 py-10', wide ? 'max-w-6xl' : 'max-w-4xl']}>
+				<div class="grid gap-8 sm:grid-cols-3">
+					<div class="sm:col-span-1">
+						<a href="/" class="inline-flex items-center gap-2.5" aria-label="Speake Blog — início">
+							<img src={logoRoxo.src} alt="" aria-hidden="true" class="h-6 w-auto block dark-hide" />
+							<img src={logoBranco.src} alt="" aria-hidden="true" class="h-6 w-auto hidden dark-show" />
+							<span class="t-micro text-ink-faint mt-1">/ blog</span>
 						</a>
-						<p class="text-sm mt-3 text-white/75 leading-relaxed">
-							Conteúdo técnico sobre áudio, podcasting e produção sonora — escrito por quem
-							grava, mixa e publica na
-							<a href="https://speake.com.br" target="_blank" rel="noopener" class="text-white font-semibold underline underline-offset-2 decoration-white/40 hover:decoration-white">Speake</a>,
-							estúdio de produção de áudio, podcast e narração profissional.
+						<p class="text-sm mt-3.5 text-ink-soft leading-relaxed max-w-xs">
+							Áudio, podcasting e produção sonora, na prática — escrito por quem grava,
+							mixa e publica.
 						</p>
 					</div>
-					<nav aria-label="Links do rodapé" class="flex flex-col gap-2 text-sm shrink-0">
-						<span class="t-micro text-white/45">Navegue</span>
-						<a href="/" class="text-white/80 hover:text-white transition-colors duration-150">Início</a>
-						<a href="/tags" class="text-white/80 hover:text-white transition-colors duration-150">Categorias</a>
-						<a href="/rss.xml" class="text-white/80 hover:text-white transition-colors duration-150">Feed RSS</a>
-						<a href="https://speake.com.br" target="_blank" rel="noopener" class="text-white/80 hover:text-white transition-colors duration-150">speake.com.br</a>
+
+					<nav aria-label="Navegação do rodapé" class="flex flex-col">
+						<h2 class="t-micro text-ink-faint mb-2">Navegue</h2>
+						<a href="/" class="footer-link">Início</a>
+						<a href="/tags" class="footer-link">Categorias</a>
+						<a href="/rss.xml" class="footer-link">Feed RSS</a>
 					</nav>
+
+					<div class="flex flex-col">
+						<h2 class="t-micro text-ink-faint mb-2">Estúdio</h2>
+						<p class="text-sm text-ink-soft leading-relaxed mb-3.5">
+							A Speake é um estúdio de produção de áudio, podcast e narração
+							profissional.
+						</p>
+						<a
+							href="https://speake.com.br"
+							target="_blank"
+							rel="noopener"
+							class="btn btn--outline btn--sm self-start"
+						>
+							speake.com.br
+						</a>
+					</div>
 				</div>
-				<div class="border-t border-white/15 mt-6 pt-4 flex flex-wrap items-center justify-between gap-2">
-					<p class="font-mono-panel text-xs text-white/55">
-						© {new Date().getFullYear()} Speake — blog.speake.com.br
+
+				<div
+					class="border-t border-(--footer-line) mt-8 pt-5 flex flex-wrap items-center justify-between gap-3"
+				>
+					<p class="font-mono-panel text-xs text-ink-faint">
+						© {new Date().getFullYear()} Speake · blog.speake.com.br
 					</p>
-					<div class="flex items-end gap-1 h-4 animate-equalize" aria-hidden="true">
-						<span class="w-1 h-full rounded-full bg-white/60"></span>
-						<span class="w-1 h-3/4 rounded-full bg-white/45"></span>
-						<span class="w-1 h-full rounded-full bg-white/60"></span>
-						<span class="w-1 h-1/2 rounded-full bg-white/45"></span>
+					<div class="flex items-end gap-1 h-3.5 animate-equalize" aria-hidden="true">
+						<span class="w-1 h-full rounded-full bg-(--color-brand-400)"></span>
+						<span class="w-1 h-3/4 rounded-full bg-(--color-brand-300)"></span>
+						<span class="w-1 h-full rounded-full bg-(--color-brand-400)"></span>
+						<span class="w-1 h-1/2 rounded-full bg-(--color-brand-300)"></span>
 					</div>
 				</div>
 			</div>

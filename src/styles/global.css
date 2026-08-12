@@ -27,9 +27,11 @@
 	--color-brand-900: #4c1d95;
 	--color-brand-950: #2e1065;
 
-	/* papel, superfície e tinta (tema claro; o escuro sobrescreve) */
-	--color-paper: #f7f4ec;
-	--color-surface: #fffdf8;
+	/* papel, superfície e tinta (tema claro; o escuro sobrescreve).
+	   Papel branco: a grade de pontos e o fio fino dos cartões já dão a
+	   textura de "folha técnica" sem tingir o fundo. */
+	--color-paper: #ffffff;
+	--color-surface: #ffffff;
 	--color-ink: #221a3a;
 	--color-ink-soft: #5d5379;
 	--color-ink-faint: #8d84a6;
@@ -45,11 +47,15 @@
 :root {
 	--line: rgba(34, 26, 58, 0.14);
 	--line-strong: rgba(34, 26, 58, 0.32);
-	--dot: rgba(34, 26, 58, 0.09);
+	/* papel branco realça a grade — ponto mais discreto que no papel quente */
+	--dot: rgba(34, 26, 58, 0.07);
 	--hover-shadow: 0 10px 28px -14px rgba(46, 16, 101, 0.3);
 	--link: var(--color-brand-700);
 	--deep: #2e1065;
 	--deep-ink: #f6f3ff;
+	/* rodapé: painel de tinta lavada, não bloco chapado */
+	--footer-bg: #faf8ff;
+	--footer-line: rgba(34, 26, 58, 0.1);
 
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 	--dur-fast: 150ms;
@@ -71,6 +77,8 @@
 	--link: var(--color-brand-300);
 	--deep: #241a45;
 	--deep-ink: #eee9fe;
+	--footer-bg: #17132a;
+	--footer-line: rgba(196, 176, 251, 0.14);
 }
 
 /* ============================================================
@@ -252,7 +260,43 @@ summary:focus-visible {
 	box-shadow: var(--hover-shadow);
 }
 
-/* bloco invertido (rodapé, CTA): violeta profundo chapado */
+/* ------------------------------------------------------------
+   Rodapé
+   ------------------------------------------------------------
+   Painel claro de largura total com fio no topo, em vez do bloco
+   violeta flutuante: separa a região sem pesar a página e mantém
+   os links no mesmo contraste de leitura do resto do conteúdo.
+   ------------------------------------------------------------ */
+
+.footer-panel {
+	background: var(--footer-bg);
+	border-top: 1px solid var(--footer-line);
+}
+
+/* links do rodapé: alvo de toque confortável, sem sublinhado permanente */
+.footer-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.3rem 0;
+	color: var(--color-ink-soft);
+	font-size: 0.875rem;
+	text-decoration: none;
+	transition: color var(--dur-fast);
+}
+
+.footer-link:hover {
+	color: var(--color-signal);
+}
+
+/* capa padrão dos cartões sem ilustração própria */
+.cover-fallback {
+	background: var(--deep);
+	display: grid;
+	place-items: center;
+}
+
+/* bloco invertido (CTA): violeta profundo chapado */
 .deep {
 	background: var(--deep);
 	color: var(--deep-ink);
