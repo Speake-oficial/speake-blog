@@ -68,4 +68,4 @@ Com cadeia adequada e material bem gravado, as diferenças audíveis aparecem em
 
 **Preciso de um master separado para Apple Music ou Tidal?** Não para lossless comum. Um master 24 bits na taxa nativa atende Spotify, Apple Music Lossless e Tidal. Master separado só faz sentido em formatos realmente distintos, como Dolby Atmos, que exige mixagem e entrega próprias.
 
-Quer ajuda profissional com masterização pronta para streaming? [Conheça a Speake](https://speake.com.br).
+Streaming aberto não é o único destino possível. Na [Speake](https://speake.com.br) você publica numa estação própria e é a assinatura da sua audiência que remunera o trabalho, não o CPM da plataforma.

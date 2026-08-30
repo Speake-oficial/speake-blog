@@ -73,4 +73,4 @@ Na Speake, sessões de mixagem e masterização trabalham com nível de monitora
 
 **Zumbido depois da sessão é normal?** Não. Zumbido (tinnitus) temporário após uma sessão é sinal de que o nível ou a duração passou do limite seguro. Se acontecer com frequência, reduza o nível de monitoração, aumente as pausas e procure avaliação audiológica — a perda auditiva induzida por ruído é irreversível.
 
-Quer ajuda profissional com mixagem e masterização feitas em ambiente calibrado? [Conheça a Speake](https://speake.com.br).
+Com a sala calibrada e o mix fechado, o passo seguinte é a distribuição. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e sua audiência assina para ouvir.

@@ -83,4 +83,4 @@ Se o podcast é só áudio, dinâmico de mesa, sem discussão: mais grave, mais 
 **Preciso de um transmissor por pessoa?**
 Sim. Um microfone compartilhado entre duas pessoas força posicionamento ruim para as duas e impossibilita tratar cada voz separadamente na mixagem. Kits com dois transmissores e um receptor são o padrão justamente por isso.
 
-Quer produzir seu podcast em vídeo com captação e edição profissionais? [Conheça a Speake](https://speake.com.br).
+E o áudio do episódio não precisa depender do vídeo para existir. Na [Speake](https://speake.com.br) você publica a versão em áudio numa estação e sua audiência assina para acompanhar.

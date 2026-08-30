@@ -72,4 +72,4 @@ Dá para partir da sessão de mixagem estéreo — é o mais comum. Você import
 
 ---
 
-Quer entregar sua faixa em estéreo e em Dolby Atmos com o mesmo padrão de qualidade? [Conheça a Speake](https://speake.com.br).
+Seja qual for o formato de entrega, alguém precisa ouvir. Na [Speake](https://speake.com.br) você publica seu conteúdo em áudio numa estação e transforma audiência em receita recorrente.

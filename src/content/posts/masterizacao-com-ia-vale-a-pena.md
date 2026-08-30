@@ -64,4 +64,4 @@ Alguns serviços aceitam stems e processam cada grupo separadamente. Isso aument
 **Dá para usar um master de IA em lançamento comercial?**
 Dá, e milhares de faixas em streaming já são assim. Verifique só três coisas antes de subir: loudness integrado, true peak em -1 dBTP e ausência de distorção em graves nos trechos mais densos.
 
-Quer ajuda profissional com masterização e finalização? [Conheça a Speake](https://speake.com.br).
+Master pronta, e agora? Na [Speake](https://speake.com.br) você publica os episódios numa estação própria e cobra assinatura mensal de quem quer ouvir.

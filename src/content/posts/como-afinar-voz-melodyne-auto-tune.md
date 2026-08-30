@@ -59,4 +59,4 @@ Sim, e geralmente com correção mais forte que a do lead. Em empilhamentos de 4
 **Afinar voz estraga a qualidade do áudio?**
 Correções de até 1 semitom são praticamente transparentes nos algoritmos atuais. Acima de 2 semitons começam a aparecer artefatos no ataque das consoantes e no formante — nesse ponto, regravar a frase custa menos tempo do que consertar.
 
-Quer produção vocal com afinação feita à mão? [Conheça a Speake](https://speake.com.br).
+Voz afinada é meio caminho — o outro meio é publicar com constância. Na [Speake](https://speake.com.br) você mantém uma estação de áudio e sua audiência assina para ouvir.
