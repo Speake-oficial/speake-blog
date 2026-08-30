@@ -39,4 +39,4 @@ O erro mais caro no home studio é comprar equipamento para resolver um problema
 
 Em projetos de gravação na Speake, verificar o piso de ruído faz parte do processo antes de qualquer sessão. Em narração e audiolivro, onde o fundo deve ser praticamente inaudível, um ground loop não tratado compromete horas de material — e esse tipo de problema não tem correção no pós.
 
-Quer ajuda profissional com seu setup de gravação? [Conheça a Speake](https://speake.com.br).
+Sala silenciosa, sinal limpo — e agora? Na [Speake](https://speake.com.br) você publica os episódios numa estação própria e transforma audiência em receita mensal.

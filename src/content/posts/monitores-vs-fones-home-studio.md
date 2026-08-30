@@ -39,4 +39,4 @@ Se você precisa escolher um antes do outro, fones de ouvido fechados de referê
 
 Na Speake, o processo de produção usa os dois em etapas distintas — monitores calibrados para as decisões de mixagem, fones para as checagens de detalhe e aprovação final antes da entrega.
 
-Precisa de um resultado que soe bem em qualquer ambiente? [conheça o estúdio da Speake](https://speake.com.br).
+E quando a mixagem estiver fechada, o episódio precisa chegar em alguém. Na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir.

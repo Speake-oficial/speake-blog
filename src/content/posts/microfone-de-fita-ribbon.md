@@ -42,4 +42,4 @@ Ribbons têm saída elétrica baixa — costumam precisar de 10 a 20 dB mais gan
 
 Na Speake, ribbons fazem parte do setup de captação em projetos de produção musical e narração onde o timbre do material justifica — não por padrão, mas quando a fonte se beneficia desse comportamento sonoro específico.
 
-Quer entender qual cadeia de captação faz mais sentido para o seu projeto? [Conheça a Speake](https://speake.com.br).
+Escolhido o microfone, o que decide o resultado é a frequência com que você publica. Na [Speake](https://speake.com.br) você grava pelo app, publica na sua estação e sua audiência assina para ouvir.

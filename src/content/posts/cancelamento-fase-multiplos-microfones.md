@@ -39,4 +39,4 @@ Cancelamento de fase parece, ao ouvido destreinado, "falta de uma frequência" �
 
 Decidir esse setup de microfones antes de gravar economiza horas de tentativa de conserto depois. A Speake monta a captação multimicrofone de podcasts, entrevistas e sessões de gravação musical já prevendo esse tipo de problema, da posição dos microfones ao tratamento do ambiente.
 
-Quer ajuda profissional com isso? [Conheça a Speake](https://speake.com.br).
+Resolvida a captação, o episódio precisa de casa. Na [Speake](https://speake.com.br) você publica sua estação de áudio e cobra assinatura de quem quer ouvir.

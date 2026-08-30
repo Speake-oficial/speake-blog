@@ -49,4 +49,4 @@ O fluxo recomendado: grave em 24 bits, processe internamente em 32 bits float (o
 
 Na Speake, projetos de narração e masterização chegam em 24 ou 32 bits float — e o processo de preparação para entrega final, incluindo a conversão correta com dithering, faz parte do serviço.
 
-Quer ajuda profissional com sua produção de áudio? [conte com o estúdio da Speake](https://speake.com.br).
+Com o arquivo entregue no formato certo, o passo seguinte é distribuir. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e cobra assinatura mensal de quem ouve.

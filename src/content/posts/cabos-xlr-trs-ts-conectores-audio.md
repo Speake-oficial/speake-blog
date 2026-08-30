@@ -56,4 +56,4 @@ Para o áudio doméstico, um cabo bem fabricado e acessível resolve tão bem qu
 
 Na Speake, a verificação de cabos e conexões faz parte do checklist antes de qualquer sessão de gravação. Um cabo defeituoso ou inadequado é a causa de chiados que as pessoas passam horas tentando resolver com plugins no DAW, quando a solução é simplesmente trocar o cabo ou o tipo de conector.
 
-Quer montar um setup funcional do início ao fim? [Conheça a Speake](https://speake.com.br).
+Com a cadeia de sinal resolvida, falta o destino do que você gravar. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e sua audiência assina para ouvir.

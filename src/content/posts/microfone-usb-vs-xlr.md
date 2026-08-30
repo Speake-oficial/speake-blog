@@ -45,4 +45,4 @@ Se você já tem uma interface ou está montando um home studio de verdade — p
 
 Na Speake, o padrão de gravação para narração e audiolivros é inteiramente XLR, com pré-amplificadores e interfaces calibradas para cada tipo de voz e projeto. A diferença no controle de ganho e no headroom de sinal é perceptível já na gravação — antes de qualquer processamento.
 
-Quer montar um setup de gravação de voz que funcione de verdade? [Conheça a Speake](https://speake.com.br).
+Vale lembrar por que essa escolha importa menos do que parece: na [Speake](https://speake.com.br) dá para começar com o microfone do celular, publicar a estação e ir melhorando o setup com a assinatura já rodando.

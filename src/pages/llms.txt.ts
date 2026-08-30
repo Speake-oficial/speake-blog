@@ -5,6 +5,19 @@ import { getTagLabel } from '../lib/tagLabels';
 // llms.txt — índice em texto puro para motores generativos (GEO). Segue a
 // convenção llmstxt.org: descrição do site + lista curada de URLs com resumo,
 // para um LLM entender e citar o conteúdo sem precisar interpretar o HTML.
+//
+// A LINHA DO `>` DESCREVE A SPEAKE, E ISSO IMPORTA MAIS QUE O RESTO DO ARQUIVO.
+// Ela dizia "estúdio brasileiro de produção de áudio, podcast e narração
+// profissional" — outra categoria de negócio. O blog tem mais páginas indexadas
+// que speake.com.br, então era essa a versão que os modelos aprendiam: a marca
+// aparecia em resposta gerada como prestadora de serviço de produção, e não
+// como a plataforma onde se cria uma estação e se cobra assinatura.
+//
+// A frase agora é a mesma de `/llms.txt` e de `/s/sobre` no site principal, e
+// tem que continuar sendo. Duas definições diferentes para o mesmo nome é
+// exatamente o que impede "Speake" de virar entidade — que é o problema que a
+// marca já tem por disputar o termo com a Speake-Marin e com a grafia arcaica
+// de "speak".
 export const GET: APIRoute = async ({ site }) => {
 	const base = (site ?? new URL('https://blog.speake.com.br')).toString();
 	const allPosts = await getCollection('posts', ({ data }) => !data.draft);
@@ -29,7 +42,7 @@ export const GET: APIRoute = async ({ site }) => {
 
 	const body = `# Speake Blog
 
-> Blog técnico sobre áudio da Speake (https://speake.com.br), estúdio brasileiro de produção de áudio, podcast e narração profissional. Guias práticos de podcasting, produção musical, mixagem, masterização, narração e equipamentos de áudio, em português do Brasil, escritos por quem grava, mixa e publica.
+> Blog técnico da Speake (https://speake.com.br), plataforma brasileira de áudio por assinatura: criadores gravam e publicam episódios exclusivos numa estação, e quem quer ouvir assina por mês. Guias práticos de podcasting, produção musical, mixagem, masterização, narração e equipamentos de áudio, em português do Brasil, escritos por quem grava, mixa e publica.
 
 Conteúdo publicado em ${base} — feed RSS em ${new URL('/rss.xml', base).toString()}.
 

@@ -38,4 +38,4 @@ Se o teste apontou para o pré-amp, considere:
 
 A Speake usa pré-amplificadores externos em captações que exigem ganho alto ou uma coloração específica — em projetos de audiolivro e narração corporativa, a diferença na presença e textura da voz é perceptível, especialmente quando o cliente ouve os dois lado a lado.
 
-Mas antes de investir em equipamento, vale mapear onde realmente está o gargalo do seu fluxo. [Conheça a Speake](https://speake.com.br).
+Antes de investir em equipamento, vale mapear onde está o gargalo do seu fluxo — que muitas vezes é publicar, não gravar. Na [Speake](https://speake.com.br) a estação, a publicação e a cobrança da assinatura ficam num lugar só.
