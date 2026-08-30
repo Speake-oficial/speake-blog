@@ -60,7 +60,7 @@ O anúncio dinâmico é o oposto: a plataforma de hospedagem insere o áudio no 
 5. **Entregue relatório no fim do pacote** com downloads da campanha e cliques no link rastreado. É o que faz o patrocinador renovar.
 6. **Cobre 50% adiantado** em anunciante novo.
 
-A taxa de conclusão do episódio é o que sustenta o CPM na renovação, e ela cai quando o áudio cansa: volume irregular entre convidados, sala com eco, voz abafada. Em programas que a Speake edita, padronizar a mixagem e o [loudness em -16 LUFS](/posts/loudness-lufs-podcast-streaming/) costuma ser a mudança mais barata com efeito direto na retenção — e retenção é exatamente o número que o anunciante olha antes de renovar.
+A taxa de conclusão do episódio é o que sustenta o CPM na renovação, e ela cai quando o áudio cansa: volume irregular entre convidados, sala com eco, voz abafada. Padronizar a mixagem e o [loudness em -16 LUFS](/posts/loudness-lufs-podcast-streaming/) costuma ser a mudança mais barata com efeito direto na retenção — e retenção é exatamente o número que o anunciante olha antes de renovar.
 
 ## Perguntas frequentes
 
@@ -73,4 +73,4 @@ Para anunciante de médio e grande porte, sim: quase toda agência exige nota fi
 **Quanto tempo até o primeiro patrocínio?**
 Com publicação semanal consistente, a faixa comum é de 6 a 12 meses para chegar aos 1.000 downloads por episódio. Programas de nicho profissional chegam antes, com audiência menor, porque vendem qualificação em vez de volume.
 
-Quer que a produção e a edição do seu podcast sustentem a retenção que o patrocinador cobra? Conheça a [Speake](https://speake.com.br).
+Publicidade e assinatura não se excluem. Na [Speake](https://speake.com.br) você publica episódios exclusivos numa estação própria e soma receita recorrente de assinatura ao patrocínio que já negocia hoje.
