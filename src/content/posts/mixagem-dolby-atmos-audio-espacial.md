@@ -51,7 +51,7 @@ Na prática isso significa que a mixagem em Dolby Atmos fica cerca de 4 a 5 dB m
 6. Envie junto o **master estéreo 2.0**. A distribuidora exige os dois; o estéreo continua sendo o que toca no Spotify, que até hoje não oferece áudio espacial.
 7. Confira o downmix estéreo gerado pelo renderizador. Se ele soa muito diferente do seu master estéreo, algo na distribuição de energia entre bed e objetos está errado.
 
-Na Speake, esse tipo de entrega multiformato — master estéreo e versão espacial saindo da mesma sessão, com os dois conferidos lado a lado — é tratado como parte do mesmo projeto de masterização, justamente porque as decisões de dinâmica de um afetam o outro.
+Entrega multiformato — master estéreo e versão espacial saindo da mesma sessão, conferidas lado a lado — funciona melhor tratada como um projeto só de masterização, justamente porque as decisões de dinâmica de uma afetam a outra.
 
 ## Vale a pena mixar em Dolby Atmos?
 

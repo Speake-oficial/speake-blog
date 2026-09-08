@@ -39,6 +39,6 @@ Muita gente configura o canal paralelo com attack rápido, achando que vai "pega
 
 O segundo erro é misturar o canal paralelo alto demais. A sensação certa é quase subliminar: a bateria deve parecer mais "cheia" e presente, não obviamente comprimida. Se você conseguir ouvir claramente o compressor agindo, o fader do aux está alto demais.
 
-Na Speake, compressão paralela faz parte do processo padrão de mixagem para produção musical — usada em combinação com EQ, saturação e automação para entregar um som ao mesmo tempo denso e orgânico.
+Compressão paralela é ferramenta padrão de mixagem em produção musical — usada junto com EQ, saturação e automação para chegar num som ao mesmo tempo denso e orgânico.
 
-Quer esse cuidado na sua produção? [produção musical com a Speake](https://speake.com.br).
+Faixa fechada, próximo passo é distribuir. Na [Speake](https://speake.com.br) você publica seu áudio numa estação própria e cobra assinatura de quem quer ouvir.

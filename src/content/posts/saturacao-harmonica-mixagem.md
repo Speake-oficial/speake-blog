@@ -39,6 +39,6 @@ Algumas referências práticas:
 
 Há uma diferença entre usar saturação porque "é o que se faz" e usá-la porque um elemento específico está pedindo mais informação harmônica para funcionar no contexto do mix. A primeira abordagem produz mixes que soam "bagunçados quentes". A segunda produz mixes que soam coesos e com caráter.
 
-Nas sessões de mixagem da Speake, saturação entra quando um elemento específico precisa — pode ser nenhum canal em alguns projetos, pode ser cinco buses em outros. A pergunta não é "vamos saturar?", é "esse elemento consegue fazer o trabalho dele sem mais harmônicos?"
+Saturação entra quando um elemento específico precisa — pode ser nenhum canal em alguns projetos, pode ser cinco buses em outros. A pergunta não é se vamos saturar, é se esse elemento consegue fazer o trabalho dele sem mais harmônicos.
 
-Quer um mix onde cada decisão de processamento tem razão de ser? [mixagem com a Speake](https://speake.com.br).
+Cada decisão com razão de ser, e o episódio pronto para publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

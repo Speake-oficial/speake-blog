@@ -37,6 +37,6 @@ Quando isso não é suficiente ou não é viável no espaço disponível:
 
 Cancelamento de fase parece, ao ouvido destreinado, "falta de uma frequência" — e a reação automática é compensar com EQ, boostando justamente a faixa que está sendo cancelada. Isso não funciona, porque o cancelamento acontece na soma das fases, não no nível de uma frequência isolada; aumentar o ganho daquela faixa só amplifica o ruído ao redor do vale, sem trazer de volta o que foi cancelado. O ajuste correto é sempre na captação — distância, ângulo, isolamento — e não na mixagem depois do fato.
 
-Decidir esse setup de microfones antes de gravar economiza horas de tentativa de conserto depois. A Speake monta a captação multimicrofone de podcasts, entrevistas e sessões de gravação musical já prevendo esse tipo de problema, da posição dos microfones ao tratamento do ambiente.
+Decidir esse setup de microfones antes de gravar economiza horas de tentativa de conserto depois. Em captação multimicrofone de podcast, entrevista ou sessão musical, prever o problema na posição dos microfones e no tratamento do ambiente sai muito mais barato do que corrigir na edição.
 
 Resolvida a captação, o episódio precisa de casa. Na [Speake](https://speake.com.br) você publica sua estação de áudio e cobra assinatura de quem quer ouvir.

@@ -52,7 +52,7 @@ O Spotify converte tudo internamente: arquivos acima de 24 bits são reduzidos p
 5. **Confira metadados e ISRC** no distribuidor. Arquivo certo com ISRC errado vira faixa duplicada no catálogo.
 6. **Guarde o master 24 bits arquivado.** Se amanhã aparecer um tier de 96 kHz, quem tem o arquivo nativo re-entrega em minutos.
 
-Na Speake, masters entregues para distribuição saem em 24 bits na taxa nativa da sessão, com uma versão de referência em 16-bit/44,1 kHz apenas para os canais que ainda exigem CD-DA — é o mesmo cuidado que aplicamos em séries de podcast, onde a consistência entre episódios depende de um padrão de entrega fixo.
+O padrão seguro é entregar masters em 24 bits na taxa nativa da sessão, com uma versão de referência em 16-bit/44,1 kHz apenas para os canais que ainda exigem CD-DA — o mesmo cuidado vale em série de podcast, onde a consistência entre episódios depende de um padrão de entrega fixo.
 
 ## Dá para ouvir a diferença do Spotify lossless?
 

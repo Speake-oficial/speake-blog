@@ -35,6 +35,6 @@ Uma régua prática: intro de 20 a 25 segundos, bumpers de 4 a 6 segundos, outro
 
 Ferramentas de IA e loops de royalty-free resolvem o mínimo, mas a maior parte do que existe em biblioteca sonora já foi usada em dezenas de outros podcasts. O risco de um ouvinte reconhecer "aquela vinheta" de outro programa que ele também escuta é real e diminui a percepção de originalidade do seu programa.
 
-A Speake produz vinhetas personalizadas para podcasts — trilha composta sob medida, locução gravada e mixada, entregue em todos os formatos necessários para edição. O resultado é um conjunto sonoro exclusivo do programa, não uma combinação de templates.
+Uma vinheta personalizada — trilha composta sob medida, locução gravada e mixada, exportada em todos os formatos que a edição vai precisar — resulta num conjunto sonoro exclusivo do programa, não numa combinação de templates.
 
-Quer uma vinheta criada do zero para o seu podcast? [criação de vinhetas na Speake](https://speake.com.br).
+Vinheta pronta, falta o canal. Na [Speake](https://speake.com.br) você publica seus episódios numa estação própria e cobra assinatura de quem acompanha.

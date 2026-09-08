@@ -36,6 +36,6 @@ EQ subtrativo não é dogma. Boost tem lugar quando você precisa de uma caracte
 
 A regra prática: tente cortar primeiro. Se o mix melhorar com o corte, o boost era desnecessário. Se depois do corte ainda sentir falta de algo, aí o boost resolve com muito menos ganho do que precisaria antes.
 
-Na Speake, o processo de mixagem parte sempre do EQ subtrativo como primeiro passo em cada faixa — o que economiza processamento, preserva headroom e resulta em mixes que respiram melhor e sobrevivem à masterização sem surpresas.
+Partir do EQ subtrativo como primeiro passo em cada faixa economiza processamento, preserva headroom e resulta em mixes que respiram melhor e sobrevivem à masterização sem surpresas.
 
-Quer esse cuidado na sua produção? [produção musical na Speake](https://speake.com.br).
+Mix limpo, falta chegar em quem ouve. Na [Speake](https://speake.com.br) você publica seu áudio numa estação própria e cobra assinatura mensal.

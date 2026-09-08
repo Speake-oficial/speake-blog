@@ -40,6 +40,6 @@ Aplicar dither no plugin da cadeia de masterização e depois deixar o exportado
 
 O fluxo correto: desligue qualquer dither automático do DAW, deixe o processamento interno em 32/64 bits, insira o plugin de dithering como último elemento da cadeia antes do export, e exporte em 16-bit integer. Um único ponto de conversão, um único dither.
 
-A Speake trabalha o processo de entrega final de cada projeto — a decisão sobre profundidade de bits, dithering e loudness target — como parte da masterização, não como um passo técnico que o cliente resolve depois. Esses detalhes importam no resultado final.
+A entrega final de cada projeto — a decisão sobre profundidade de bits, dithering e loudness target — é parte da masterização, não um passo técnico que fica para depois. Esses detalhes importam no resultado final.
 
-Quer uma masterização onde nenhum detalhe da entrega fica ao acaso? [masterização de áudio na Speake](https://speake.com.br).
+Arquivo entregue certo, próximo passo é distribuir. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e cobra assinatura mensal de quem ouve.

@@ -44,6 +44,6 @@ Funciona muito bem para gravação de voz e instrumentos sem efeitos no monitora
 
 Um buffer de 64 amostras numa interface com driver ASIO bem otimizado é completamente diferente de 64 amostras em modo genérico pelo Windows sem driver dedicado. No Mac, o CoreAudio é nativo e funciona bem. No Windows, use sempre o driver ASIO do fabricante da interface — nunca o ASIO4ALL em produção, que é uma solução de contorno para hardware sem suporte adequado.
 
-Parte do cuidado técnico que a Speake aplica na preparação de sessões remotas passa exatamente por isso: garantir que a cadeia de captura esteja calibrada antes de gravar, não depois de perceber o problema na edição.
+O cuidado que sustenta uma sessão remota passa exatamente por isso: garantir que a cadeia de captura esteja calibrada antes de gravar, não depois de perceber o problema na edição.
 
-Quer uma sessão de gravação configurada do início? [comece com a Speake](https://speake.com.br).
+Sessão configurada, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

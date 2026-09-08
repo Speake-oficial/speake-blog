@@ -42,6 +42,6 @@ Você não precisa de um analisador profissional para isso. O Youlean Loudness M
 
 ## Quando vale terceirizar
 
-Se você distribui o mesmo conteúdo em múltiplas plataformas com especificações diferentes — podcast no Spotify, versão em áudio-livro na Audible, trecho em vídeo no YouTube — manter masters separados e calibrados certo para cada uma vira trabalho de rotina que rouba tempo de produção de conteúdo. A Speake faz esse processo de masterização e adequação de loudness por plataforma como parte do serviço de pós-produção de áudio, evitando que o episódio saia errado em algum canal.
+Se você distribui o mesmo conteúdo em múltiplas plataformas com especificações diferentes — podcast no Spotify, versão em áudio-livro na Audible, trecho em vídeo no YouTube — manter masters separados e calibrados para cada uma vira trabalho de rotina que rouba tempo de produção. Vale montar essa cadeia de masters por plataforma uma vez e reaproveitá-la a cada episódio, em vez de recalibrar do zero toda semana.
 
-Quer ajuda profissional com isso? [masterização de podcast na Speake](https://speake.com.br).
+E quanto menos canais diferentes você precisa alimentar, melhor: na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir ali mesmo.

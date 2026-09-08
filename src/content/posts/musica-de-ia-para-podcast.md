@@ -53,7 +53,7 @@ A regra é fazer a trilha ficar bem abaixo da voz e abrir espaço em frequência
 5. Use **sidechain ducking** com attack de 5–15 ms e release de 250–400 ms, para a trilha respirar entre as frases.
 6. Feche a vinheta com **fade de 1,5 a 3 s** e masterize o episódio inteiro para **-16 LUFS integrado (mono) ou -14 LUFS (estéreo)**, com true peak em -1 dBTP.
 
-Vinheta de abertura funciona bem entre **5 e 15 segundos**. Acima disso, a taxa de abandono nos primeiros 30 segundos sobe visivelmente — e é justamente esse trecho que as plataformas usam como preview. Quando o programa é comercial e a identidade sonora precisa ser mesmo sua, exclusiva e defensável, o caminho continua sendo produção original: é o tipo de vinheta que a Speake produz, com composição feita por gente e direitos claros de quem contratou.
+Vinheta de abertura funciona bem entre **5 e 15 segundos**. Acima disso, a taxa de abandono nos primeiros 30 segundos sobe visivelmente — e é justamente esse trecho que as plataformas usam como preview. Quando o programa é comercial e a identidade sonora precisa ser mesmo sua, exclusiva e defensável, o caminho continua sendo produção original: composição feita por gente, com direitos claros em nome do programa.
 
 ## Perguntas frequentes
 
@@ -66,4 +66,4 @@ Serve para pontuações e transições curtas, mas cuidado: distribuidoras de au
 **Vale mais assinar uma biblioteca de música ou usar IA?**
 Biblioteca (Epidemic, Artlist, Musicbed) entrega segurança jurídica e catálogo curado por assinatura anual; IA entrega faixa sob medida em minutos, por menos dinheiro, com mais risco. Para programa com patrocinador, a segurança da biblioteca — ou da trilha original — costuma pagar a diferença.
 
-Quer ajuda profissional com a identidade sonora do seu podcast? Conheça a [Speake](https://speake.com.br).
+Identidade sonora definida, falta o canal. Na [Speake](https://speake.com.br) você publica seus episódios numa estação própria e cobra assinatura de quem acompanha.

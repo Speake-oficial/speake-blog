@@ -38,7 +38,7 @@ Para podcast só em áudio, lip sync é irrelevante — não pague por isso. Par
 
 A cobrança é por minuto de áudio processado, quase sempre via créditos de assinatura. Planos mensais entre US$ 5 e US$ 99 cobrem de alguns minutos a algumas horas de dublagem, e os planos de entrada em geral não liberam uso comercial — confira essa cláusula antes de assinar.
 
-O ponto que quase ninguém contabiliza é o tempo humano. Revisar a tradução e o timing de um episódio de 60 minutos leva de 2 a 4 horas de trabalho atento, mesmo com a IA acertando a maior parte. A economia contra uma dublagem tradicional com locutor, estúdio e direção é real, mas ela vem de substituir a gravação, não a revisão. Quando o episódio dublado vira peça de marca, vale tratá-lo como produção de locução mesmo — é o tipo de trabalho que a Speake faz com voz humana, direção e masterização.
+O ponto que quase ninguém contabiliza é o tempo humano. Revisar a tradução e o timing de um episódio de 60 minutos leva de 2 a 4 horas de trabalho atento, mesmo com a IA acertando a maior parte. A economia contra uma dublagem tradicional com locutor, estúdio e direção é real, mas ela vem de substituir a gravação, não a revisão. Quando o episódio dublado vira peça de marca, vale tratá-lo como produção de locução mesmo — voz humana, direção e masterização.
 
 ## Como publicar o episódio dublado no Spotify e no YouTube?
 
@@ -70,4 +70,4 @@ Dá, e costuma ser o melhor teste: dubla um episódio evergreen com boa audiênc
 **A dublagem por IA substitui legendas?**
 Não, complementa. Legenda é o que torna o episódio indexável por busca e acessível para quem assiste sem som; a dublagem atende quem prefere ouvir. O SRT no idioma de destino sai da mesma tradução que você já revisou.
 
-Quer ajuda profissional com isso? Conheça a [Speake](https://speake.com.br).
+E o episódio, dublado ou não, precisa de um canal seu. Na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir.

@@ -54,7 +54,7 @@ Gravar demo de locução em casa é viável desde que a sala não apareça no ar
 7. **Entregue em -16 LUFS integrado e -1 dBTP.** Não esmague em -9 LUFS para "soar profissional": isso mata a dinâmica que a demo existe para mostrar ([alvos por plataforma](/posts/loudness-lufs-podcast-streaming/)).
 8. **Exporte MP3 320 kbps** para enviar e guarde o WAV 48 kHz/24 bit para quando pedirem.
 
-A montagem e o acabamento são onde a maioria trava — é o mesmo trabalho de edição, limpeza e masterização de voz que a Speake faz em locução e narração comercial, e que dá para contratar avulso quando os takes já estão gravados.
+A montagem e o acabamento são onde a maioria trava — é trabalho de edição, limpeza e masterização de voz, e dá para contratar avulso com um editor quando os takes já estão gravados.
 
 ## Preciso de demos separadas por segmento?
 
@@ -71,4 +71,4 @@ A cada 12 a 18 meses, ou sempre que a sua leitura mudar de patamar. Demo antiga 
 **Preciso de microfone caro para gravar a demo?**
 Não. Um condensador de entrada em faixa de R$ 700 a R$ 1.500 numa sala tratada bate um microfone de R$ 5.000 num quarto vazio. Se estiver escolhendo agora, veja [microfone USB vs XLR](/posts/microfone-usb-vs-xlr/).
 
-Quer ajuda profissional para gravar, montar e finalizar a sua demo? Conheça a [Speake](https://speake.com.br).
+Demo pronta, falta um lugar seu para publicar. Na [Speake](https://speake.com.br) você cria uma estação de áudio, publica seu trabalho e cobra assinatura de quem quer acompanhar.

@@ -41,6 +41,6 @@ Cada dB de ruído evitado na gravação é um dB que você não precisa "comprar
 
 Existem situações em que reduzir ruído de forma mais agressiva, mesmo com algum artefato, ainda é a decisão certa — por exemplo, um trecho de entrevista gravado em ambiente ruidoso que não pode ser regravado. Nesses casos, ferramentas de restauração espectral (como o RX da iZotope) com correção manual, faixa por faixa, dão resultado muito melhor do que um redutor de ruído genérico aplicado na faixa inteira. É um processo mais lento, mas evita destruir uniformemente toda a gravação para resolver um problema localizado.
 
-Na Speake, a limpeza de ruído de fundo é parte do fluxo de pós-produção de narração e podcast: o objetivo é sempre resolver o máximo possível na escolha de equipamento e ambiente de gravação, e usar redução de ruído como ajuste fino, não como muleta para uma gravação mal capturada.
+A limpeza de ruído de fundo é ajuste fino de pós-produção, não muleta: o objetivo é sempre resolver o máximo possível na escolha de equipamento e no ambiente de gravação.
 
-Quer ajuda profissional com isso? [tratamento de voz na Speake](https://speake.com.br).
+Voz limpa, falta publicar. Na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir.

@@ -44,7 +44,7 @@ O maior ganho de qualidade não está na ferramenta, está no arquivo de entrada
 5. **Trate o stem depois.** Filtro passa-alta em 80-100 Hz no vocal isolado, um de-esser leve e, se necessário, um redutor de ruído espectral suave resolvem a maior parte do "borbulhado" residual.
 6. **Confira em mono e em fones.** Artefatos de separação são muito mais audíveis em fones e na soma mono do que em monitores.
 
-Em produções de podcast e audiolivro, essa técnica aparece num caso específico: recuperar uma trilha ou vinheta cujo projeto original se perdeu. Na Speake, quando um cliente chega só com o áudio finalizado e precisa refazer a mixagem, separar os elementos por IA é o que permite reconstruir uma versão nova sem regravar tudo do zero.
+Em produções de podcast e audiolivro, essa técnica aparece num caso específico: recuperar uma trilha ou vinheta cujo projeto original se perdeu. Quando você só tem o áudio finalizado e precisa refazer a mixagem, separar os elementos por IA é o que permite reconstruir uma versão nova sem regravar tudo do zero.
 
 ## Quais são os limites da separação de stems por IA?
 
@@ -63,4 +63,4 @@ Dá. Demucs v4 é aberto e gratuito, e o UVR oferece interface gráfica para rod
 **O stem separado serve para mixar do zero?**
 Serve como ponto de partida, não como multitrack. Você consegue reequilibrar níveis, trocar a bateria e refazer o espaço, mas não vai obter o mesmo controle de uma sessão original — o vazamento entre faixas limita quanto dá para mover cada elemento antes que os artefatos apareçam.
 
-Quer ajuda profissional com produção, mixagem e recuperação de áudio? Conheça a [Speake](https://speake.com.br).
+Áudio recuperado, falta publicar. Na [Speake](https://speake.com.br) você publica seus episódios numa estação própria e cobra assinatura de quem ouve.

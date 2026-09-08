@@ -41,6 +41,6 @@ E se a interface tem entrada Hi-Z de qualidade e você está gravando em cabos c
 
 A DI é um dos acessórios mais baratos com impacto real na qualidade do sinal gravado. Uma DI passiva simples de marca confiável já resolve a maioria dos casos de home studio. A DI ativa justifica o investimento maior quando você grava muitas guitarras acústicas com captador piezo ou instrumentos com sinal mais fraco.
 
-Na Speake, o setup de gravação para projetos de produção musical inclui DI ativas para instrumentos de corda e passivas para teclados e baixo — escolha feita instrumento a instrumento, não como padrão único.
+Num setup de gravação para produção musical, o padrão costuma ser DI ativa para instrumentos de corda e passiva para teclados e baixo — escolha feita instrumento a instrumento, não como regra única.
 
-Quer ajuda profissional com gravação e produção no seu projeto? [gravação e produção na Speake](https://speake.com.br).
+Gravação resolvida, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio por assinatura.

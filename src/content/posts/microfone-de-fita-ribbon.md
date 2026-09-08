@@ -40,6 +40,6 @@ Outro efeito do princípio de velocidade: ribbons têm padrão polar **bidirecio
 
 Ribbons têm saída elétrica baixa — costumam precisar de 10 a 20 dB mais ganho do que um condensador típico na mesma fonte. Isso significa que o preamp importa: com um preamp ruidoso, o sinal do ribbon vai trazer ruído de fundo junto com o áudio. Se você já tem um preamp limpo com ganho suficiente no seu setup, o ribbon vai funcionar bem. Se a interface tem preamps mediocres, pode valer avaliar um preamp externo antes de investir no microfone.
 
-Na Speake, ribbons fazem parte do setup de captação em projetos de produção musical e narração onde o timbre do material justifica — não por padrão, mas quando a fonte se beneficia desse comportamento sonoro específico.
+Ribbons fazem sentido em produção musical e narração quando o timbre do material justifica — não por padrão, mas quando a fonte se beneficia desse comportamento sonoro específico.
 
 Escolhido o microfone, o que decide o resultado é a frequência com que você publica. Na [Speake](https://speake.com.br) você grava pelo app, publica na sua estação e sua audiência assina para ouvir.

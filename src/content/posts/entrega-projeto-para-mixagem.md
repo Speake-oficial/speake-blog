@@ -45,6 +45,6 @@ Stems sozinhos são metade da informação. Mande também:
 
 Não mande o arquivo do projeto do seu DAW como substituto dos stems. Projetos de DAW dependem de plugins instalados, versões específicas de software e caminhos de arquivo que só existem na sua máquina. O mixer vai abrir e encontrar 40 plugins faltando — e esse retrabalho vai custar tempo de sessão que você está pagando.
 
-Na Speake, o processo começa com um checklist de entrega antes de abrir qualquer arquivo — justamente para garantir que o tempo de sessão vai para decisões criativas, não para resolver problemas de exportação que deveriam ter sido resolvidos antes. Se você tem dúvidas sobre como preparar sua entrega, é exatamente esse tipo de orientação que faz parte do serviço.
+Vale começar por um checklist de entrega antes de abrir qualquer arquivo — é o que garante que o tempo de sessão vá para decisões criativas, e não para resolver problemas de exportação que deveriam ter sido resolvidos antes.
 
-Pronto para enviar seu projeto para mixagem? [envie seu projeto para a Speake](https://speake.com.br).
+Depois de mixado, o material precisa de destino. Na [Speake](https://speake.com.br) você publica na sua estação de áudio e sua audiência assina para ouvir.

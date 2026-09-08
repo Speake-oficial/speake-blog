@@ -46,6 +46,6 @@ O SPL Transient Designer original tem dois knobs por canal — Attack e Sustain 
 
 Uma aplicação menos óbvia: automação de sustain em seções de clímax. Aumentar levemente o sustain da bateria nas últimas quatro medidas de uma ponte cria uma sensação de expansão do ambiente que complementa o arranjo sem mudar nenhum outro elemento. O ouvido percebe o espaço crescendo, não o plugin.
 
-A Speake usa transient shaping como etapa padrão em percussão, guitarras e baixo nas mixagens de produção musical — é um dos ajustes que entrega punch e definição sem sacrificar headroom para a masterização.
+Transient shaping funciona como etapa padrão em percussão, guitarras e baixo na mixagem de produção musical — é um dos ajustes que entrega punch e definição sem sacrificar headroom para a masterização.
 
-Quer esse nível de controle na sua produção? [produção de áudio profissional na Speake](https://speake.com.br).
+Mix com punch, falta chegar em quem ouve. Na [Speake](https://speake.com.br) você publica seu áudio numa estação própria e cobra assinatura mensal.

@@ -57,6 +57,6 @@ O que funciona: estudar como o personagem pensa e se move na história, e deixar
 
 ---
 
-Na Speake, produção de audiolivro inclui revisão de consistência vocal entre sessões — além da edição técnica, verificamos se os personagens principais mantêm identidade reconhecível do início ao fim. Esse cuidado faz diferença especialmente em obras longas ou gravadas em múltiplas semanas.
+Revisar a consistência vocal entre sessões vale tanto quanto a edição técnica: verificar se os personagens principais mantêm identidade reconhecível do início ao fim faz diferença especialmente em obras longas ou gravadas ao longo de várias semanas.
 
-Quer produzir um audiolivro com essa qualidade de acabamento? [produção de audiolivro na Speake](https://speake.com.br).
+Audiolivro acabado, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem quer ouvir.

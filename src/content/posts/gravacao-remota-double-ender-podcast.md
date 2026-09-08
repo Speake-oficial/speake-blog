@@ -35,6 +35,6 @@ Mesmo com double-ender, vale manter a gravação da própria chamada como backup
 
 ## Quando vale terceirizar
 
-Para quem grava com convidados regularmente, montar esse fluxo — escolher a plataforma certa, orientar os convidados sobre microfone e ambiente antes da gravação, sincronizar e tratar as faixas — consome tempo que poderia ir para o conteúdo do episódio. A Speake monta esse processo de ponta a ponta para podcasts com gravação remota, da escolha da ferramenta à entrega do episódio mixado e masterizado.
+Para quem grava com convidados regularmente, montar esse fluxo — escolher a plataforma certa, orientar os convidados sobre microfone e ambiente antes da gravação, sincronizar e tratar as faixas — consome tempo que poderia ir para o conteúdo do episódio. Montá-lo uma vez, com ferramenta escolhida e template de sincronização pronto no DAW, transforma o que era retrabalho a cada episódio em rotina de minutos.
 
-Quer ajuda profissional com isso? [gravação de podcast com a Speake](https://speake.com.br).
+Com o episódio gravado e tratado, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem acompanha.

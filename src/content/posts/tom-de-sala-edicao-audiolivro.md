@@ -37,6 +37,6 @@ Não gravar room tone antes de desmobilizar o setup. Uma vez que você guardou o
 
 Se você perceber o problema na edição e não tiver o room tone gravado, vai precisar criar silêncio artificial — com um plugin de geração de ruído tentando imitar o ambiente — ou aceitar uma edição que revela os cortes para qualquer ouvinte com atenção. É um dos problemas mais difíceis de resolver em pós-produção porque o dado simplesmente não existe.
 
-São dois minutos que custam nada e economizam horas. Na Speake, o room tone é capturado como parte do protocolo padrão de toda produção de audiolivro, para que a edição final nunca traia os cortes.
+São dois minutos que custam nada e economizam horas. Vale capturar o room tone como protocolo padrão de toda produção de audiolivro, para que a edição final nunca traia os cortes.
 
-Vai produzir um audiolivro? [produza com a Speake](https://speake.com.br).
+Audiolivro editado, falta publicar. Na [Speake](https://speake.com.br) você publica seus capítulos numa estação própria e cobra assinatura de quem ouve.

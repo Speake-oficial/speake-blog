@@ -43,7 +43,7 @@ Não existe escolha errada aqui, existe etapa errada: nenhuma dessas ferramentas
 6. **Exporte em WAV 48 kHz/24 bit**, faixas separadas quando a ferramenta permitir. Nunca exporte MP3 nessa etapa: você ainda vai processar o áudio, e cada rodada de compressão com perdas cobra o preço.
 7. **Finalize na DAW**: crossfades de 5 a 20 ms em cada emenda, tom de sala nos buracos, redução de ruído, compressão, e a entrega em -16 LUFS integrado com true peak em -1 dBTP.
 
-Esse desenho — texto para estrutura, DAW para acabamento — é o mesmo que a [Speake](https://speake.com.br) usa na produção de podcast: a transcrição acelera a decisão editorial, mas o que chega ao ouvinte passa por edição de áudio de verdade.
+Esse desenho — texto para estrutura, DAW para acabamento — é o que sustenta um fluxo rápido sem perder qualidade: a transcrição acelera a decisão editorial, mas o que chega ao ouvinte passa por edição de áudio de verdade.
 
 ## Quando não usar edição por texto?
 
@@ -62,4 +62,4 @@ Dá, e é onde o método mais economiza tempo, porque um corte só vale para as 
 **Preciso pagar para editar por texto?**
 Não necessariamente. Transcrição local com Whisper sai de graça e alimenta um fluxo manual, e Premiere e Resolve trazem edição por transcrição nas versões que muita gente já tem. As assinaturas específicas compram conveniência e velocidade, não uma capacidade exclusiva.
 
-Quer ajuda profissional com a edição e a produção do seu podcast? Conheça a [Speake](https://speake.com.br).
+Episódio editado, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem acompanha o programa.

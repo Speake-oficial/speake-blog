@@ -43,6 +43,6 @@ Muitos compressores modernos têm modo "auto" para ataque e release. O modo auto
 
 Se você ajustou threshold e ratio e o compressor parece não estar fazendo nada, verifique o ataque. Um ataque muito lento pode estar deixando os picos passarem antes da compressão entrar — o GR meter não vai mostrar muito movimento. Se o compressor faz demais — tira o punch, deixa o som plano — provavelmente o ataque está rápido demais. Ajustar o ataque resolve mais rapidamente do que procurar um compressor diferente.
 
-Na Speake, o ajuste de compressão é feito caso a caso por faixa, levando em conta o material, o gênero e o destino da mixagem — não há preset que funcione para todo tipo de áudio.
+Não existe preset que funcione para todo tipo de áudio: o ajuste é caso a caso por faixa, levando em conta o material, o gênero e o destino da mixagem.
 
-Quer uma mixagem com controle de dinâmica feito com precisão? [mixagem profissional na Speake](https://speake.com.br).
+Com a dinâmica sob controle, o que falta é publicar. Na [Speake](https://speake.com.br) você cria sua estação de áudio, publica o que produz e sua audiência assina para ouvir.

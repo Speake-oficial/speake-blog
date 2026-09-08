@@ -52,7 +52,7 @@ Não corte do arquivo publicado. O episódio publicado já passou por limitaçã
 6. **Meça o LUFS integrado** do arquivo final e ajuste o ganho de saída até chegar em -14. Medidores gratuitos como o Youlean Loudness Meter ou o LUFS Meter do próprio Premiere/DaVinci resolvem.
 7. **Renderize o áudio em 48 kHz/24 bit** dentro do vídeo. É a taxa nativa de todo pipeline de vídeo — converter para 44,1 kHz só adiciona um passo desnecessário.
 
-Em produções que a Speake edita, os cortes saem desse export dedicado da mixagem, e não do MP3 já publicado: é a diferença entre um corte que soa como o episódio e um que soa como uma cópia de terceira geração.
+O ideal é que os cortes saiam desse export dedicado da mixagem, e não do MP3 já publicado: é a diferença entre um corte que soa como o episódio e um que soa como uma cópia de terceira geração.
 
 ## O que muda porque o corte é ouvido no celular e sem som?
 
@@ -71,4 +71,4 @@ Deixe a música 15 a 20 dB abaixo da voz nos trechos falados, com [ducking por s
 **Cortes verticais e horizontais precisam de mixes diferentes?**
 Não. O formato de imagem não muda nada no áudio. O que muda é o destino: se o mesmo corte vai para o feed e para um episódio completo no Apple Podcasts, aí sim vale um segundo master em -16 LUFS.
 
-Quer ajuda profissional com a edição e os cortes do seu podcast? Conheça a [Speake](https://speake.com.br).
+Os cortes servem para atrair; o episódio inteiro é o que fideliza. Na [Speake](https://speake.com.br) você publica seus episódios numa estação própria e transforma essa audiência em assinatura mensal.

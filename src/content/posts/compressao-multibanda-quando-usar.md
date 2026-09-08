@@ -36,6 +36,6 @@ Multibanda também introduz artefatos de fase. A maioria dos designs usa filtros
 
 Antes de abrir um plugin multibanda, uma pergunta: o problema é dinâmico e específico de uma faixa de frequência, ou é estático? Se for estático — o mix tem grave demais, a voz é nasal, os agudos são duros — a resposta é EQ. Multibanda é a ferramenta certa quando o desequilíbrio só aparece em certos momentos da música, e só em uma parte do espectro.
 
-Nas sessões de masterização da Speake, multibanda entra na cadeia quando o material apresenta exatamente esse padrão: problema dinâmico, localizado em frequência, sem outra saída. Para projetos produzidos do zero com a Speake, o desequilíbrio é resolvido na mixagem — onde a correção é mais limpa e deixa a master fazer seu trabalho sem compensar erro de etapa anterior.
+Multibanda entra na cadeia quando o material apresenta exatamente esse padrão: problema dinâmico, localizado em frequência, sem outra saída. Em projeto produzido do zero, o desequilíbrio é resolvido na mixagem — onde a correção é mais limpa e deixa a master fazer seu trabalho sem compensar erro de etapa anterior.
 
-Quer masterização que resolve o problema certo com a ferramenta certa? [masterização com a Speake](https://speake.com.br).
+Resolvido o problema certo com a ferramenta certa, resta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio por assinatura.

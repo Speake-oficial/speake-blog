@@ -50,6 +50,6 @@ A voz principal é o ponto de partida óbvio — ride manual da voz é prática 
 
 Um detalhe técnico que afeta o resultado final: automação de volume que cria saltos abruptos entre seções complica o trabalho de masterização. O limitador na master vê picos de energia que não correspondem à dinâmica musical real — são artefatos da automação mal desenhada. Mixes com automação bem construída chegam para a masterização com loudness interno consistente entre seções, o que permite que o limitador trabalhe de forma mais transparente.
 
-Na Speake, automação de volume faz parte do fluxo padrão de mixagem — antes de qualquer decisão de masterização, o mix precisa respirar corretamente por conta própria.
+Automação de volume vem antes de qualquer decisão de masterização: o mix precisa respirar corretamente por conta própria.
 
-Precisa de um mix que soa coeso do início ao fim? [mixagem de áudio na Speake](https://speake.com.br).
+Mix coeso, próximo passo: publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

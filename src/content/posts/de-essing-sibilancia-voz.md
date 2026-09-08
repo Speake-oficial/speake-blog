@@ -39,6 +39,6 @@ Há dois tipos principais:
 
 Quando a sibilância é extremamente severa — locutor com dicção muito sibilante, microfone mal posicionado (diretamente na linha dos lábios em vez de levemente acima ou abaixo), ou ambiente com excesso de reflexões em alta frequência — o de-esser chega até um limite. Nesses casos, parte do trabalho precisa vir da captação: reposicionar o microfone, usar um pop filter com malha dupla ou selecionar um microfone com resposta de frequência menos enfatizada nos agudos faz diferença que nenhum plugin cobre depois.
 
-Na Speake, o controle de sibilância começa na captação — escolha de microfone, posicionamento e acústica do ambiente — e a etapa de mixagem com de-esser é o ajuste fino, não o resgate de uma gravação problemática.
+O controle de sibilância começa na captação — escolha de microfone, posicionamento e acústica do ambiente. O de-esser na mixagem é ajuste fino, não resgate de uma gravação problemática.
 
-Quer voz limpa desde a origem? [tratamento de voz profissional na Speake](https://speake.com.br).
+Voz limpa desde a origem, e depois? Na [Speake](https://speake.com.br) você publica seus episódios numa estação e sua audiência assina para ouvir.

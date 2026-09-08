@@ -38,6 +38,6 @@ Gargarejar com água quente e sal ajuda em garganta irritada, mas não aquece ne
 
 Para sessões de audiolivro acima de duas horas, o aquecimento inicial não é suficiente. A cada 45 a 60 minutos de gravação contínua vale uma pausa de cinco minutos com hidratação e dois ou três minutos de sopros labiais para manter a voz estável até o fim. Sessões longas sem pausas produzem um cansaço vocal perceptível que aparece na forma de onda — a voz começa a perder brilho e a consistência de takes cai.
 
-Para narradores que trabalham com audiolivros de longa duração, a Speake cuida de toda a pós-produção da sessão — edição, comping, masterização nos padrões ACX e Findaway — para que o esforço fique concentrado na performance, não no processo técnico.
+Para quem narra com regularidade, o aquecimento deixa de ser ritual e vira parte do custo de cada sessão: cinco minutos antes de gravar economizam takes refeitos depois, além de edição e comping em cima de material cansado.
 
-Quer ajuda profissional com produção de audiolivros? [produção de audiolivros na Speake](https://speake.com.br).
+E quando a voz já está pronta, falta o lugar de publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio, publica capítulos e episódios exclusivos e cobra assinatura de quem quer ouvir.

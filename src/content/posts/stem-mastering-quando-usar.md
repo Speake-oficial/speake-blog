@@ -55,6 +55,6 @@ Vale considerar stems quando: o projeto tem alta complexidade de dinâmica entre
 
 ---
 
-Na Speake, a masterização aceita tanto bounces estéreo quanto stems organizados — e o fluxo de cada projeto é definido em conjunto, com base no que o material pede. Se você tem dúvida sobre como preparar os arquivos antes de enviar, a orientação faz parte do processo.
+A masterização aceita tanto bounces estéreo quanto stems organizados — o fluxo se define pelo que o material pede. Resolver como preparar os arquivos antes de exportar economiza uma rodada inteira de retrabalho.
 
-Quer masterizar seu projeto com esse nível de controle? [masterização na Speake](https://speake.com.br).
+Projeto masterizado, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio por assinatura.

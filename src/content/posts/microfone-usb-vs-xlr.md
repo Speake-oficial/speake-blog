@@ -43,6 +43,6 @@ Se você está começando hoje, sem interface, sem planos de escalar o setup em 
 
 Se você já tem uma interface ou está montando um home studio de verdade — para narração, música, podcast com múltiplos participantes presenciais ou qualquer coisa além de um microfone solo — vá direto para o XLR. O investimento extra na interface compensa na flexibilidade imediata.
 
-Na Speake, o padrão de gravação para narração e audiolivros é inteiramente XLR, com pré-amplificadores e interfaces calibradas para cada tipo de voz e projeto. A diferença no controle de ganho e no headroom de sinal é perceptível já na gravação — antes de qualquer processamento.
+Para narração e audiolivro, o padrão de gravação costuma ser inteiramente XLR, com pré-amplificador e interface calibrados para cada tipo de voz. A diferença no controle de ganho e no headroom de sinal é perceptível já na gravação — antes de qualquer processamento.
 
 Vale lembrar por que essa escolha importa menos do que parece: na [Speake](https://speake.com.br) dá para começar com o microfone do celular, publicar a estação e ir melhorando o setup com a assinatura já rodando.

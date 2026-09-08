@@ -46,6 +46,6 @@ Verifique se a interface tem direct monitoring e se ele é mono ou estéreo. Alg
 
 **Software bundle incluso:** O DAW que vem na caixa raramente é o que você vai usar no longo prazo. Não deixe o bundle influenciar a escolha do hardware.
 
-A Speake trabalha com gravações feitas em diferentes setups de interface — e a cadeia de processamento se adapta ao material captado. Mas sinal gravado com preamp ruidoso ou ganho insuficiente não se recupera completamente em pós-produção: o ruído injetado na gravação está fundido ao sinal. A escolha da interface é a primeira decisão de qualidade de qualquer projeto de áudio.
+A cadeia de processamento se adapta ao material captado, mas só até certo ponto: sinal gravado com preamp ruidoso ou ganho insuficiente não se recupera completamente em pós-produção, porque o ruído injetado na gravação está fundido ao sinal. A escolha da interface é a primeira decisão de qualidade de qualquer projeto de áudio.
 
-Quer ajuda para estruturar seu setup de gravação ou entender o que falta na sua cadeia? [fale com a Speake](https://speake.com.br).
+Com a cadeia resolvida, falta o destino do que você gravar. Na [Speake](https://speake.com.br) você publica numa estação própria e cobra assinatura de quem quer ouvir.

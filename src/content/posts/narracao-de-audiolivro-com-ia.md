@@ -42,7 +42,7 @@ A qualidade de uma narração de audiolivro com IA é decidida no texto, não no
 6. **Revise 100% do áudio ouvindo.** Ler o texto de novo não adianta — o erro está na fala, não na página. Marque o timecode e regere só o bloco.
 7. **Finalize com edição e masterização humanas.** Junte os blocos, iguale o [tom de sala](/posts/tom-de-sala-edicao-audiolivro/) e ajuste níveis antes de entregar.
 
-Na Speake, é essa etapa final que mais chega como pedido isolado: o cliente gera a narração por IA, mas precisa de edição e masterização para o arquivo passar na validação automática da plataforma.
+É essa etapa final que costuma virar o gargalo de quem usa IA: a narração sai rápido, mas o arquivo ainda precisa de edição e masterização para passar na validação automática da plataforma.
 
 ## Quais são as especificações técnicas de entrega?
 
@@ -65,4 +65,4 @@ O royalty não muda por causa da narração — muda pelo canal de distribuiçã
 **Dá para misturar narração humana e IA no mesmo título?**
 Tecnicamente sim, mas evite. A troca de timbre entre capítulos é perceptível e quebra a imersão, além de complicar a declaração exigida pelas plataformas. Se precisar de reforço pontual, use IA só para material auxiliar, como créditos e prefácio.
 
-Quer ajuda profissional com edição, masterização e entrega de audiolivro? Conheça a [Speake](https://speake.com.br).
+E dá para não depender da validação de plataforma nenhuma: na [Speake](https://speake.com.br) você publica seu audiolivro numa estação própria e cobra assinatura de quem ouve.

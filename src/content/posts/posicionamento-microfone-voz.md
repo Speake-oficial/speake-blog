@@ -42,6 +42,6 @@ Não é receita: é ponto de partida para testar, porque cada voz irradia de for
 
 O processo mais direto: grave 30 segundos na posição padrão (15 cm, 0° de ângulo). Mova 5 cm para frente, grave de novo. Mova 5 cm para trás da posição original. Incline 15° para cima, grave. Compare os quatro arquivos sem nenhum processamento — só o que entrou. A diferença vai ser maior do que qualquer ajuste de plugin que você fizer depois.
 
-Na Speake, o ajuste de posicionamento faz parte do setup de gravação de narração e voz, especialmente em sessões de audiolivro onde a consistência de timbre ao longo de horas de gravação é crítica. Um posicionamento bem calibrado no início poupa tempo de edição e entrega um sinal mais limpo desde o source.
+O ajuste de posicionamento é parte do setup de gravação de narração e voz, especialmente em sessões de audiolivro, onde a consistência de timbre ao longo de horas de gravação é crítica. Um posicionamento bem calibrado no início poupa tempo de edição e entrega um sinal mais limpo desde a origem.
 
-Quer que sua voz soe bem antes do processamento? [gravação de voz na Speake](https://speake.com.br).
+Voz bem captada, falta publicar. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e cobra assinatura mensal.

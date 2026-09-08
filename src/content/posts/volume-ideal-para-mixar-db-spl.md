@@ -63,7 +63,7 @@ Calibrar não significa mixar sempre no mesmo nível. A referência calibrada é
 - **Volume alto (acima de 90 dB SPL):** só para checagens pontuais de impacto e subgrave, em trechos de 10 a 20 segundos. Não é um lugar para trabalhar.
 - **Em mono e em alto-falante único:** confere compatibilidade e mascaramento, independentemente do nível.
 
-Na Speake, sessões de mixagem e masterização trabalham com nível de monitoração fixo e checagens curtas em outros volumes — é o que mantém a coerência tonal entre episódios de uma mesma série de podcast, em que cada faixa precisa soar igual à anterior.
+Trabalhar com nível de monitoração fixo e fazer checagens curtas em outros volumes é o que mantém a coerência tonal entre episódios de uma mesma série de podcast, em que cada faixa precisa soar igual à anterior.
 
 ## Perguntas frequentes
 

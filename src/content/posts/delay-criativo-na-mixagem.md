@@ -42,6 +42,6 @@ Reverb coloca o elemento num ambiente. Delay controla posição temporal. São p
 
 Quando um vocal soa fechado e seco mas você quer presença sem parecer que está num quarto: slapback. Quando você quer abrir o estéreo de uma voz sem usar mais saturação ou EQ: Haas. Quando você quer que as repetições de uma guitarra trabalhem com a bateria em vez de preencher os espaços entre os tempos: delay sincronizado.
 
-Na Speake, delay é parte do kit padrão de mixagem — mesmo em materiais aparentemente simples, como locução corporativa ou podcast solo, o uso cuidadoso de atraso faz a diferença entre uma voz que "tá lá" e uma voz que prende a atenção.
+Delay é parte do kit padrão de mixagem — mesmo em material aparentemente simples, como locução corporativa ou podcast solo, o uso cuidadoso de atraso faz a diferença entre uma voz que está lá e uma voz que prende a atenção.
 
-Quer um mix que usa essas técnicas de forma consciente? [mixagem profissional com a Speake](https://speake.com.br).
+Mix consciente, publicação constante. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem acompanha.

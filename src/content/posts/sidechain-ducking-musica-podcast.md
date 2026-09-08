@@ -33,6 +33,6 @@ Outro erro é configurar o ducking ouvindo só o trecho de teste e esquecer de r
 
 ## Quando vale automatizar versus terceirizar
 
-Para quem já tem um template de DAW configurado, montar esse sidechain uma vez e reaproveitar a cadeia em todo episódio novo é trabalho de minutos. O problema aparece quando o podcast tem múltiplos formatos de trilha (abertura, transições, trilha de fundo em entrevistas) e cada um precisa de um ajuste de ratio e release diferente — isso deixa de ser configuração única e passa a ser parte do trabalho de mixagem de cada episódio. A Speake cuida dessa etapa dentro do serviço de pós-produção de podcast, ajustando ducking, EQ e nível por episódio para que a trilha nunca compita com a fala.
+Para quem já tem um template de DAW configurado, montar esse sidechain uma vez e reaproveitar a cadeia em todo episódio novo é trabalho de minutos. O problema aparece quando o podcast tem múltiplos formatos de trilha (abertura, transições, trilha de fundo em entrevistas) e cada um precisa de um ajuste de ratio e release diferente — aí vale tratar ducking, EQ e nível como ajuste por episódio, para que a trilha nunca compita com a fala.
 
-Quer ajuda profissional com isso? [mixagem de podcast na Speake](https://speake.com.br).
+Trilha no lugar, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

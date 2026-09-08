@@ -37,6 +37,6 @@ Para microfones de baixa sensibilidade — dinâmicos como o SM7B e similares �
 
 O erro mais caro no home studio é comprar equipamento para resolver um problema que tem solução elétrica simples. Antes de qualquer aquisição, isole o ponto exato onde o ruído entra na cadeia. Um isolador de linha custa entre R$ 100 e R$ 200 e resolve a maioria dos ground loops sem trocar interface, cabo ou computador.
 
-Em projetos de gravação na Speake, verificar o piso de ruído faz parte do processo antes de qualquer sessão. Em narração e audiolivro, onde o fundo deve ser praticamente inaudível, um ground loop não tratado compromete horas de material — e esse tipo de problema não tem correção no pós.
+Verificar o piso de ruído antes de qualquer sessão evita perder material. Em narração e audiolivro, onde o fundo deve ser praticamente inaudível, um ground loop não tratado compromete horas de gravação — e esse tipo de problema não tem correção no pós.
 
 Sala silenciosa, sinal limpo — e agora? Na [Speake](https://speake.com.br) você publica os episódios numa estação própria e transforma audiência em receita mensal.

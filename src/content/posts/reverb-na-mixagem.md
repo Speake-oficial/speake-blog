@@ -42,6 +42,6 @@ Isso tem duas vantagens. Primeiro, o transiente do sinal original nunca é tocad
 
 Reverb se acumula na faixa baixa e alta. Na faixa baixa, reverb cria lama — sub e grave competindo com o kick e o baixo. Na faixa alta, cria um brilho difuso que compete com os instrumentos de ataque rápido (percussão, guitarras). O que resolve: colocar um high-pass em torno de 150–200Hz na entrada do reverb e um low-pass em torno de 8–10kHz. Isso mantém o reverb onde ele contribui — médios e médio-altos — e retira o que só vai causar problema.
 
-A Speake usa essa abordagem de reverb filtrado e em paralelo como padrão em mixagens de música e podcast, porque é o que permite profundidade sem sacrificar definição — o mix soa grande e ao mesmo tempo claro.
+Reverb filtrado e em paralelo funciona como padrão em mixagens de música e podcast porque é o que permite profundidade sem sacrificar definição — o mix soa grande e ao mesmo tempo claro.
 
-Quer esse cuidado na sua produção? [conte com a Speake](https://speake.com.br).
+Mix com profundidade, falta publicar. Na [Speake](https://speake.com.br) você publica seu áudio numa estação própria e cobra assinatura de quem ouve.

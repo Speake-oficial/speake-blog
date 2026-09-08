@@ -46,7 +46,7 @@ A ordem completa numa faixa vocal é: comping dos takes → limpeza de ruído e 
 
 Sim, e provavelmente você já tem uma ferramenta nativa. O Logic Pro traz o Flex Pitch, o Cubase tem o VariAudio, o Studio One inclui o Melodyne Essential na licença, e o Reaper vem com o ReaTune. Todos permitem edição por nota com qualidade suficiente para conteúdo falado, backing vocals e demos.
 
-Entre os gratuitos de terceiros, o Graillon 2 (versão free) e o MAutoPitch cobrem correção em tempo real e o efeito duro. Nenhum deles chega perto do algoritmo do Melodyne em vozes com muito vibrato ou material polifônico, mas resolvem a maior parte do trabalho de home studio. Na Speake, a produção vocal usa afinação manual nota a nota justamente nos casos em que o algoritmo automático falha: vozes com muito ar, sussurro e passagens de peito para falsete.
+Entre os gratuitos de terceiros, o Graillon 2 (versão free) e o MAutoPitch cobrem correção em tempo real e o efeito duro. Nenhum deles chega perto do algoritmo do Melodyne em vozes com muito vibrato ou material polifônico, mas resolvem a maior parte do trabalho de home studio. A afinação manual nota a nota continua valendo justamente nos casos em que o automático falha: vozes com muito ar, sussurro e passagens de peito para falsete.
 
 ## Perguntas frequentes
 

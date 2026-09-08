@@ -27,6 +27,6 @@ Difusores (painéis que espalham a reflexão em vez de absorvê-la) são úteis 
 
 ## Antes de gastar com tratamento, faça o diagnóstico certo
 
-Vale a pena gravar um teste com ruído rosa e um app de medição de RT60 no celular, ou simplesmente bater palmas em pontos diferentes da sala e ouvir onde a reverberação dura mais. É um diagnóstico simples que evita comprar tratamento no lugar errado. A Speake passa por essa etapa de diagnóstico acústico antes de qualquer sessão de mixagem ou masterização em ambiente externo, justamente porque nenhuma cadeia de processamento corrige uma escuta distorcida na origem.
+Vale a pena gravar um teste com ruído rosa e um app de medição de RT60 no celular, ou simplesmente bater palmas em pontos diferentes da sala e ouvir onde a reverberação dura mais. É um diagnóstico simples que evita comprar tratamento no lugar errado — e vale fazê-lo antes de qualquer sessão de mixagem ou masterização, justamente porque nenhuma cadeia de processamento corrige uma escuta distorcida na origem.
 
-Quer mixar e masterizar num ambiente já calibrado? [estúdio tratado da Speake](https://speake.com.br).
+Sala calibrada, falta publicar o que você gravar nela. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

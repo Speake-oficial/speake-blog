@@ -56,4 +56,4 @@ Esse procedimento elimina os "cliques" que aparecem na gravação quando a phant
 
 ---
 
-Na Speake, a cadeia de pré-amplificação é configurada de acordo com o microfone e o conteúdo gravado — condensadores, ribbons e dinâmicos têm tratamentos diferentes no setup. Se você tem dúvidas sobre como configurar sua interface ou qual microfone funciona com seu pré-amp, [fale com a Speake](https://speake.com.br).
+A cadeia de pré-amplificação se configura de acordo com o microfone e o conteúdo gravado — condensadores, ribbons e dinâmicos pedem tratamentos diferentes no setup. E depois de gravar, falta publicar: na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para ouvir.

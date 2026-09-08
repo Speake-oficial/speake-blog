@@ -54,6 +54,6 @@ Para o áudio doméstico, um cabo bem fabricado e acessível resolve tão bem qu
 - **Blindagem:** cabos muito baratos às vezes têm blindagem incompleta, que não fecha a cobertura do condutor central e deixa ruído entrar
 - **Comprimento adequado:** não use 10 metros de TRS para conectar uma interface ao monitor que está a 60 cm de distância — cabo em excesso dobrado sobre si mesmo pode criar indutância e captar ruído
 
-Na Speake, a verificação de cabos e conexões faz parte do checklist antes de qualquer sessão de gravação. Um cabo defeituoso ou inadequado é a causa de chiados que as pessoas passam horas tentando resolver com plugins no DAW, quando a solução é simplesmente trocar o cabo ou o tipo de conector.
+Vale transformar a verificação de cabos e conexões em checklist fixo antes de qualquer sessão de gravação. Um cabo defeituoso ou inadequado é a causa de chiados que as pessoas passam horas tentando resolver com plugins no DAW, quando a solução é simplesmente trocar o cabo ou o tipo de conector.
 
 Com a cadeia de sinal resolvida, falta o destino do que você gravar. Na [Speake](https://speake.com.br) você publica seus episódios numa estação e sua audiência assina para ouvir.

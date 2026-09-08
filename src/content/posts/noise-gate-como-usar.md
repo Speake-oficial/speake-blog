@@ -35,6 +35,6 @@ Muitos plugins têm um parâmetro range, que define quanto o sinal é atenuado q
 
 Gate não resolve ruído severo. Se o ruído está dentro de 6 a 10 dB do sinal útil — voz fraca ou ambiente muito ruidoso —, o gate vai ou cortar parte da voz junto com o ruído, ou deixar ruído audível quando aberto. Nesse caso, o problema é de gravação: distância do microfone, tratamento acústico insuficiente ou ruído eletrônico da interface. A ferramenta certa para ruído embedded no sinal é redução espectral (iZotope RX, por exemplo), não um gate.
 
-A Speake inclui revisão de processamento dinâmico — incluindo gate e de-essing — nos serviços de mixagem e masterização de voz, justamente para garantir que o isolamento de ruído não comprometa a naturalidade da locução.
+Vale revisar todo o processamento dinâmico junto — gate e de-esser incluídos — para garantir que o isolamento de ruído não comprometa a naturalidade da locução.
 
-Quer ajuda profissional com o processamento de áudio do seu projeto? [processamento de áudio na Speake](https://speake.com.br).
+Voz tratada, falta publicar. Na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir.

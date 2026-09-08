@@ -42,6 +42,6 @@ Nenhuma das duas ferramentas é gratuita. Clipping excessivo introduz harmônico
 
 A decisão depende do material. Conteúdo de voz raramente precisa de clipper. Música eletrônica com kick forte muitas vezes se beneficia dele. Narração para audiolivro não quer nenhum dos dois de forma agressiva — quer controle de loudness com o mínimo de coloração tonal. Não existe resposta universal; existe análise do material antes de qualquer decisão de processamento.
 
-Na Speake, a escolha entre clipper, limitador ou a combinação dos dois faz parte do processo de masterização caso a caso, avaliando o conteúdo espectral e o target de loudness de cada plataforma de entrega.
+A escolha entre clipper, limitador ou a combinação dos dois é caso a caso: depende do conteúdo espectral do material e do target de loudness da plataforma de destino.
 
-Quer uma masterização calibrada para o seu material? [masterização profissional na Speake](https://speake.com.br).
+Master fechada, falta o destino. Na [Speake](https://speake.com.br) você publica na sua estação de áudio e cobra assinatura de quem quer ouvir.

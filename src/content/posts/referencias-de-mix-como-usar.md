@@ -50,6 +50,6 @@ Cada um desses pontos vira um dado de ação, não um julgamento estético.
 
 No começo do mix — antes de qualquer processamento — ouça a referência para calibrar o ambiente e o ouvido. No meio do processo, quando alguma seção parece travada e não sabe por quê. E no final, antes de fechar o bounce, para uma verificação geral.
 
-Na Speake, o uso de referências faz parte do fluxo padrão de mixagem e masterização — tanto para calibrar decisões técnicas quanto para alinhar expectativas com o cliente sobre o caráter sonoro do projeto.
+Usar referências faz parte do fluxo padrão de mixagem e masterização — tanto para calibrar decisões técnicas quanto para alinhar expectativas sobre o caráter sonoro do projeto.
 
-Quer um mix calibrado com esse critério? [mixagem e masterização na Speake](https://speake.com.br).
+Mix calibrado, falta chegar em quem ouve. Na [Speake](https://speake.com.br) você mantém sua estação de áudio por assinatura.

@@ -56,7 +56,7 @@ Evitar custa menos que corrigir, e dá para resolver em uma tarde. Checklist do 
 - [ ] Grave em 48 kHz/24 bit com picos entre −18 e −12 dBFS — headroom facilita qualquer correção posterior.
 - [ ] Faça um teste de palma: bata palma e ouça. Se sobra um "chiado" agudo depois do estalo, ainda há reflexão para tratar.
 
-Um armário de roupas fechado é, honestamente, uma cabine melhor que a maioria dos "estúdios" improvisados com espuma fina. Espuma de 2 cm absorve agudos e deixa passar médios e graves, o que muda o timbre do eco sem eliminá-lo. Quando o projeto exige consistência ao longo de dezenas de capítulos ou episódios, é o tipo de trabalho que a Speake resolve em sala tratada e com pós-produção padronizada, em vez de depender de correção plugin a plugin.
+Um armário de roupas fechado é, honestamente, uma cabine melhor que a maioria dos "estúdios" improvisados com espuma fina. Espuma de 2 cm absorve agudos e deixa passar médios e graves, o que muda o timbre do eco sem eliminá-lo. Quando o projeto exige consistência ao longo de dezenas de capítulos ou episódios, tratar o ambiente uma vez sai mais barato que depender de correção plugin a plugin em cada arquivo.
 
 ## Perguntas frequentes
 
@@ -69,4 +69,4 @@ Funciona parcialmente. Celular grava mono, comprimido e com processamento própr
 **Remover reverb é a mesma coisa que remover ruído?**
 Não. Ruído (ar-condicionado, chiado, rua) é contínuo e descorrelacionado da voz; reverb é a própria voz atrasada e refletida. Por isso ferramentas de redução de ruído não tiram eco, e plugins de dereverb não resolvem chiado. Se a gravação tem os dois problemas, trate ruído primeiro e dereverb depois.
 
-Quer ajuda profissional com isso? Conheça a [Speake](https://speake.com.br).
+Sala resolvida, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem acompanha.

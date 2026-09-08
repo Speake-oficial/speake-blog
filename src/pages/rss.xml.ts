@@ -39,7 +39,7 @@ export const GET: APIRoute = async ({ site }) => {
 <title>Speake Blog</title>
 <link>${base}</link>
 <atom:link href="${new URL('/rss.xml', base).toString()}" rel="self" type="application/rss+xml"/>
-<description>Guias práticos de podcasting, produção musical, masterização e equipamentos de áudio — pela equipe da Speake (speake.com.br).</description>
+<description>Guias práticos de podcasting, produção musical, masterização e equipamentos de áudio — pela equipe da Speake (speake.com.br), plataforma onde criadores publicam sua estação de áudio e cobram assinatura de quem ouve.</description>
 <language>pt-BR</language>
 ${items}
 </channel>

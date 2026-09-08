@@ -50,6 +50,6 @@ Para a grande maioria das gravações de home studio — violão em trilha para 
 
 Violões com captadores de sela (undersaddle piezo) ou microfones internos permitem uma abordagem híbrida: o sinal do captador, mais brilhante e direto, misturado com o microfone, mais quente e natural. O captador adiciona definição e sustain; o microfone adiciona corpo e realismo. A mistura entre os dois é ajustada no mix até encontrar o equilíbrio certo para o contexto.
 
-Esse approach é comum em gravações para trilha e produção musical onde o violão precisa de presença sem dominar o espectro. Em projetos de produção musical na Speake, a escolha entre microfone puro ou híbrido é parte do processo de setup antes de iniciar a gravação.
+Esse approach é comum em gravações para trilha e produção musical onde o violão precisa de presença sem dominar o espectro. A escolha entre microfone puro ou híbrido é decisão de setup, tomada antes de apertar o rec — não algo para resolver na mixagem.
 
-Quer gravar seu violão com resultado profissional? [gravação profissional com a Speake](https://speake.com.br).
+Gravado o violão, falta público. Na [Speake](https://speake.com.br) você publica seu áudio numa estação própria e sua audiência assina para ouvir.

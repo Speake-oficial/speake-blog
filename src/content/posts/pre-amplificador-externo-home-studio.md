@@ -36,6 +36,6 @@ Se o teste apontou para o pré-amp, considere:
 - **Transformador ou transformerless**: transformadores adicionam harmônicos e caráter. Sem transformador, o sinal é mais neutro. Nenhum é melhor — depende do que você quer da gravação.
 - **Formato**: para home studio com um ou dois microfones, um pré externo de canal único já resolve. Não precisa de rack completo.
 
-A Speake usa pré-amplificadores externos em captações que exigem ganho alto ou uma coloração específica — em projetos de audiolivro e narração corporativa, a diferença na presença e textura da voz é perceptível, especialmente quando o cliente ouve os dois lado a lado.
+Pré-amplificadores externos fazem diferença em captações que exigem ganho alto ou uma coloração específica — em audiolivro e narração corporativa, a presença e a textura da voz mudam de forma perceptível quando você ouve os dois lado a lado.
 
 Antes de investir em equipamento, vale mapear onde está o gargalo do seu fluxo — que muitas vezes é publicar, não gravar. Na [Speake](https://speake.com.br) a estação, a publicação e a cobrança da assinatura ficam num lugar só.

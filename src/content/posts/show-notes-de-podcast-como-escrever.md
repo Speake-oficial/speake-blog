@@ -46,7 +46,7 @@ Sim, e são hoje o principal caminho de descoberta fora dos apps. Google, ChatGP
 6. **Monte a página completa** com resumo, timestamps, 3 a 5 blocos de pergunta e resposta tirados da conversa e a transcrição — em acordeão indexável, nunca atrás de JavaScript que só carrega no clique.
 7. **Suba o arquivo de transcrição** no seu host. Apple Podcasts e Spotify já geram transcrição automática, mas a sua versão revisada substitui a deles e mantém os nomes corretos.
 
-Esse fluxo — edição, transcrição revisada, show notes e página de episódio — é parte da produção de podcast que a [Speake](https://speake.com.br) entrega junto com o áudio, justamente porque publicar o MP3 sem o texto joga fora metade do alcance.
+Esse fluxo — edição, transcrição revisada, show notes e página de episódio — anda junto com o áudio, justamente porque publicar o MP3 sem o texto joga fora metade do alcance.
 
 ## Checklist antes de publicar o episódio
 
@@ -70,4 +70,4 @@ Para o primeiro rascunho a partir da transcrição, sim. O que a IA erra com fre
 **Show notes mudam com podcast em vídeo no YouTube?**
 A estrutura é a mesma, mas o YouTube mostra só os primeiros ~150 caracteres da descrição antes do "mostrar mais" e exige capítulos começando em `00:00` para exibi-los na barra de progresso. Use o mesmo texto, com a informação decisiva antes do corte.
 
-Quer ajuda profissional com a produção e a publicação do seu podcast? Conheça a [Speake](https://speake.com.br).
+E cada episódio precisa de uma página que seja sua. Na [Speake](https://speake.com.br) você publica na sua estação de áudio e cobra assinatura de quem acompanha.

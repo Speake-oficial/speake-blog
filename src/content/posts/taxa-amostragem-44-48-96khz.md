@@ -44,6 +44,6 @@ O ponto que mais causa problema silencioso: converter taxa de amostragem no meio
 
 A regra prática: defina a taxa de amostragem do projeto antes de importar qualquer arquivo, mantenha consistente ao longo de toda a produção, e exporte na taxa nativa de entrega do destino final. Se o destino é podcast em MP3, trabalhe em 44.1 ou 48kHz do início ao fim. Se é música em streaming, 44.1kHz da gravação ao master.
 
-A Speake define essa configuração como parte do setup técnico de cada projeto antes de qualquer gravação começar — evitar conversões desnecessárias é um detalhe pequeno que poupa problemas na entrega final.
+Definir essa configuração faz parte do setup técnico do projeto, antes de qualquer gravação começar — evitar conversões desnecessárias é um detalhe pequeno que poupa problemas na entrega final.
 
 Definida a taxa de amostragem, o que sobra é publicar com constância. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e sua audiência assina para acompanhar.

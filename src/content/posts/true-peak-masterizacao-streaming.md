@@ -58,6 +58,6 @@ Para qualquer master destinada a distribuição digital, o padrão de entrega é
 
 Se a master excede o alvo de loudness, os streamings vão normalizar o volume para baixo — não é proibido entregar mais alto, mas o serviço decide como vai soar. Entregar no nível certo significa que a dinâmica que você masterizou é a dinâmica que o ouvinte escuta, sem correção automática no meio do caminho.
 
-Na Speake, toda masterização para streaming passa por verificação de true peak e loudness integrado nas especificações de cada plataforma — porque uma master que clipa após conversão de codec não é uma master finalizada, independentemente de como ela soa no DAW antes da entrega.
+Toda masterização para streaming deveria passar por verificação de true peak e loudness integrado nas especificações de cada plataforma — porque uma master que clipa depois da conversão de codec não é uma master finalizada, independentemente de como ela soa no DAW antes da entrega.
 
-Quer uma masterização pronta para todas as plataformas? [masterização para streaming na Speake](https://speake.com.br).
+Master pronta para as plataformas — e para a sua. Na [Speake](https://speake.com.br) você publica numa estação de áudio própria e cobra assinatura de quem ouve.

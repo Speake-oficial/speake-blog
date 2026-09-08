@@ -57,7 +57,7 @@ Um detalhe de ganho decide muita compra: microfones dinâmicos de podcast como o
 5. **Confirme que a gravação está em multitrack**, não só no mix estéreo. Grave 30 segundos e verifique os arquivos no cartão antes de começar.
 6. **Dê um fone e um controle de volume a cada participante.** Quem não se escuta grita ou sussurra, e nenhum plugin conserta isso depois.
 
-Depois da gravação, a pós-produção é igual nos dois caminhos: edição, mixagem por faixa e masterização em torno de -16 LUFS para podcast falado. É a etapa que a Speake assume quando o time quer publicar toda semana sem virar editor de áudio em tempo integral.
+Depois da gravação, a pós-produção é igual nos dois caminhos: edição, mixagem por faixa e masterização em torno de -16 LUFS para podcast falado. É a etapa que mais consome tempo de quem publica toda semana — e a primeira que vale padronizar num template para não virar editor de áudio em tempo integral.
 
 ## Perguntas frequentes
 
@@ -70,4 +70,4 @@ Sim. RØDECaster Pro II, Mixcast 4 e PodTrak P8 funcionam como interface USB e a
 **Preciso de mesa de podcast para gravar convidados por chamada de vídeo?**
 Não necessariamente. Para convidados remotos, gravação double-ender (cada um grava o próprio áudio localmente e envia o arquivo) entrega qualidade melhor que qualquer mix-minus, porque não passa pela compressão da chamada. A mesa resolve quando o convidado não tem equipamento ou tempo para isso.
 
-Quer ajuda profissional com a produção do seu podcast? Conheça a [Speake](https://speake.com.br).
+Escolhido o caminho de gravação, falta o de publicação. Na [Speake](https://speake.com.br) você mantém uma estação de áudio própria e cobra assinatura de quem acompanha.

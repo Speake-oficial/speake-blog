@@ -70,7 +70,7 @@ Checklist de 60 segundos antes de gravar:
 - [ ] Teste de 30 segundos gravado e ouvido no fone, não só no medidor
 - [ ] Cabo com alça de folga e cápsula sem contato com tecido
 
-Na Speake, gravações de podcast em vídeo saem com lapela sem fio na imagem e gravação interna redundante em cada transmissor — o áudio que vai para a edição é o do arquivo local, não o do link de rádio.
+Em podcast em vídeo, o padrão seguro é lapela sem fio na imagem e gravação interna redundante em cada transmissor — o áudio que vai para a edição é o do arquivo local, não o do link de rádio.
 
 ## Perguntas frequentes
 

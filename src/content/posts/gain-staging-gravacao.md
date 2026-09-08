@@ -29,6 +29,6 @@ Isso importa especialmente em home studios com interfaces de entrada dupla, onde
 
 Peça para quem vai ser gravado fazer a parte mais intensa do material — o grito, a nota mais aguda, a explosão de consoantes — antes de começar a gravação de verdade. Calibre o ganho nesse momento, não na fala mais calma. É o pico, não a média, que decide se você vai ter clipping.
 
-Gravações bem calibradas na entrada economizam horas de mixagem depois, porque sobra menos para "salvar" e mais espaço para decisões criativas. É um dos motivos pelos quais a Speake trata a etapa de captação com tanto cuidado quanto a mixagem em si — gravação malfeita limita o resultado final, não importa quão boa seja a mesa depois.
+Gravações bem calibradas na entrada economizam horas de mixagem depois, porque sobra menos para salvar e mais espaço para decisões criativas. Vale tratar a captação com tanto cuidado quanto a mixagem em si — gravação malfeita limita o resultado final, não importa quão boa seja a mesa depois.
 
-Quer uma gravação calibrada desde o primeiro take? [gravação profissional na Speake](https://speake.com.br).
+Take calibrado, falta publicar. Na [Speake](https://speake.com.br) você publica seus episódios numa estação própria e transforma audiência em receita recorrente.

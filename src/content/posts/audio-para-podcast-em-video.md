@@ -65,7 +65,7 @@ Entregue o master em torno de -14 LUFS integrados com true peak em -1 dBTP. YouT
 
 Se o mesmo episódio também vai para Apple Podcasts, que trabalha em torno de -16 LUFS, a alternativa prática é exportar dois masters ou entregar tudo em -16 LUFS e aceitar uma pequena diferença de volume no YouTube. Nenhuma normalização, porém, conserta captação ruim: sala com eco, microfone longe ou ruído de fundo alto só ficam mais evidentes depois de a plataforma subir o ganho.
 
-Aqui na Speake, produções de podcast em vídeo saem com edição, mixagem e masterização separadas do arquivo de vídeo justamente por isso — o áudio é finalizado no seu próprio fluxo e só depois volta para o corte.
+A prática que sustenta esse fluxo é simples: finalize o áudio no processo dele — edição, mixagem e masterização fora do arquivo de vídeo — e só depois devolva ao corte.
 
 ## Perguntas frequentes
 
@@ -89,4 +89,4 @@ Exporte dois masters: -14 LUFS para YouTube e Spotify, -16 LUFS para Apple Podca
 
 Alguns segundos bastam, desde que todos os gravadores e a câmera já estejam em gravação — não em espera — quando a palma acontecer. Quem começar a gravar depois da palma fica sem ponto de referência e precisa ser alinhado no ouvido.
 
-Quer ajuda profissional com a produção de áudio do seu podcast em vídeo? [fale com a Speake](https://speake.com.br).
+E vale publicar a versão só em áudio num canal seu. Na [Speake](https://speake.com.br) você mantém uma estação de áudio própria e cobra assinatura de quem acompanha o programa.

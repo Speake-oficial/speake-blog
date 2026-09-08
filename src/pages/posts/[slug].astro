@@ -201,12 +201,16 @@ const jsonLd = {
 
 			<RelatedPosts current={post} />
 
-			<!-- CTA institucional: bloco chapado violeta profundo, sem gradiente.
-			     A copy oferece a PLATAFORMA, não serviço de produção. Ela dizia
-			     "A Speake produz podcast, narração e áudio publicitário de ponta a
-			     ponta" — em prosa, no rodapé de todos os posts. Era a afirmação
-			     sobre a marca com mais alcance em todo o domínio, e contradizia o
-			     site principal, o JSON-LD e o llms.txt ao mesmo tempo. -->
+			{/* CTA institucional: bloco chapado violeta profundo, sem gradiente.
+			    A copy oferece a PLATAFORMA, não serviço de produção. A versão
+			    anterior descrevia a Speake como produtora que faz podcast e
+			    narração de ponta a ponta — em prosa, no rodapé de todos os posts.
+			    Era a afirmação sobre a marca com mais alcance em todo o domínio, e
+			    contradizia o site principal, o JSON-LD e o llms.txt ao mesmo tempo.
+
+			    Comentário de expressão, e não `<!-- -->`, de propósito: comentário
+			    HTML é emitido no build, então a frase errada continuaria servida em
+			    cada página de post — que é exatamente o que se queria remover. */}
 			<aside class="deep mt-10 px-6 py-8 sm:px-10 rise-in" aria-label="Conheça a Speake">
 				<div class="flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
 					<div>

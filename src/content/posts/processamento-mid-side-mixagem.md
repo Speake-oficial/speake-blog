@@ -36,7 +36,7 @@ Na masterização, M-S é ferramenta de rotina. A maioria dos problemas de "o mi
 - **Graves excessivos nas laterais:** em alto-falantes mono o sinal colapsa e o baixo some ou bate errado. Resolver no Side com um high-pass não afeta a audição em stereo, só corrige o mono.
 - **Vocal perdido no mastering:** em vez de levantar o mix inteiro e criar fadiga auditiva, você age cirurgicamente só no Mid.
 
-Na Speake, processamento M-S faz parte do workflow de masterização para garantir que o mix chegue compatível com mono, com largura stereo controlada e sem artefatos de fase que só aparecem quando o cliente escuta na caixa bluetooth.
+Processamento M-S na masterização garante que o mix chegue compatível com mono, com largura estéreo controlada e sem artefatos de fase que só aparecem quando alguém escuta na caixa bluetooth.
 
 ## O erro mais comum em M-S
 
@@ -44,4 +44,4 @@ Widening excessivo. Quem descobre o processamento M-S pela primeira vez tende a 
 
 A checagem é simples: se você fez uma mudança no Side e o mono ficou pior, você foi longe demais. Ouça em mono antes e depois de qualquer manipulação de largura. É o teste mais rápido e honesto sobre se o M-S que você aplicou ajudou ou criou problema novo.
 
-Quer masterização com esse cuidado de controle stereo e compatibilidade mono? [masterização com controle stereo na Speake](https://speake.com.br).
+Master compatível em qualquer caixa, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem ouve.

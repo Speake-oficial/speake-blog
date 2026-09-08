@@ -51,6 +51,6 @@ Só depois do comp aprovado vale a pena aplicar afinação e alinhamento rítmic
 
 Mantenha as faixas originais de cada take intactas no projeto, mesmo depois de montar o comp. Se na mixagem o produtor decidir que prefere uma versão de um refrão gravada no take 3, você precisa ter esse material disponível. Apagar os takes crus é uma decisão que vai custar horas de regravação.
 
-Na Speake, as sessões de produção vocal incluem o processo de comping como parte da entrega — o cliente recebe a faixa comp finalizada, com os takes originais arquivados, pronta para entrar na fase de mixagem sem necessidade de revisitar a gravação.
+O ideal é fechar o comp antes de entrar na mixagem — faixa comp finalizada, takes originais arquivados — para não precisar revisitar a gravação lá na frente.
 
-Quer produzir vocais com esse nível de cuidado? [produção vocal na Speake](https://speake.com.br).
+Vocal pronto, falta chegar em quem ouve. Na [Speake](https://speake.com.br) você publica na sua estação de áudio e transforma audiência em receita recorrente.

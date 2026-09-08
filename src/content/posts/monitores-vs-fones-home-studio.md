@@ -37,6 +37,6 @@ Plugins de crossfeed (como o Goodhertz Canopener ou o TB Isone) ajudam a simular
 
 Se você precisa escolher um antes do outro, fones de ouvido fechados de referência (como o Sony MDR-7506 ou o Beyerdynamic DT 770 Pro) são mais versáteis em ambientes não tratados: entregam resultado confiável independentemente da acústica da sala. Monitores em ambiente sem tratamento nenhum podem enganar mais do que ajudar.
 
-Na Speake, o processo de produção usa os dois em etapas distintas — monitores calibrados para as decisões de mixagem, fones para as checagens de detalhe e aprovação final antes da entrega.
+O fluxo mais confiável usa os dois em etapas distintas — monitores calibrados para as decisões de mixagem, fones para as checagens de detalhe e a conferência final.
 
 E quando a mixagem estiver fechada, o episódio precisa chegar em alguém. Na [Speake](https://speake.com.br) você publica numa estação própria e sua audiência assina para ouvir.

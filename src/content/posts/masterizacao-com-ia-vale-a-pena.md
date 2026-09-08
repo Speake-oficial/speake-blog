@@ -51,7 +51,7 @@ Contrate um engenheiro quando a decisão for musical e não técnica: álbum int
 
 A diferença prática aparece em três pontos: um humano ouve o arranjo e decide onde deixar respiro; corrige problemas de mix em vez de disfarçar; e assume revisões — você pede "menos brilho no refrão" e recebe uma versão nova, não outra rodada de sorteio. No Brasil, masterização profissional por faixa costuma ficar na faixa de R$ 150 a R$ 600, variando com prazo, número de revisões e reputação do estúdio.
 
-Na Speake, esse é o critério que aplicamos também em série de podcast e audiolivro: processamento automatizado dá conta da consistência episódio a episódio, mas o ajuste de referência do primeiro episódio — o que define o timbre da série inteira — é sempre feito por ouvido.
+O mesmo critério vale para série de podcast e audiolivro: processamento automatizado dá conta da consistência episódio a episódio, mas o ajuste de referência do primeiro episódio — o que define o timbre da série inteira — pede ouvido humano.
 
 ## Perguntas frequentes
 

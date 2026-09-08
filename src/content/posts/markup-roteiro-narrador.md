@@ -41,6 +41,6 @@ O momento ideal para marcar o roteiro é após a primeira leitura silenciosa com
 
 Para audiolivros longos — onde o roteiro pode ter centenas de páginas — o markup não é opcional, é o que mantém a consistência de performance ao longo de dias de gravação. Um capítulo gravado na segunda-feira e outro na quinta precisam soar como a mesma voz interpretando o mesmo personagem.
 
-Na Speake, os projetos de narração e audiolivro incluem revisão do roteiro antes da gravação, justamente para garantir que o narrador entre na cabine com o material preparado — e que a sessão seja usada para gravar, não para resolver dúvidas que podiam ter sido respondidas antes.
+Revisar o roteiro antes da gravação garante que o narrador entre na cabine com o material preparado — e que a sessão seja usada para gravar, não para resolver dúvidas que podiam ter sido respondidas antes.
 
-Quer produzir sua narração com esse nível de preparação? [narração profissional na Speake](https://speake.com.br).
+Narração pronta, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio e cobra assinatura de quem ouve.

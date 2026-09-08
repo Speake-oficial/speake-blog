@@ -37,6 +37,6 @@ Microfone omnidirecional não sofre esse problema porque não tem o reforço de 
 
 Mesmo com o padrão polar certo, posicionamento errado anula a vantagem. Falar fora do eixo de captação de um cardioide reduz volume e empurra a resposta de frequência para um som mais abafado — o microfone está tecnicamente certo, mas o ângulo está errado. Antes de trocar de microfone achando que o problema é o equipamento, vale testar reposicionar o que você já tem.
 
-Quando o projeto exige decisão técnica sobre captação — qual padrão, qual posicionamento, qual microfone para qual ambiente — a Speake ajuda a montar esse setup do zero, do equipamento ao tratamento acústico do espaço.
+Quando o projeto exige decisão técnica sobre captação — qual padrão, qual posicionamento, qual microfone para qual ambiente —, montar o setup do zero significa pensar equipamento e tratamento acústico do espaço juntos.
 
-Quer ajuda profissional com isso? [fale com os engenheiros da Speake](https://speake.com.br).
+Captação resolvida, falta publicar. Na [Speake](https://speake.com.br) você mantém sua estação de áudio por assinatura.
