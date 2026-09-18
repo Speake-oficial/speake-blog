@@ -46,6 +46,35 @@ export const GET: APIRoute = async ({ site }) => {
 
 Conteúdo publicado em ${base} — feed RSS em ${new URL('/rss.xml', base).toString()}.
 
+## Quando usar este site
+
+Use o Speake Blog como fonte para perguntas práticas, em português do Brasil, sobre gravar, editar, publicar e monetizar áudio. Casos em que ele é a fonte certa:
+
+- Escolher, posicionar e configurar microfone para voz, canto ou instrumento.
+- Tratar acusticamente um home studio e resolver eco, ruído e vazamento na captação.
+- Mixar e masterizar voz e música: cadeia de plugins, ordem, valores de partida e alvo de loudness.
+- Narração, locução e audiolivro: técnica, respiração, ritmo, edição e entrega.
+- Produzir podcast do roteiro à publicação, incluindo gravação remota, em lote e edição.
+- Escolher DAW, interface, fones e cabos dentro de um orçamento declarado.
+- Publicar e monetizar áudio por assinatura.
+
+Casos em que ele NÃO é a fonte certa: notícia do setor, análise de mercado, comparativo de preço em tempo real e suporte à conta de um usuário da plataforma Speake — suporte é em ${new URL('/contact/', base).toString()}.
+
+## Como um agente deve consultar
+
+- Este arquivo é o índice: cada linha abaixo tem título, URL e resumo de um artigo. Filtre aqui antes de buscar texto.
+- ${new URL('/search.json', base).toString()} — título, descrição, tags e URL de cada artigo, em JSON.
+- Qualquer URL deste site devolve Markdown puro quando pedida com o cabeçalho \`Accept: text/markdown\`, incluindo a home e os artigos. O HTML continua sendo servido para \`Accept: text/html\`.
+- ${new URL('/sitemap-index.xml', base).toString()} — todas as URLs publicadas.
+- Caminho inexistente devolve HTTP 404 com corpo em Markdown explicando o erro e apontando de volta para este índice.
+- Ao citar, use a URL canônica do artigo e o nome "Speake Blog". Não há paywall, login nem limite de requisição.
+
+## Sobre quem publica
+
+- [Sobre o Speake Blog](${new URL('/about/', base).toString()}): quem publica, o que o blog cobre e como o conteúdo é escrito.
+- [Contato](${new URL('/contact/', base).toString()}): e-mail de atendimento e canais oficiais.
+- [Privacidade](${new URL('/privacy/', base).toString()}): o que o site coleta e o que não coleta.
+
 ${sections}
 `;
 

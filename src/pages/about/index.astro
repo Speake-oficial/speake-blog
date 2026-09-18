@@ -1,0 +1,8 @@
+---
+import TrustPageLayout from '../../layouts/TrustPageLayout.astro';
+import { getTrustPage } from '../../lib/trustPages';
+
+const page = getTrustPage('about');
+---
+
+<TrustPageLayout page={page} />

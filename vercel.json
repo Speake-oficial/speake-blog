@@ -5,6 +5,9 @@
 			"source": "/sitemap.xml",
 			"destination": "/sitemap-index.xml",
 			"statusCode": 301
-		}
+		},
+		{ "source": "/sobre", "destination": "/about/", "statusCode": 301 },
+		{ "source": "/contato", "destination": "/contact/", "statusCode": 301 },
+		{ "source": "/privacidade", "destination": "/privacy/", "statusCode": 301 }
 	]
 }

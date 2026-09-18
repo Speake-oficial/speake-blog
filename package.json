@@ -10,16 +10,25 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "og:images": "node scripts/gen-og-images.mjs"
+    "test": "node --test \"src/**/*.test.ts\" \"*.test.ts\"",
+    "typecheck": "astro check",
+    "og:images": "node scripts/gen-og-images.mjs",
+    "verify:agents": "node scripts/verify-agent-readiness.mjs",
+    "preview:agents": "node scripts/serve-with-middleware.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.5",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.1",
+    "@vercel/functions": "^3.9.8",
     "astro": "^7.2.1",
     "tailwindcss": "^4.3.1"
   },
   "overrides": {
     "sharp": "^0.35.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
   }
 }

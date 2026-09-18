@@ -1,0 +1,66 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { renderBlock } from '../lib/miniMarkdown';
+import { ORGANIZATION_ID, organizationNode } from '../lib/organization';
+import type { TrustPage } from '../lib/trustPages';
+
+// Casca das três páginas-âncora (/about, /contact, /privacy). O texto vem de
+// src/lib/trustPages.ts e é renderizado aqui e no gêmeo `/…/index.md` a partir
+// da mesma fonte.
+
+interface Props {
+	page: TrustPage;
+}
+
+const { page } = Astro.props;
+
+const siteURL = (Astro.site ?? Astro.url.origin).toString();
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
+
+// O nó Organization sai de src/lib/organization.ts, igual ao da home: ele é a
+// âncora de entidade do blog e não pode divergir entre páginas — ver o comentário
+// naquele arquivo. Campos de identidade (legalName, sameAs) continuam vivendo só
+// no site principal; aqui a página apenas aponta para o mesmo `@id`.
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': page.schemaType,
+			'@id': `${canonicalURL}#page`,
+			url: canonicalURL,
+			name: page.title,
+			description: page.description,
+			inLanguage: 'pt-BR',
+			isPartOf: { '@id': `${siteURL}#website` },
+			about: { '@id': ORGANIZATION_ID },
+			publisher: { '@id': ORGANIZATION_ID },
+		},
+		organizationNode(siteURL),
+	],
+};
+---
+
+<BaseLayout title={page.title} description={page.description} jsonLd={jsonLd}>
+	<Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: page.label }]} />
+
+	<h1 class="font-display font-semibold text-3xl sm:text-4xl mb-3 rise-in">{page.title}</h1>
+	<p class="text-ink-soft leading-relaxed mb-10 max-w-2xl rise-in">{page.intro}</p>
+
+	<div class="prose-speake max-w-2xl rise-in rise-in--2">
+		{
+			page.sections.map((section) => (
+				<>
+					<h2>{section.heading}</h2>
+					{section.body.map((block) => (
+						<Fragment set:html={renderBlock(block)} />
+					))}
+				</>
+			))
+		}
+	</div>
+
+	<p class="t-micro text-ink-faint mt-12">
+		Esta página também responde em Markdown para <code>Accept: text/markdown</code>.
+	</p>
+</BaseLayout>
