@@ -1,5 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    // `middleware.ts` importa `./src/lib/agentMarkdown.ts` com extensão (o Node
+    // exige isso nos testes). O builder da Vercel transpila arquivo a arquivo sem
+    // empacotar, então sem esta opção o `middleware.js` gerado continuaria
+    // apontando para um `.ts` que não existe na Edge Function e o deploy falha.
+    "rewriteRelativeImportExtensions": true
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
